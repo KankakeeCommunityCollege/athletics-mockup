@@ -35,5 +35,7 @@
     "wiredep": "^4.0.0",
     "yargs": "^7.0.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "require-dir": "^1.0.0"
+  }
 }
