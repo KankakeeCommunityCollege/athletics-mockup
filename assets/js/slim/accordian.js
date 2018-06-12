@@ -1,20 +1,39 @@
 // Acordian.JS
 // Allows anchor jump-link to work with with acordian function
 //
-$('#membershipLink').click(function() {
-  $('#collapseOne').collapse('hide');
-  $('#collapseOne').collapse('show');
+
+$('.membershipTarget').on('click', function() {
+  $('#collapseOne').toggle('show').trigger('showCollapsed');
 });
 
-$('#personalTrainersLink').click(function() {
-  $('#collapseTwo').collapse('hide');
-  $('#collapseTwo').collapse('show');
+$('#collapseOne').on('showCollapsed', function() {
+  $('#plusMinus').toggleClass('buttons__minus');
 });
 
-$('#testimonialsLink').click(function() {
-  $('#collapseThree').collapse('hide');
-  $('#collapseThree').collapse('show');
+$('.trainersTarget').on('click', function() {
+  $('#collapseTwo').toggle('show').trigger('showCollapsed2');
 });
+
+$('#collapseTwo').on('showCollapsed2', function() {
+  $('#plusMinus2').toggleClass('buttons__minus');
+});
+
+$('.testimonialsTarget').on('click', function() {
+  $('#collapseThree').toggle('show').trigger('showCollapsed3');
+});
+
+$('#collapseThree').on('showCollapsed3', function() {
+  $('#plusMinus3').toggleClass('buttons__minus');
+});
+
+$('.powerTarget').on('click', function() {
+  $('#collapseFour').toggle('show').trigger('showCollapsed4');
+});
+
+$('#collapseFour').on('showCollapsed4', function() {
+  $('#plusMinus4').toggleClass('buttons__minus');
+});
+
 lzFunction();
 
 // function toggleAccordian() {
