@@ -1,10 +1,14 @@
 ---
-post_title: Gold Glove Award Winner
-date: 2018-06-21 07:00:00
+post_title: KCC Athletics Facebook
+date: 2018-06-21 11:00:00
 categories:
-  - baseball
   - news
-sport-category: Baseball
-news_thumb_image: /assets/img/Gold Glove Team.PNG
-description: Congratulations Brennan Kelly!
+  - general
+sport-category: General News
+news_thumb_image: /uploads/fb.PNG
+description: Athletics on Social Media
 ---
+
+The new athletics Facebook is now live. Please follow us for updates on teams, scores, and happenings in the athletic department at Kankakee Community College.
+
+[KCC Cavaliers Facebook](https://www.facebook.com/kcccavaliers/){: target="_blank"}
