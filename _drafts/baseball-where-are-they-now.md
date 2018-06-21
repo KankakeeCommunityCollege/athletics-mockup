@@ -11,7 +11,7 @@ description: Where are the 2018 Baseball athletes headed
 
 * Colin BeDell INF Tiffin University DII Tiffin, OH - DII
 * Bryce Butler OF Catawba College DII Salisbury, NC - DII
-* Dylan Dodd 1B/LHP Southeast Missouri State University DI Cape Girardeau, MO DI
+* Dylan Dodd 1B/LHP Southeast Missouri State University DI Cape Girardeau, MO - DI
 * Anthony Cocco INF Grand Valley State University DII Grand Rapids, MI - DII
 * Waylon Richardson RHP St. Leo University St. Leo, FL - DII
 * Brennan Kelly LHP Eastern Kentucky University, Richmond KY - DI
