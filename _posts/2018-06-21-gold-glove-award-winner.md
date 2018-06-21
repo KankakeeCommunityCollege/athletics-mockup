@@ -1,6 +1,6 @@
 ---
 post_title: Gold Glove Award Winner
-date: 2018-06-21 08:00:00
+date: 2018-06-21 07:00:00
 categories:
   - baseball
   - news
