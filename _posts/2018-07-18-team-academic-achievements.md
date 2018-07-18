@@ -1,5 +1,5 @@
 ---
-post_title: Academic All Americans
+post_title: Team Academic All Americans
 date: 2018-07-18 07:00:00
 categories:
   - news
