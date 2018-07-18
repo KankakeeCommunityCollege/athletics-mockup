@@ -13,7 +13,7 @@ news_thumb_image:
 description: Athletes receiving 3.60 or higher GPA
 ---
 
-Congratulations to our Academic All Americans. These athletes received a 3.60 or high GPA.
+Congratulations to our Academic All Americans. These athletes received a 3.60 or higher GPA.
 
 Soccer<br>2017-2018 Bobby Cooper 3.84<br>2017-2018 Connor Blanchette 3.85<br>2017-2018 Santiago Mena 3.91<br>2017-2018 Nicolas Mena 3.91<br>2017-2018 Jacob McCleary 4<br>2018 Andrew Newsome 3.63<br>2018 Dawson Swearengen 3.77 \*Freshman
 
