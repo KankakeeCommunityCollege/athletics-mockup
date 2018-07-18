@@ -7,7 +7,7 @@ categories:
   - softball
 sport-category: General
 news_thumb_image: /assets/img/cavaliers-16x9-thumb.png
-description: Congratulations
+description: Congratulations!
 ---
 
 Congratulations to two of our athletic teams for being recognized by the NJCAA for their academic excellence. To be recognized the team must have a combined GPA of 3.0 or higher.
