@@ -1,0 +1,355 @@
+{% include head.html %}
+  <body id="page-top" class="page">
+  <!-- Google Tag Manager (noscript) -->
+  {% include script/googletag.html %}
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- MODIFIED GLOBAL NAV FOR 404 PAGE
+       NEEDS CUSTOM LINK BACK TO MAIN ATHLETICS PAGE -->
+  <div class="container global-nav fixed-top">
+    <div class="row">
+      <div class="col-xs-6">
+        <a class="clickable" href="http://www.kcc.edu"><img src="{{page.baseurl}}assets/img/kankakee-community-college-word-logo.svg" class="img-fluid kcc-logo" alt="Kankakee Community College link to home page"></a>
+      </div>
+      <div class="col-xs-6 text-right">
+        <a href="/"><img src="{{page.baseurl}}assets/img/cavaliers-logo_white.png" class="center-logo d-xs-inline d-lg-none" alt="KCC Cavaliers logo link to main athletics page"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODIFIED MEGA-NAV FOR 404 PAGE
+       NEEDS CUSTOM LINK BACK TO MAIN ATHLETICS PAGE -->
+       <nav id="navBar" class="navbar navbar-expand-lg fixed-top">
+         <div class="clickable">
+           <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           <a href="/"><img src="{{page.baseurl}}assets/img/cavaliers-logo.png" class="center-logo d-none d-lg-inline" alt="KCC Cavaliers logo link to main athletics page"></a>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav mx-auto">
+               <!--  Sports  -->
+               <li class="nav-item dropdown active-nav">
+                 <a class="nav-link nav-link-main dropdown-toggle" href="{{site.baseurl}}/sports" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Sports</a>
+                 <!--  Sports dropdown menu  -->
+                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <div class="container drop-pad">
+                     <div class="row">
+                       <div class="col-md-6">
+                         <ul class="nav flex-column mega-nav__flex-column-left--margin">
+                           <h3 class="menu-heading">Men's Sports</h3>
+                           <li class="nav-list">
+                             <div class="row nav-row mega-nav__nav-row--bottom-border">
+                               <div class="col-md-4 mega-nav__sport-name--margin-right">
+                                 <a class="nav-link nav-link-main no-pad dark-text" href="{{site.baseurl}}/baseball"><strong>Baseball</strong></a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-right">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text schedule-link" href="{{site.baseurl}}/baseball/schedule">Schedule</a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-center">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/baseball/roster">Roster</a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-left">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/baseball/news">News</a>
+                               </div>
+                             </div>
+                           </li>
+                           <li class="nav-list">
+                             <div class="row nav-row mega-nav__nav-row--bottom-border">
+                               <div class="col-md-4 mega-nav__sport-name--margin-right">
+                                 <a class="nav-link nav-link-main no-pad dark-text" href="{{site.baseurl}}/mens-basketball"><strong>Basketball</strong></a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-right">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text schedule-link" href="{{site.baseurl}}/mens-basketball/schedule">Schedule</a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-center">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/mens-basketball/roster">Roster</a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-left">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/mens-basketball/news">News</a>
+                               </div>
+                             </div>
+                           </li>
+                           <li class="nav-list">
+                             <div class="row nav-row">
+                               <div class="col-md-4 mega-nav__sport-name--margin-right">
+                                 <a class="nav-link nav-link-main no-pad dark-text" href="{{site.baseurl}}/soccer"><strong>Soccer</strong></a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-right">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text schedule-link" href="{{site.baseurl}}/soccer/schedule">Schedule</a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-center">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/soccer/roster">Roster</a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-left">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/soccer/news">News</a>
+                               </div>
+                             </div>
+                           </li>
+                         </ul>
+                       </div>
+                       <div class="col-md-6">
+                         <ul class="nav flex-column mega-nav__flex-column-right--margin">
+                           <h3 class="menu-heading">Women's Sports</h3>
+                           <li class="nav-list">
+                             <div class="row nav-row mega-nav__nav-row--bottom-border">
+                               <div class="col-md-4 mega-nav__sport-name--margin-right">
+                                 <a class="nav-link nav-link-main no-pad dark-text" href="{{site.baseurl}}/womens-basketball"><strong>Basketball</strong></a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-right">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text schedule-link" href="{{site.baseurl}}/womens-basketball/schedule">Schedule</a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-center">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/womens-basketball/roster">Roster</a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-left">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/womens-basketball/news">News</a>
+                               </div>
+                             </div>
+                           </li>
+                           <li class="nav-list">
+                             <div class="row nav-row mega-nav__nav-row--bottom-border">
+                               <div class="col-md-4 mega-nav__sport-name--margin-right">
+                                 <a class="nav-link nav-link-main no-pad dark-text" href="{{site.baseurl}}/softball"><strong>Softball</strong></a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-right">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text schedule-link" href="{{site.baseurl}}/softball/schedule">Schedule</a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-center">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/softball/roster">Roster</a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-left">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/softball/news">News</a>
+                               </div>
+                             </div>
+                           </li>
+                           <li class="nav-list">
+                             <div class="row nav-row">
+                               <div class="col-md-4 mega-nav__sport-name--margin-right">
+                                 <a class="nav-link nav-link-main no-pad dark-text" href="{{site.baseurl}}/volleyball"><strong>Volleyball</strong></a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-right">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text schedule-link" href="{{site.baseurl}}/volleyball/schedule">Schedule</a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-center">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/volleyball/roster">Roster</a>
+                               </div>
+                               <div class="col-md-2 d-none d-md-block mega-nav__sport-link--no-padding text-left">
+                                 <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/volleyball/news">News</a>
+                               </div>
+                             </div>
+                           </li>
+                         </ul>
+                       </div>
+
+                     </div>
+                   </div>
+                 </div>
+                 <!--  End of Sports menu dropdown  -->
+               </li>
+               <!--  Facilities  -->
+               <li class="nav-item dropdown active-nav">
+                 <a class="nav-link nav-link-main dropdown-toggle" href="{{site.baseurl}}/facilities" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Facilities</a>
+               <!--  Facilities dropdown menu  -->
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                 <div class="container">
+                   <div class="row">
+                     <div class="col-md-4 d-none d-md-block">
+                       <a href="{{site.baseurl}}/facilities">
+                         <img src="{{page.baseurl}}assets/img/placeholder.png" data-src="{{page.baseurl}}assets/img/fitness-center-thumb.jpg" alt="Photo of the various equipment in the fitness center" class="img-fluid nav-img">
+                       </a>
+                     </div>
+                     <!-- /.col-md-4  -->
+                     <div class="col-md-8">
+                       <ul class="nav flex-column">
+                       <li class="nav-list">
+                         <div class="row nav-row facilities-drop-pad mega-nav__nav-row--half-bottom-border">
+                           <div class="col-md-12">
+                             <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/facilities/fitness-center"><strong>Fitness Center</strong></a>
+                           </div>
+                         </div>
+                       </li>
+                       <li class="nav-list">
+                         <div class="row nav-row">
+                           <div class="col-md-12">
+                             <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/facilities/sports-facilities"><strong>Sports Facilities</strong></a>
+                           </div>
+                         </div>
+                       </li>
+                     </ul>
+                     </div>
+                     <!-- /.col-md-8  -->
+                   </div>
+                 </div>
+               </div>
+               <!--  End of Facilities menu dropdown  -->
+             </li>
+             <!--  Recruitment  -->
+             <li class="nav-item dropdown active-nav nav-split">
+               <a class="nav-link nav-link-main dropdown-toggle" href="{{site.baseurl}}/recruitment" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Recruitment</a>
+               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                 <div class="container">
+                   <div class="row">
+                     <div class="col-md-4 d-none d-md-block">
+                       <a href="{{site.baseurl}}/recruitment">
+                         <img src="{{page.baseurl}}assets/img/placeholder.png" data-src="{{page.baseurl}}assets/img/cavaliers-16x9-thumb.png" alt="Photo of the various equipment in the fitness center" class="img-fluid nav-img">
+                       </a>
+                     </div>
+                     <!-- /.col-md-4  -->
+                     <div class="col-md-8">
+                       <ul class="nav flex-column">
+                       <li class="nav-list">
+                         <div class="row nav-row recruit-pad mega-nav__nav-row--half-bottom-border">
+                           <div class="col-md-12">
+                             <a class="nav-link typography__nav-link-secondary no-pad dark-text" rel="noopener" target="_blank" href="https://form.jotform.com/72396568714974"><strong>Baseball Form</strong></a>
+                           </div>
+                         </div>
+                       </li>
+                       <li class="nav-list">
+                         <div class="row nav-row mega-nav__nav-row--half-bottom-border">
+                           <div class="col-md-12">
+                             <a class="nav-link typography__nav-link-secondary no-pad dark-text"  rel="noopener" target="_blank" href="https://form.jotform.com/72495899814982"><strong>Men's Basketball Form</strong></a>
+                           </div>
+                         </div>
+                       </li>
+                       <li class="nav-list">
+                         <div class="row nav-row mega-nav__nav-row--half-bottom-border">
+                           <div class="col-md-12">
+                             <a class="nav-link typography__nav-link-secondary no-pad dark-text"  rel="noopener" target="_blank" href="https://form.jotform.com/72536200679963"><strong>Women's Basketball  Form</strong></a>
+                           </div>
+                         </div>
+                       </li>
+                       <li class="nav-list">
+                         <div class="row nav-row mega-nav__nav-row--half-bottom-border">
+                           <div class="col-md-12">
+                             <a class="nav-link typography__nav-link-secondary no-pad dark-text"  rel="noopener" target="_blank" href="https://form.jotform.com/72476618714969"><strong>Soccer Form</strong></a>
+                           </div>
+                         </div>
+                       </li>
+                       <li class="nav-list">
+                         <div class="row nav-row mega-nav__nav-row--half-bottom-border">
+                           <div class="col-md-12">
+                             <a class="nav-link typography__nav-link-secondary no-pad dark-text"  rel="noopener" target="_blank" href="https://form.jotform.com/72396278214967"><strong>Softball Form</strong></a>
+                           </div>
+                         </div>
+                       </li>
+                       <li class="nav-list">
+                         <div class="row nav-row">
+                           <div class="col-md-12">
+                             <a class="nav-link typography__nav-link-secondary no-pad dark-text"  rel="noopener" target="_blank" href="https://form.jotform.com/72396296514970"><strong>Volleyball Form</strong></a>
+                           </div>
+                         </div>
+                       </li>
+                     </ul>
+                     </div>
+                     <!-- /.col-md-8  -->
+                   </div>
+                 </div>
+               </div>
+             </li>
+
+             <!--  Support Athletics  -->
+             <li class="nav-item dropdown active-nav">
+               <a class="nav-link nav-link-main dropdown-toggle" href="{{site.baseurl}}/support" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Support&#160;Athletics</a>
+             <!--  Support Athletics dropdown menu  -->
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <div class="container">
+                 <div class="row">
+                   <div class="col-md-4 d-none d-md-block">
+                     <a href="{{site.baseurl}}/support">
+                       <img src="{{page.baseurl}}assets/img/placeholder.png" data-src="{{page.baseurl}}assets/img/support-thumb.jpg" alt="Photo of a Cavaliers jersey" class="img-fluid nav-img">
+                     </a>
+                   </div>
+                   <!-- /.col-md-4  -->
+                   <div class="col-md-8">
+                     <ul class="nav flex-column">
+                     <li class="nav-list">
+                       <div class="row nav-row facilities-drop-pad mega-nav__nav-row--half-bottom-border">
+                         <div class="col-md-12">
+                           <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/support/cash-bash"><strong>Cash Bash</strong></a>
+                         </div>
+                       </div>
+                     </li>
+                     <li class="nav-list">
+                       <div class="row nav-row mega-nav__nav-row--half-bottom-border">
+                         <div class="col-md-12">
+                           <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/support/cavalier-club"><strong>Cavalier Club</strong></a>
+                         </div>
+                       </div>
+                     </li>
+                     <li class="nav-list">
+                       <div class="row nav-row">
+                         <div class="col-md-12">
+                           <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/support/donate"><strong>Donate</strong></a>
+                         </div>
+                       </div>
+                     </li>
+                   </ul>
+                   </div>
+                   <!-- /.col-md-8  -->
+                 </div>
+               </div>
+             </div>
+             <!--  End of Support Athletics menu dropdown  -->
+             </li>
+
+             <!--  About  -->
+             <li class="nav-item dropdown active-nav">
+               <a class="nav-link nav-link-main dropdown-toggle" href="{{site.baseurl}}/about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+             <!--  About dropdown menu  -->
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <div class="container">
+                 <div class="row">
+                   <div class="col-md-4 d-none d-md-block">
+                     <a href="{{site.baseurl}}/about">
+                       <img src="{{page.baseurl}}assets/img/placeholder.png" data-src="{{page.baseurl}}assets/img/njcaa-region4-logo.png" alt="" class="img-fluid nav-img">
+                     </a>
+                   </div>
+                   <!-- /.col-md-4  -->
+                   <div class="col-md-8">
+                     <ul class="nav flex-column">
+                     <li class="nav-list">
+                       <div class="row nav-row about-drop-pad mega-nav__nav-row--half-bottom-border">
+                         <div class="col-md-12">
+                           <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/about/student-athletes"><strong>Student-Athlete Experience</strong></a>
+                         </div>
+                       </div>
+                     </li>
+                     <li class="nav-list">
+                       <div class="row nav-row mega-nav__nav-row--half-bottom-border">
+                         <div class="col-md-12">
+                           <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/about/equity"><strong>Equity in Athletics</strong></a>
+                         </div>
+                       </div>
+                     </li>
+                     <li class="nav-list">
+                       <div class="row nav-row mega-nav__nav-row--half-bottom-border">
+                         <div class="col-md-12">
+                           <a class="nav-link typography__nav-link-secondary no-pad dark-text" href="{{site.baseurl}}/about/staff"><strong>Staff Directory</strong></a>
+                         </div>
+                       </div>
+                     </li>
+                     <li class="nav-list">
+                       <div class="row nav-row">
+                         <div class="col-md-12">
+                           <a class="nav-link typography__nav-link-secondary no-pad dark-text" target="_blank" rel="noopener" href="https://form.jotform.com/72415108814957"><strong>Alumni Survey</strong></a>
+                         </div>
+                       </div>
+                     </li>
+                   </ul>
+                   </div>
+                   <!-- /.col-md-8  -->
+                 </div>
+               </div>
+             </div>
+             <!--  End of About menu dropdown  -->
+             </li>
+             <!--  End Navigation Menu links  -->
+             </ul>
+           </div>
+         </div>
+       </nav>
+
+  {{ content }}
+  {% include footer.html %}
+  {% include script/vendor-scripts.html %}
+  {% include script/slim-script.html %}
+{% include foot.html %}
