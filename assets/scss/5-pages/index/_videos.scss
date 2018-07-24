@@ -151,12 +151,25 @@ button#load-more {
 }
 
 .slick-next {
-  right: -10px;
+  right: 20px;
+  z-index: 999;
 }
 
 .slick-prev {
-  left: -10px;
+  left: 20px;
+  z-index: 999;
 }
+
+@media screen and (min-width: 600px) {
+  .slick-next {
+    right: -22px;
+  }
+
+  .slick-prev {
+    left: -22px;
+  }
+}
+
 
 @media screen and (orientation: portrait) and (max-width: 468px) {
  .item {

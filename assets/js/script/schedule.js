@@ -105,12 +105,13 @@ var Schedule = (function scheduleLoading() {
     });
 
     slideStringLength = slideString.length;
-    if(slideStringLength > 0 && slideStringLength <= 3) {
+    //if(slideStringLength > 0 && slideStringLength <= 3) {
+    if(slideStringLength > 0) {
       document.querySelector('#track').innerHTML = slideString.join('');
       slickOptions();
       Youtube_carousel.init();
     } else if (slideStringLength === 0){
-      document.querySelector('#track').innerHTML = '<p style="margin:10px;font-weight:bold;">Currently there are no upcoming games. <br><a href="../uploads/FALL-2018-BASEBALL-SCHEDULE.pdf" target="_blank" rel="noopener">Fall 2018 Baseball Schedule (PDF)<br><a href="../uploads/FALL-2018-SOFTBALL-SCHEDULE.pdf" target="_blank" rel="noopener">Fall 2018 Softball Schedule (PDF)</p>';
+      document.querySelector('#track').innerHTML = '<p style="margin:10px;font-weight:bold;">Currently there are no upcoming games. <br><a href="../uploads/FALL-2018-BASEBALL-SCHEDULE.pdf" target="_blank" rel="noopener">Fall 2018 Baseball Schedule (PDF)</a><br><a href="../uploads/FALL-2018-SOFTBALL-SCHEDULE.pdf" target="_blank" rel="noopener">Fall 2018 Softball Schedule (PDF)</a></p>';
       Youtube_carousel.init();
     }
   }
