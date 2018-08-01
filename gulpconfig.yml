@@ -105,7 +105,7 @@ sitemap:
     - "_site/**/*.pdf"
     - "_site/**/**/*.pdf"
   siteUrl:
-    - "http://athletics.kcc.edu"
+    - "https://athletics.kcc.edu"
 
 jekyll:
   notification: "Running jekyll"

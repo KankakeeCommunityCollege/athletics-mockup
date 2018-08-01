@@ -11,7 +11,7 @@ description: Website revamped!
 
 The Athletics Department is thrilled to introduce our brand-new website!
 
-This site allows us to interact more than ever before through live social media feeds, news stories, and more. Please share a link to [http://athletics.kcc.edu](http://athletics.kcc.edu) so friends and prospective students/athletes can stay up-to-date with our athletic programs.
+This site allows us to interact more than ever before through live social media feeds, news stories, and more. Please share a link to [https://athletics.kcc.edu](https://athletics.kcc.edu) so friends and prospective students/athletes can stay up-to-date with our athletic programs.
 
 What else?
 
