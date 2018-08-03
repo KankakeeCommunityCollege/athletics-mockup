@@ -1,0 +1,9 @@
+// Styles to hide items unless in the visual editor (from CluodCannon Documentation)
+
+.editor-content {
+  display: none;
+}
+
+.cms-editor-active .editor-content {
+  display: block;
+}
