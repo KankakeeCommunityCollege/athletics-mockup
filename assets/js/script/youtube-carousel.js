@@ -3,7 +3,10 @@ var Youtube_carousel = (function youtube_carousel_module(){
 
   var $apiK = $('meta[name=yt-api-k]').attr('value'),
     $ytList = $('#yt_list'),
-    $ytPlayer = $('#yt_player');
+    $ytPlayer = $('#yt_player'),
+    // To use on a different site repalce baseUrl's value with the desired site URL
+    // (e.g. var baseUrl = 'https://foundation.kcc.edu';)
+    baseUrl = 'https://athletics.kcc.edu'; // The base site used to call assets (e.g. images)
 
   function init(){
     var default_user_name = 'KankakeeCommCollege';
@@ -67,7 +70,7 @@ var Youtube_carousel = (function youtube_carousel_module(){
         }
         for (var i = 0; i < limit; i++) {
           var title = $('<h3 class="video-carousel__title">').append(data.items[i].snippet.title),
-            thumb = $('<img class="img-fluid" src="assets/img/yt-loading.png">').attr('data-src', data.items[i].snippet.thumbnails.medium.url),
+            thumb = $('<img class="img-fluid" src="' + baseUrl +  '/assets/img/yt-loading.png">').attr('data-src', data.items[i].snippet.thumbnails.medium.url),
             video_id = data.items[i].snippet.resourceId.videoId,
             link = $('<a class="video-link" data-toggle="modal" data-target="#exampleModalCenter" href="#">')
               .data('videoid', video_id)
@@ -83,8 +86,8 @@ var Youtube_carousel = (function youtube_carousel_module(){
           slidesToShow: 3,
           slidesToScroll: 1,
           adaptiveHeight: false,
-          prevArrow:'<img class="a-left control-c prev slick-prev" src="https://athletics.kcc.edu/assets/img/blue-prev.svg">',
-          nextArrow:'<img class="a-right control-c next slick-next" src="https://athletics.kcc.edu/assets/img/blue-next.svg">',
+          prevArrow:'<img class="a-left control-c prev slick-prev" src="' + baseUrl + '/assets/img/blue-prev.svg">',
+          nextArrow:'<img class="a-right control-c next slick-next" src="' + baseUrl + '/assets/img/blue-next.svg">',
           responsive: [
             {
               breakpoint: 1024,
