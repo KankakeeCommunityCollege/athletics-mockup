@@ -65,6 +65,7 @@ javascript:
     - "assets/js/script/youtube-carousel.js" # Custom JS for YouTube video carousel
     - "assets/js/script/init.js" # Initiate the schedule.js
     - "assets/js/script/lazyload.js" # lazload.js called within youtube-carousel.js
+    - "assets/js/script/moreButton.js"
 
 javascriptSlim:
   dest:
@@ -113,8 +114,8 @@ jekyll:
 watch: # 'Watch' for changes in all the following:
   images: "assets/img/**/*"
   javascript:
-    - "assets/js/all.min.js"
-    - "assets/js/*.js"
+    - "assets/js/script/all.min.js"
+    - "assets/js/script/*.js"
   sass: "assets/scss/**/*.scss"
   contentSass: "assets/scss/**/*.scss"
   pages:

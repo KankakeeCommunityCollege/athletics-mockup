@@ -131,7 +131,7 @@ slides:
 <section class="coach-section">
   <div class="container">
     <div class="row text-left">
-      <h4 id="coaches" name="coaches" class="coaches-heading link__offset"><img src="{{page.baseurl}}assets/img/basketball.svg" class="icon-middle" alt="" />&#160;&#160;Coaches</h4>
+      <h4 id="coaches" name="coaches" class="coaches-heading link__offset"><img src="{{page.baseurl}}assets/img/basketball.svg" class="icon-middle" alt="" />&#160;Coaches</h4>
     </div>
     <!-- ========================================================================================
     =============================================================================================
@@ -149,8 +149,8 @@ slides:
           <!-- Coach 1 left image div (inner-left column) -->
           <div class="col-6 float-left"><a data-toggle="modal" href="#modalCoach1"><img alt="Photo of Alex Thorson" class="img-fluid coach-img modal-link editable" title="Photo of Alex Thorson" src="/uploads/athorson.jpg" width="300" height="400" /></a></div>
           <!-- Coach 1 right info div (inner-right column) -->
-          <div class="col-6 float-right">
-            <a data-toggle="modal" href="#modalCoach1" class="modal-link"><h5 class="coach-name editable">Alex&#160;Thorson</h5>
+          <div class="col-6 float-right coaches__info">
+            <a data-toggle="modal" href="#modalCoach1" class="modal-link"><h5 class="coach-name editable">Alex Thorson</h5>
             <h6 class="coach-title editable">Head Coach</h6></a>
             <p class="editable">
                 815‑802‑8609<br />athorson@kcc.edu
@@ -167,22 +167,23 @@ slides:
           <!-- Coach 2 left image div (inner-left column) -->
           <div class="col-6 float-left"><a data-toggle="modal" href="#modalCoach2"><img alt="Photo of Assistant Coach" class="img-fluid coach-img modal-link editable" src="/uploads/blank-male-avatar-1.jpg" title="Assistant Coach" width="300" height="400" /></a></div>
           <!-- Coach 2 right info div (inner-right column) -->
-          <div class="col-6 float-right">
-            <a data-toggle="modal" href="#modalCoach2" class="modal-link"><h5 class="coach-name editable">Matt&#160;Neaville</h5>
+          <div class="col-6 float-right coaches__info">
+            <a data-toggle="modal" href="#modalCoach2" class="modal-link"><h5 class="coach-name editable">Matt Neaville</h5>
             <h6 class="coach-title editable">Assistant Coach</h6></a>
             <a data-toggle="modal" class="btn btn-primary" href="#modalCoach2">View Bio</a>
           </div>
         </div>
       </div>
 
+
       <!-- To add Coach 3:
       Un-comment the following HTML and replace generic picture/info
       ALSO un-comment Coach 3 Modal and edit contents
       ==================================================================================
-    <div class="col-md-4">
+    <div class="col-md-4 coaches__col-bottom-margin">
       <div class="row">
         <div class="col-6 float-left"><a data-toggle="modal" href="#modalCoach3"><img src="{{page.baseurl}}uploads/blank-male-avatar.jpg" alt="Photo of Assistant Coach" class="img-fluid coach-img modal-link editable" title="Photo of Assistant Coach" /></div>
-        <div class="col-6 float-right">
+        <div class="col-6 float-right coaches__info">
           <a data-toggle="modal" href="#modalCoach3" class="modal-link"><h5 class="coach-name editable">Coach 3 Name</h5>
           <h6 class="coach-title editable">Coach 3 Title</h6></a>
           <p class="editable">
@@ -196,13 +197,13 @@ slides:
 
     uncomment to here for Coach 3
     =====================================================================================  -->
-
-
+    <!-- Close first coach row -->
+    </div>
 
     <!-- To add an additional row of Coaches
     un-comment this div row and its closing tag (the HTML surrounded by "=" signs)
     =========================================================
-    <div class="row coach-row-marg">
+    <div class="row">
     =========================================================
     Then un-comment any additional coaches needed bellow-->
 
@@ -210,10 +211,10 @@ slides:
     Un-comment the following HTML and replace generic picture/info
     ALSO un-comment Coach 4 Modal and edit contents
     ==================================================================================
-      <div class="col-md-4">
+      <div class="col-md-4 coaches__col-bottom-margin">
         <div class="row">
           <div class="col-6 float-left"><a data-toggle="modal" href="#modalCoach4"><img src="{{page.baseurl}}uploads/blank-male-avatar.jpg" alt="Photo of Assistant Coach" class="img-fluid coach-img modal-link editable" title="Photo of Assistant Coach" />
-          <div class="col-6 float-right">
+          <div class="col-6 float-right coaches__info">
             <a data-toggle="modal" href="#modalCoach4" class="modal-link"><h5 class="coach-name editable">Coach 4 Name</h5>
             <h6 class="coach-title editable">Coach 4 Title</h6></a>
             <p class="editable">
@@ -231,10 +232,10 @@ slides:
       Un-comment the following HTML and replace generic picture/info
       ALSO un-comment Coach 5 Modal and edit contents
       ==================================================================================
-      <div class="col-md-4">
+      <div class="col-md-4 coaches__col-bottom-margin">
         <div class="row">
           <div class="col-6 float-left"><a data-toggle="modal" href="#modalCoach5"><img src="{{page.baseurl}}uploads/blank-male-avatar.jpg" alt="Photo of Assistant Coach" class="img-fluid coach-img modal-link editable" title="Photo of Assistant Coach" />
-          <div class="col-6 float-right">
+          <div class="col-6 float-right coaches__info">
             <a data-toggle="modal" href="#modalCoach5" class="modal-link"><h5 class="coach-name editable">Coach 5 Name</h5>
             <h6 class="coach-title editable">Coach 5 Title</h6></a>
             <p class="editable">
@@ -252,10 +253,10 @@ slides:
       Un-comment the following HTML and replace generic picture/info
       ALSO un-comment Coach 6 Modal and edit contents
       ==================================================================================
-      <div class="col-md-4">
+      <div class="col-md-4 coaches__col-bottom-margin">
         <div class="row">
           <div class="col-6 float-left"><a data-toggle="modal" href="#modalCoach6"><img src="{{page.baseurl}}uploads/blank-male-avatar.jpg" alt="Photo of Assistant Coach" class="img-fluid coach-img modal-link editable" title="Photo of Assistant Coach" />
-          <div class="col-6 float-right">
+          <div class="col-6 float-right coaches__info">
             <a data-toggle="modal" href="#modalCoach6" class="modal-link"><h5 class="coach-name editable">Coach 6 Name</h5>
             <h6 class="coach-title editable">Coach 6 Title</h6></a>
             <p class="editable">
