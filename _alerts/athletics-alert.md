@@ -1,6 +1,6 @@
 ---
-title: (Example Alert Title) Something Has Been Canceled
-display_alert: false
+title: Baseball Scrimmages Canceled
+display_alert: true
 ---
 
-Please enter a short and concise alert message here
+Due to pending weather games for 9/7 & 9/8 have been canceled
