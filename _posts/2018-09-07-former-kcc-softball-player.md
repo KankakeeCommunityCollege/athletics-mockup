@@ -6,7 +6,7 @@ categories:
   - news
   - softball
 sport-category: General
-news_thumb_image: /assets/img/cavaliers-logo.png
+news_thumb_image: /uploads/roan.jpg
 description: Former KCC Softball Player
 ---
 
