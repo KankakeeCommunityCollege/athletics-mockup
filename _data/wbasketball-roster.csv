@@ -1,12 +1,12 @@
-Jersey,Player,Position,Height,Class,Hometown
-5,Dejah Weathersby,G,"5'6""",Soph,Matteson
-10,Isabelle Hille,G,"5'6""",Fresh,"Fort Wayne, IN"
-12,TyAnn LeGrand-Melton,G/F,"5'11""",Soph,Lisle
-13,Alexis Marin,G,"5'6""",Soph,Romeoville
-15,Olivia Powell,G,"5'6""",Fresh,Cissna Park
-20,Courtnee Riley,G/F,"5'8""",Fresh,Decatur
-21,Bryanna Johnson,F,"6'0""",Fresh,Rockford
-22,Paige Hacker,F,"5'10""",Soph,Seneca
-23,Grace Schroeder,G/F,"5'9""",Soph,Gilman
-25,Alandria Frison,G,"5'9""",Fresh,Evergreen Park
-31,Meara Tilstra,F/C,"6'1""",Fresh,Onarga
+﻿Jersey,Player,Position,Height,Class,Hometown,High School
+5,Dejah Weathersby,G,5-6,Soph,"Matteson, IL",Rich South HS
+10,Isabelle Hille,G,5-6,Fresh,"Fort Wayne, IN",Churubusco HS
+12,TyAnn LeGrand-Melton,G/F,5-11,Soph,"Lisle, IL",Lisle HS
+13,Alexis Marin,G,5-6,Soph,"Romeoville, IL",Romeoville HS
+15,Olivia Powell,G,5-6,Fresh,"Cissna Park, IL",Cissna Park HS
+20,Courtnee Riley,G/F,5-8,Fresh,"Decatur, IL",MacArthur HS
+21,Bryanna Johnson,F,6-0,Fresh,"Rockford, IL",Rockford East HS
+22,Paige Hacker,F,5-10,Soph,"Seneca, IL",Seneca HS
+23,Grace Schroeder,G/F,5-9,Soph,"Gilman, IL",Iroquois West HS/Lincoln College
+25,Alandria Frison,G,5-9,Fresh,"Evergreen Park, IL",Evergreen Park HS
+31,Meara Tilstra,F/C,6-1,Fresh,"Onarga, IL",Iroquois West HS 
