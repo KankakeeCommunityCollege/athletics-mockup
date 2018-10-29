@@ -111,7 +111,7 @@ var Schedule = (function scheduleLoading() {
       slickOptions();
       Youtube_carousel.init();
     } else if (slideStringLength === 0){
-      document.querySelector('#track').innerHTML = '<p style="margin:10px;font-weight:bold;">Currently there are no upcoming games. <br><a href="../uploads/FALL-2018-BASEBALL-SCHEDULE.pdf" target="_blank" rel="noopener">Fall 2018 Baseball Schedule (PDF)</a><br><a href="../uploads/FALL-2018-SOFTBALL-SCHEDULE.pdf" target="_blank" rel="noopener">Fall 2018 Softball Schedule (PDF)</a><br><a href="../uploads/FALL-2018-MBASKETBALL-SCHEDULE.pdf" target="_blank" rel="noopener">Fall 2018 Men&apos;s Basketball Schedule (PDF)</a><br><a href="../uploads/FALL-2018-WBASKETBALL-SCHEDULE.pdf" target="_blank" rel="noopener">Fall 2018 Women&apos;s Basketball Schedule (PDF)</a></p>';
+      document.querySelector('#track').innerHTML = '<p style="margin:10px;font-weight:bold;">Currently there are no upcoming games. <br><a href="../uploads/spring-2019-baseball-schedule.pdf" target="_blank" rel="noopener">Spring 2019 Baseball Schedule (PDF)</a><br><a href="../uploads/spring-2019-softball-schedule.pdf" target="_blank" rel="noopener">Spring 2019 Softball Schedule (PDF)</a><br><a href="../uploads/FALL-2018-MBASKETBALL-SCHEDULE.pdf" target="_blank" rel="noopener">Fall 2018 Men&apos;s Basketball Schedule (PDF)</a><br><a href="../uploads/FALL-2018-WBASKETBALL-SCHEDULE.pdf" target="_blank" rel="noopener">Fall 2018 Women&apos;s Basketball Schedule (PDF)</a></p>';
       Youtube_carousel.init();
     }
   }
