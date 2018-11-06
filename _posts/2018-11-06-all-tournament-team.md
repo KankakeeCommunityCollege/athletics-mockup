@@ -5,7 +5,7 @@ categories:
   - volleyball
   - news
 sport-category: General
-news_thumb_image: /assets/img/16-9_thumb.png
+news_thumb_image: /uploads/image-2018-11-6.jpg
 description: All Tournament Team
 ---
 
