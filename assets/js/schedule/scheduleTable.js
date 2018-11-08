@@ -33,6 +33,8 @@ function spreadsheetTable() {
     sheetNumber = 1;
   } else if ( noProto.indexOf('mens-basketball/schedule') > -1 ) {
     sheetNumber = 2;
+  } else if ( noProto.indexOf('womens-basketball/schedule') > -1 ) {
+    sheetNumber = 3;
   }
 
   // Make sure it is public or set to Anyone with link can view
@@ -76,7 +78,7 @@ function spreadsheetTable() {
         color = blue;
       }
       html += '<tr>';
-      html += '<td style="vertical-align:top;background-color:' + color + ';color:#ffffff;text-indent:5rem;">' + entry[i]['gsx$date']['$t'] + '</td>';
+      html += '<td class="mx-auto" style="vertical-align:top;background-color:' + color + ';color:#ffffff;">' + entry[i]['gsx$date']['$t'] + '</td>';
       html += '<td align="left">' + entry[i]['gsx$opponent']['$t'] + '</td>';
       html += '<td>' + entry[i]['gsx$time']['$t'] + '</td>';
       // html += '<td>' + entry[i]['gsx$category']['$t'] + '</td>';
