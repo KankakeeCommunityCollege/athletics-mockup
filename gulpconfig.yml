@@ -85,10 +85,11 @@ javascriptSchedule:
   filename: "schedule.min.js"
   notification: "Running JavaScript Schedule"
   src:
-    - "assets/js/schedule/stickyTableHeader.js"
-    - "assets/js/schedule/stickyTableCustom.js"
-    - "assets/js/schedule/schedule-pages.js"
-    - "assets/js/schedule/initSchedulePage.js"
+    - "!assets/js/schedule/stickyTableHeader.js"
+    - "!assets/js/schedule/stickyTableCustom.js"
+    - "!assets/js/schedule/schedule-pages.js"
+    - "!assets/js/schedule/initSchedulePage.js"
+    - "assets/js/schedule/scheduleTable.js"
 
 javascriptLazy:
   dest:
@@ -117,6 +118,12 @@ watch: # 'Watch' for changes in all the following:
   javascript:
     - "assets/js/script/all.min.js"
     - "assets/js/script/*.js"
+    - "assets/js/schedule/schedule.min.js"
+    - "assets/js/schedule/*.js"
+    - "assets/js/lazy/lazyLoad.min.js"
+    - "assets/js/lazy/*.js"
+    - "assets/js/slim/all.slim.min.js"
+    - "assets/js/slim/*.js"
   sass: "assets/scss/**/*.scss"
   contentSass: "assets/scss/**/*.scss"
   pages:
