@@ -5,10 +5,14 @@
 td {
   color: $grey-1;
   font-family: $basefont-stack;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 th {
   color: $primary-red;
   font-family: $secondaryfont-stack;
   font-weight: $secondaryfont-weight-bold;
+  padding-left: 5px;
+  padding-right: 5px;
 }
