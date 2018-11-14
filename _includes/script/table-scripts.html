@@ -4,4 +4,17 @@
 <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
 <!-- dataTable's JS for "Responsive" extension -->
 <script src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
-<script src="{{page.baseurl}}assets/js/schedule/schedule.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    function goGoGadgetTable () {
+      $('#Data').DataTable({
+        "ordering": false,
+        "paging": false,
+        "searching": false,
+        "info": false
+      });
+    }
+    goGoGadgetTable();
+  });
+</script>
