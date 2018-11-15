@@ -2,8 +2,7 @@
 var deferSpreadsheetTable = $.Deferred();
 var deferSearchForm = $.Deferred();
 var deferPopovers = $.Deferred();
-
-$.when(deferSpreadsheetTable).done(function() {
+ $.when(deferSpreadsheetTable).done(function() {
   $('#Data').DataTable( {
     responsive: true,
     paging: false,
@@ -11,23 +10,18 @@ $.when(deferSpreadsheetTable).done(function() {
   } );
   deferSearchForm.resolve();
 });
-
-$.when(deferSearchForm).done(function() {
+ $.when(deferSearchForm).done(function() {
   $('input[aria-controls="Data"]').attr('placeholder', 'Search Schedule...');
   deferPopovers.resolve();
 });
-
-$.when(deferPopovers).done(function() {
+ $.when(deferPopovers).done(function() {
   $('[data-toggle="popover"]').popover();
 });
-
-function spreadsheetTable() {
-
-  var currentUrl = window.location.href;
+ function spreadsheetTable() {
+   var currentUrl = window.location.href;
   // Remove the http(s):// protocol
   var noProto = currentUrl.replace(/(^\w+:|^)\/\//, '');
-
-  var spreadsheetID = '1TiSs5L7Ta3hBWXjUcgQlNn_JAXF6N5jEmleiAlAmSvw';
+   var spreadsheetID = '1TiSs5L7Ta3hBWXjUcgQlNn_JAXF6N5jEmleiAlAmSvw';
   var sheetNumber;
   if ( noProto.indexOf('baseball/schedule') > -1 ) {
     sheetNumber = 1;
@@ -36,17 +30,13 @@ function spreadsheetTable() {
   } else if ( noProto.indexOf('womens-basketball/schedule') > -1 ) {
     sheetNumber = 3;
   }
-
-  // Make sure it is public or set to Anyone with link can view
+   // Make sure it is public or set to Anyone with link can view
   var url = 'https://spreadsheets.google.com/feeds/list/' + spreadsheetID + '/' + sheetNumber + '/public/values?alt=json';
-
-  // make JSON call to Google Data API
+   // make JSON call to Google Data API
   $.getJSON(url, function(data) {
-
-    // set global html variable
+     // set global html variable
     var html = '';
-
-    // build table headings
+     // build table headings
     html += '<table id="Data" class="display table table-striped table-hover" style="width:100%">';
     html += '<thead>';
     html += '<tr>';
@@ -60,11 +50,9 @@ function spreadsheetTable() {
     html += '</tr>';
     html += '</thead>';
     html += '<tbody>';
-
-    // loop to build html output for each row
+     // loop to build html output for each row
     var entry = data.feed.entry;
-
-    /**
+     /**
           ** Change to descending order
           ** for (var i = entry.length - 1; i >= 0; i -= 1) {
            */
@@ -86,13 +74,11 @@ function spreadsheetTable() {
       html += '<td>' + entry[i]['gsx$status']['$t'] + '</td>';
       html += '<td>' + entry[i]['gsx$summary']['$t'] + '</td>';
       //html += '<td><button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Other Special Requirements" data-content="' + entry[i]['gsx$otherspecialrequirements']['$t'] + '">Special Requirements</button></td>';
-
-      html += '</tr>';
+       html += '</tr>';
     }
     html += '</tbody>';
     html += '</table>';
-
-    // output html
+     // output html
     $('#theTable').html(html);
     deferSpreadsheetTable.resolve();
   });

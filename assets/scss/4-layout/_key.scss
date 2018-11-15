@@ -1,0 +1,13 @@
+
+.key {
+  display: inline-block;
+  height: 1.5rem;
+  vertical-align: middle;
+  width: 1.5rem;
+  &__red {
+    background-color: $primary-red;
+  }
+  &__blue {
+    background-color: $primary-blue;
+  }
+}

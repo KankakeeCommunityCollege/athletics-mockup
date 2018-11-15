@@ -90,7 +90,9 @@ javascriptSchedule:
     - "!assets/js/schedule/stickyTableCustom.js"
     - "!assets/js/schedule/schedule-pages.js"
     - "!assets/js/schedule/initSchedulePage.js"
-    - "assets/js/schedule/scheduleTable.js"
+    - "!assets/js/schedule/scheduleTable.js"
+    - "!assets/js/schedule/scheduleTableDev.js"
+    - "assets/js/schedule/scheduleTableDevelopment.js"
 
 javascriptLazy:
   dest:
