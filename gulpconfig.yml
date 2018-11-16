@@ -63,10 +63,11 @@ javascript:
     - "assets/js/script/sliders.js" # custom slick slider JS
     - "!assets/js/script/schedule-old.js" # Custom JS for schedule pages
     - "assets/js/script/youtube-carousel.js" # Custom JS for YouTube video carousel
-    - "assets/js/script/init.js" # Initiate the schedule.js
+    - "!assets/js/script/init.js" # Initiate the schedule.js
     - "assets/js/script/lazyload.js" # lazload.js called within youtube-carousel.js
     - "assets/js/script/moreButton.js"
     - "assets/js/script/schedule.js"
+    - "assets/js/script/scheduleTableDevelopment.js"
 
 javascriptSlim:
   dest:

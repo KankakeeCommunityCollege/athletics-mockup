@@ -3,12 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Define some deferred variables of things to do later.
   var deferSpreadsheetTable = $.Deferred();
   var deferSearchForm = $.Deferred();
+  var deferSlick = $.Deferred();
 
   var currentUrl = window.location.href;  // Defin currentUrl as the user's current browser URL
   var noProto = currentUrl.replace(/(^\w+:|^)\/\//, '');  // Remove the http(s):// protocol from that URL
   var url = setSheetUrl(url);  // Define the variable url as: the function setSheetUrl() and passing the variable url through it.
-
-  console.log(noProto);
 
   var monthNames = [
     'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'
@@ -38,13 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var sheetNumber; // Defined as an empty variable
 
     // Set the sheet # based on which page the user is on:
-    if ( noProto.indexOf('/baseball/schedule') > -1 ) {
+    if ( noProto.indexOf('/baseball') > -1 ) {
       sheetNumber = 1;  // If on Baseball Schedule page set to '1'
-    } else if ( noProto.indexOf('/mens-basketball/schedule') > -1 ) {
+    } else if ( noProto.indexOf('/mens-basketball') > -1 ) {
       sheetNumber = 2;  // If on Men's Basketball Schedule page set to '2'
-    } else if ( noProto.indexOf('/womens-basketball/schedule') > -1 ) {
+    } else if ( noProto.indexOf('/womens-basketball') > -1 ) {
       sheetNumber = 3;  // If on Women's Basketball Schedule page set to '3'
-    } else if ( noProto.indexOf('/softball/schedule') > -1 ) {
+    } else if ( noProto.indexOf('/softball') > -1 ) {
       sheetNumber = 4;  // If on Women's Basketball Schedule page set to '3'
     }
     // Make sure the Google Sheet is public or set to Anyone with link can view
@@ -52,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     urlString = 'https://spreadsheets.google.com/feeds/list/' + spreadsheetID + '/' + sheetNumber + '/public/values?alt=json'; // build the url
     return urlString; // Kick-out the urlString variable as the URL to the appropriate Sheet.
   }
+  console.log(url);
 
   // A function to build-out the HTML for the table...
   // pulling from the URL of the appropriate Google Sheet:
@@ -155,7 +155,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // loop to build html output for each row
       var entry = data.feed.entry;  // Define 'entry' var from Google Sheet
-      entry.forEach(function(entry) { // Run a 'forEach()' loop on the entrys:
+
+      var games = [];
+      entry.forEach(function(entry) {
+        var gameDate = entry['gsx$start']['$t'],
+          d = new Date(),
+          gd = new Date(gameDate),
+          dt = d.getTime(),
+          gdt = gd.getTime();
+        if ( gdt >= dt ) {
+          games.push(entry);
+        }
+        return games;
+      });
+
+      games.forEach(function(entry) { // Run a 'forEach()' loop on the entrys:
 
         function setColor(colorCode) {
           // Set the background color for the first column in the table...
@@ -175,7 +189,10 @@ document.addEventListener('DOMContentLoaded', function() {
           // Add an ending date if there is one:
           endDateValue = entry['gsx$end']['$t']; // Define the var 'endDate' as the data in the 'end' column of the Google Sheet
           if ( endDateValue !== '' ) {  // If an endDate exists (is not a blank cell in the sheet) then do this:
-            endDateValue = ' - ' + endDateValue;  // Redefine 'endDate' as the cell's value
+            var d = new Date(endDateValue),
+              m = monthNames[d.getMonth()],
+              day = d.getDate();
+            endDateValue = '<span class="schedule-slider__dash d-block">&nbsp;-&nbsp;</span>' + '<span class="schedule-slider__m2 d-block">' + m + '</span><span class="schedule-slider__day2 d-block">' + day + '</span>';  // Redefine 'endDate' as the cell's value
           }
           return endDateValue;
         }
@@ -194,35 +211,90 @@ document.addEventListener('DOMContentLoaded', function() {
         var timeZone = checkForTimezone(entry);
 
         function buildSliderDivs() {
+          var startDate = entry['gsx$start']['$t'];
+          var sport;
+          var d = new Date(startDate),
+            m = monthNames[d.getMonth()],
+            day = d.getDate();
+          if ( day <= 9 ) {
+            day = '0' + day;
+          }
+          if ( noProto.indexOf('/mens-basketball') > -1 ) {
+            sport = 'Men&apos;s Basketball';
+          } else if ( noProto.indexOf( '/baseball' ) > -1 ) {
+            sport = 'Baseball';
+          } else if ( noProto.indexOf('/womens-basketball') > -1 ) {
+            sport = 'Women&apos;s Basketball';
+          } else if ( noProto.indexOf('/softball') > -1 ) {
+            sport = 'Softball';
+          }
           // Build-out rows of the table:
-          html += '<div>';  // Begin a the slider div
-          html += '<div style="background-color:' + color + ';color:#ffffff;">' + entry['gsx$start']['$t'] + endDate + '</td>'; // Date Column: gets the appropriate background color and an end-date added if it exists.
-          html += '<td align="left">' + entry['gsx$opponent']['$t'] + '</td>';  // Opponent Column
-          html += '<td>' + entry['gsx$time']['$t'] + timeZone + '</td>';  // Time  Column: If there is a timezone other than CST add the timezone in parenthesis
-          html += '<td align="left">' + entry['gsx$where']['$t'] + '</td>';  // Where Column
-          html += '<td>' + entry['gsx$status']['$t'] + '</td>';  // Status Column
-          html += '<td>' + entry['gsx$summary']['$t'] + '</td>';  // Summary Column
-          html += '</tr>'; // End the row
+          html += '<div><div class="row schedule-slider__row">';  // Begin a the slider div
+          html += '<div class="schedule-slider__l text-center col-2" style="background-color:' + color + '">';
+          html += '<span class="schedule-slider__m d-block">' + m + '</span><span class="schedule-slider__day d-block">' + day + '</span>' + endDate; // Date Column: gets the appropriate background color and an end-date added if it exists.
+          html += '</div><div class="schedule-slider__r col-10">';
+          html += '<div class="schedule-slider__sport--wrapper"><span class="schedule-slider__sport d-block">' + sport + '</span></div>';
+          html += '<span class="schedule-slider__opponent d-block">vs. ' + entry['gsx$opponent']['$t'] + '</span>';  // Opponent Column
+          html += '<span class="schedule-slider__where d-block">' + entry['gsx$where']['$t'] + '</span>';  // Where Column
+          html += '<span class="schedule-slider__time d-block">' + entry['gsx$time']['$t'] + timeZone + '</span>';  // Time  Column: If there is a timezone other than CST add the timezone in parenthesis
+          html += '</div></div></div>'; // End the row
         }
         buildSliderDivs();
       });  // End of forEach loop
-
-      // Tack on the closing table tags
-      html += '</tbody>';
-      html += '</table>';
-
+      html += '</div>';
       // output the html
-      $('#theTable').html(html);  // Inject the var 'html' into div w/ id="theTable".  (Var 'html' = string of text that makes up the table markup)
-      deferSpreadsheetTable.resolve();  // Resolve the deferSpreadsheetTable deferrement
+      $('#scheduleDiv').html(html);  // Inject the var 'html' into div w/ id="theTable".  (Var 'html' = string of text that makes up the table markup)
+      deferSlick.resolve();
     });
   }
 
+  $.when(deferSlick).done(function() {
+    initSliderSchedule();
+  });
 
+  function initSliderSchedule() {
+    $('.schedule-slider').slick({
+      dots: false,
+      infinite: false,
+      autoplay: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      adaptiveHeight: false,
+      prevArrow:'<img class="a-left control-c prev slick-prev" src="../assets/img/blue-prev.svg">',
+      nextArrow:'<img class="a-right control-c next slick-next" src="../assets/img/blue-next.svg">',
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+      ]
+    });
+  }
 
   //  A function that fires the spreadsheetTable() function IF the user is on a schedule page.
   function checkPageLocation() {
+    var h = 'althetics.kcc.edu',
+      lh = 'localhost:3000';
     if ( noProto.indexOf('/schedule') > -1 ) {  // If user's current URL contains '/schedule' in it, do:
       spreadsheetTable();  // Go-go gadget spreadsheetTable()!
+    } else if ( noProto.indexOf( lh + '/mens-basketball' ) > -1 || noProto.indexOf( h + '/mens-basketball' ) > -1 ) {
+      sliderSchedule();
+    } else if ( noProto.indexOf( lh + '/baseball' ) > -1 || noProto.indexOf( h + '/baseball' ) > -1 ) {
+      sliderSchedule();
+    } else if ( noProto.indexOf( lh + '/womens-basketball' ) > -1 || noProto.indexOf( h + '/womens-basketball' ) > -1 ) {
+      sliderSchedule();
+    } else if ( noProto.indexOf( lh + '/softball' ) > -1 || noProto.indexOf( h + '/softball' ) > -1 ) {
+      sliderSchedule();
     }
   }
   checkPageLocation();  // Fire the nuclear missiles!
