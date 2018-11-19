@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var currentUrl = window.location.href,  // Defin currentUrl as the user's current browser URL
     noProto = currentUrl.replace(/(^\w+:|^)\/\//, ''),  // Remove the http(s):// protocol from that URL
     url = setSheetUrl(url);  // Define the variable url as: the function setSheetUrl() and passing the variable url through it.
+    console.log(noProto);
   var monthNames = [ // Define an array of the months to convert JS # value of month into short text version
     'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'
   ];
@@ -279,21 +280,24 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   //  A function that fires the spreadsheetTable() function IF the user is on a schedule page and fires the sliderSchedule() function if the user is on a sport's landing page:
   function checkPageLocation() {
-    var h = 'althetics.kcc.edu', // Set h as the domain of the site
-      lh = 'localhost:3000'; // Set lh as the local domain of the site is when in dev.
+    var h = 'athletics.kcc.edu/', // Set h as the domain of the site
+      lh = 'localhost:3000/'; // Set lh as the local domain of the site is when in dev.
     if ( noProto.indexOf('/schedule') > -1 ) {  // If user's current URL contains '/schedule' in it, do:
       spreadsheetTable();  // Go-go gadget spreadsheetTable()!
-    } else if ( noProto.indexOf( lh + '/mens-basketball' ) > -1 || noProto.indexOf( h + '/mens-basketball' ) > -1 ) {
+    } else if ( noProto.indexOf( lh + 'mens-basketball' ) > -1 || noProto.indexOf( h + 'mens-basketball' ) > -1 ) {
       sliderSchedule();
-    } else if ( noProto.indexOf( lh + '/baseball' ) > -1 || noProto.indexOf( h + '/baseball' ) > -1 ) {
+    } else if ( noProto.indexOf( lh + 'baseball' ) > -1 || noProto.indexOf( h + 'baseball' ) > -1 ) {
       sliderSchedule();
-    } else if ( noProto.indexOf( lh + '/womens-basketball' ) > -1 || noProto.indexOf( h + '/womens-basketball' ) > -1 ) {
+    } else if ( noProto.indexOf( lh + 'womens-basketball' ) > -1 || noProto.indexOf( h + 'womens-basketball' ) > -1 ) {
       sliderSchedule();
-    } else if ( noProto.indexOf( lh + '/softball' ) > -1 || noProto.indexOf( h + '/softball' ) > -1 ) {
+    } else if ( noProto.indexOf( lh + 'softball' ) > -1 || noProto.indexOf( h + 'softball' ) > -1 ) {
       sliderSchedule();
-    } else if ( noProto.indexOf( lh + '/soccer' ) > -1 || noProto.indexOf( h + '/soccer' ) > -1 ) {
+    } else if ( noProto.indexOf( lh + 'soccer' ) > -1 || noProto.indexOf( h + 'soccer' ) > -1 ) {
       sliderSchedule();
-    } else if ( noProto.indexOf( lh + '/volleyball' ) > -1 || noProto.indexOf( h + '/volleyball' ) > -1 ) {
+    } else if ( noProto.indexOf( lh + 'volleyball' ) > -1 || noProto.indexOf( h + 'volleyball' ) > -1 ) {
+      sliderSchedule();
+    } else if ( noProto == h || noProto == lh ) {
+      console.log('MONKEYS');
       sliderSchedule();
     }
   }
