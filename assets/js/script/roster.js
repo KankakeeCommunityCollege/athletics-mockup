@@ -16,11 +16,22 @@ document.addEventListener('DOMContentLoaded', function() {
       'order': [] // Initial column ordering
     } );
     deferSearchForm.resolve();  // Resolve the deferSearchForm deferrement
+    lzFunction();
   });
   // Once deferSearchForm is resolved, do this function:
   $.when(deferSearchForm).done(function() {
     $('input[aria-controls="Data"]').attr('placeholder', 'Search Roster...');  // Set the dataTable's search field placeholder as "Search Schedule"
   });
+  function lzFunction(){
+    (function() {
+      [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+        img.setAttribute('src', img.getAttribute('data-src'));
+        img.onload = function() {
+          img.removeAttribute('data-src');
+        };
+      });
+    })();
+  }
   // Function to set the url of the Google Sheet to use:
   function setSheetUrl(urlString) { // Pass the variable 'urlString' through
     var spreadsheetID = '14pczY6IjNEy3zdqyNRhCZFLfWLEP4Uv3EGwIp7uXrLo';  // ID of the Google Sheets Spreadsheet
@@ -106,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
         function buildTableRows() {
           var nameId = entry['gsx$player']['$t'].replace(/\W/g, '').toLowerCase();
           html += '<div class="modal fade" id="' + nameId + '" tabindex="-1" role="dialog" aria-labelledby="' + nameId + '" aria-hidden="true"><div class="modal-dialog modal-dialog-centered" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalCenterTitle">' + entry['gsx$player']['$t'] + '</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body mx-auto mx-sm-0">';
-          html += '<img class="img-fluid float-none float-sm-left roster__img" src="../../uploads/roster-img/' + entry['gsx$image']['$t'] + '.jpg">';
+          html += '<img class="img-fluid float-none float-sm-left roster__img" src="../../assets/img/placeholder.png" data-src="../../uploads/roster-img/' + entry['gsx$image']['$t'] + '.jpg">';
           html += '<p><strong>Name: </strong>' + entry['gsx$player']['$t'] + '<br>';
           html += '<strong>Class: </strong>' + entry['gsx$class']['$t'] + '<br>';
           html += '<strong>Height: </strong>' + entry['gsx$height']['$t'] + '<br>';
