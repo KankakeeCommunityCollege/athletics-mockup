@@ -19,7 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
     $('#Data').DataTable( {
       responsive: true,
       paging: false,
-      'order': []
+      'order': [],
+      'columnDefs': [
+        { 'orderData':[0], 'targets': [1] },
+        {
+          'targets': [0],
+          'visible': false,
+          'searchable': false
+        },
+      ]
     } );
     deferSearchForm.resolve();  // Resolve the deferSearchForm deferrement
   });
@@ -63,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         html += '<table id="Data" class="display table table-striped table-hover" style="width:100%">';
         html += '<thead>';
         html += '<tr>';
+        html += '<th class="all">Sort</th>';
         html += '<th class="all">Date</th>';
         html += '<th class="all">Opponent</th>';
         html += '<th class="all">Time</th>';
@@ -125,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
             day = d.getDate();
           // Build-out rows of the table:
           html += '<tr>';  // Begin the row
+          html += '<td>' + entry['gsx$start']['$t'] + '</td>';  // Opponent Column
           html += '<td align="center" class="mx-auto" style="vertical-align:top;background-color:' + color + ';color:#ffffff;">' + m + ' ' + day + endDate + '</td>'; // Date Column: gets the appropriate background color and an end-date added if it exists.
           html += '<td align="left">' + entry['gsx$opponent']['$t'] + '</td>';  // Opponent Column
           html += '<td>' + entry['gsx$time']['$t'] + timeZone + '</td>';  // Time  Column: If there is a timezone other than CST add the timezone in parenthesis
