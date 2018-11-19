@@ -11,3 +11,10 @@
     background-color: $primary-blue;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .key__p {
+    // absolute positioning takes a block-level element out of the page/DOM flow.
+    position: absolute; // Move the key down into the table area by removing it from page flow.
+  }
+}
