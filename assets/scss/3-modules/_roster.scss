@@ -11,6 +11,7 @@
 @media screen and (min-width: 576px) {
   .roster__img {
     margin-right: 15px;
+    margin-left: 15px;
   }
 }
 
@@ -19,7 +20,7 @@
 }
 
 .roster__link::after {
-  content:"";
+  content: '';
   left: -25px;
   padding-bottom: 25px;
   padding-left: 50px;
