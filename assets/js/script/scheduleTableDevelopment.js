@@ -73,11 +73,11 @@ document.addEventListener('DOMContentLoaded', function() {
         html += '<tr>';
         html += '<th class="all">Sort</th>';
         html += '<th class="all">Date</th>';
-        html += '<th class="all">Opponent</th>';
+        html += '<th class="min-tablet-l">Opponent</th>';
         html += '<th class="all">Time</th>';
         html += '<th class="all">Where</th>';
-        html += '<th class="all">Status</th>';
-        html += '<th class="all">Summary</th>';
+        html += '<th class="desktop">Status</th>';
+        html += '<th class="desktop">Summary</th>';
         html += '</tr>';
         html += '</thead>';
         html += '<tbody>';
@@ -131,10 +131,11 @@ document.addEventListener('DOMContentLoaded', function() {
           var startDate = entry['gsx$start']['$t'];
           var d = new Date(startDate),
             m = monthNames[d.getMonth()],
-            day = d.getDate();
+            day = d.getDate(),
+            sortingDate = d.getTime();
           // Build-out rows of the table:
           html += '<tr>';  // Begin the row
-          html += '<td>' + entry['gsx$start']['$t'] + '</td>';  // Opponent Column
+          html += '<td>' + sortingDate + '</td>';  // Opponent Column
           html += '<td align="center" class="mx-auto" style="vertical-align:top;background-color:' + color + ';color:#ffffff;">' + m + ' ' + day + endDate + '</td>'; // Date Column: gets the appropriate background color and an end-date added if it exists.
           html += '<td align="left">' + entry['gsx$opponent']['$t'] + '</td>';  // Opponent Column
           html += '<td>' + entry['gsx$time']['$t'] + timeZone + '</td>';  // Time  Column: If there is a timezone other than CST add the timezone in parenthesis
