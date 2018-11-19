@@ -16,3 +16,13 @@
     margin-right: 0;
   }
 }
+
+.positioning__roster-table--m {
+  margin-top: 5px;
+}
+
+@media screen and (min-width: 992px) {
+  .positioning__roster-table--m {
+    margin-top: 185px;
+  }
+}

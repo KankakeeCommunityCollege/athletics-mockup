@@ -68,6 +68,7 @@ javascript:
     - "assets/js/script/moreButton.js"
     - "assets/js/script/schedule.js"
     - "assets/js/script/scheduleTableDevelopment.js"
+    - "assets/js/script/roster.js"
 
 javascriptSlim:
   dest:
