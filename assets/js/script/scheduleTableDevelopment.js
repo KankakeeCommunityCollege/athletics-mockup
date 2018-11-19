@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     urlString = 'https://spreadsheets.google.com/feeds/list/' + spreadsheetID + '/' + sheetNumber + '/public/values?alt=json'; // build the url
     return urlString; // Kick-out the urlString variable as the URL to the appropriate Sheet.
   }
-  console.log(url);
+  //console.log(url);
 
   // A function to build-out the HTML for the table...
   // pulling from the URL of the appropriate Google Sheet:
