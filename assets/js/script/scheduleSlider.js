@@ -73,11 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
           for ( var i=0; i<splitTime.length; i++ ) {
             hh = splitTime[0]*1+tzh;
             mm = splitTime[1];
-            console.log(hh);
-            console.log(mm);
           }
           var hours;
-          if ( tz !== null || tz !== ' ' || tz !== undefined || tz !== '' || tz == CST ) {
+          if ( tz !== null || tz !== ' ' || tz !== undefined || tz !== '' || tz == 'CST' ) {
             hours = hh + 6;
           } else if ( tz == 'EST' ) {
             hours = hh + 5;
