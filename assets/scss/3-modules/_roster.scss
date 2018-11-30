@@ -6,6 +6,7 @@
   border: solid 5px $primary-blue;
   margin-bottom: 15px;
   max-width: 300px;
+  width: 100%;
 }
 
 @media screen and (min-width: 576px) {
@@ -28,4 +29,11 @@
   padding-top: 25px;
   position: absolute;
   top: -12px;
+}
+
+.roster__player {
+  color: $primary-red;
+  font-family: $secondaryfont-stack;
+  font-size: 2rem;
+  font-weight: $secondaryfont-weight-black;
 }

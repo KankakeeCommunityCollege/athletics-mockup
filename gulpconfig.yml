@@ -67,8 +67,10 @@ javascript:
     - "assets/js/script/lazyload.js" # lazload.js called within youtube-carousel.js
     - "assets/js/script/moreButton.js"
     - "assets/js/script/schedule.js"
-    - "assets/js/script/scheduleTableDevelopment.js"
+    - "assets/js/script/scheduleTable.js"
+    - "assets/js/script/scheduleSlider.js"
     - "assets/js/script/roster.js"
+    - "assets/js/script/rosterModal.js"
 
 javascriptSlim:
   dest:

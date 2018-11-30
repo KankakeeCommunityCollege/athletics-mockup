@@ -2,96 +2,65 @@ var spData = null; // Set to null in-case the data is not there
 function doData(json) { // There's a callback on this function ( 'https://...&callback=doData' ) the end of the spreadsheet URL inside a script tag in the page
   spData = json.feed.entry; // Set it to the json feed of the sheet
 }
-
-function drawCell(tr, val) {
-  var td = document.createElement('td'); // Create an empty <td></td> element
-  tr.append(td);
-  td.append(val);
-  return td;
+function drawWSpan(div) {
+  var wspan = document.createElement('span');
+  div.append(wspan);
+  return wspan;
 }
-function drawTh(tr, val) {
-  var th = document.createElement('th'); // Create an empty <td></td> element
-  tr.append(th);
-  th.append(val);
-  return th;
+function drawCatSpan(wspan, val) {
+  var span = document.createElement('span'); // Create an empty <td></td> element
+  span.classList.add('roster__modal--category');
+  wspan.append(span);
+  span.append(val);
+  return span;
 }
-function drawHeadRow(thead, rowData) {
-  if (rowData == null) return null;
-  if (rowData.length == 0) return null;
-  var tr = document.createElement('tr');
-  thead.append(tr);
-  for(var c=0; c<rowData.length; c++) {
-    drawTh(tr, rowData[c]);
+function drawValSpan(wspan, val) {
+  var span = document.createElement('span'); // Create an empty <td></td> element
+  span.classList.add('roster__modal--value');
+  wspan.append(span);
+  span.append(val);
+  return span;
+}
+function drawBodyRow(mbody, mData) {
+  if (mData == null) return null;
+  if (mData.length == 0) return null;
+  var span = document.createElement('span');
+  mbody.append(span);
+  for(var c=0; c<mData.length; c++) {
+    drawSpan(span, mData[c]);
   }
   return tr;
 }
-function drawBodyRow(tbody, rowData) {
-  if (rowData == null) return null;
-  if (rowData.length == 0) return null;
-  var tr = document.createElement('tr');
-  tbody.append(tr);
-  for(var c=0; c<rowData.length; c++) {
-    drawCell(tr, rowData[c]);
-  }
-  return tr;
+function drawDiv(parent) {
+  var div = document.createElement('div');
+  div.classList.add('modal-body');
+  parent.append(div);
+  return div;
 }
-function drawTable(parent) {
-  var table = document.createElement("table");
-  table.classList.add('display', 'responsive', 'table', 'table-striped', 'table-hover');
-  table.setAttribute('id', 'responsiveTable');
-  table.setAttribute('width', '100%');
-  parent.append(table);
-  return table;
-}
-function drawHead(table) {
-  var thead = document.createElement('thead');
-  table.append(thead);
-  return thead;
-}
-function drawBody(table) {
-  var tbody = document.createElement('tbody');
-  table.append(tbody);
-  return tbody;
-}
-
 function readData(parent) {
   var data = spData;
-  var table = drawTable(parent);
-  var thead = drawHead(table);
-  var tbody = drawBody(table);
-  var rowData = [];
+  var div = drawDiv(parent);
+  var wspan = drawWSpan(div);
+  var mData = [];
+  var hData = [];
 
   for(var r=0; r<data.length; r++) {
     var cell = data[r]["gs$cell"];
     var val = cell["$t"];
-    var a = document.createElement('a');
-    var modalHref;
-    if ( cell.col == 3 && val !== 'Player' ) {
-      modalHref = '#' + val.replace(/[\W_]+/g, '');
-      a.setAttribute('href', modalHref);
-      a.setAttribute('data-toggle', 'modal');
-      a.append(val);
-      rowData.push(a);
-    }
+
     if ( cell.row == 2 ) {
       if ( cell.col == 1 ) {
-        drawHeadRow(thead, rowData);
-        rowData = [];
+        drawCatSpan(wspan, hData);
+        hData = [];
       }
     } else {
       if ( cell.col == 1 ) {
-        drawBodyRow(tbody, rowData);
-        rowData = [];
+        drawBodyRow(tbody, mData);
+        mData = [];
       }
     }
-    if ( cell.col != 3 ) {
-      rowData.push(val);
-    }
-    if ( cell.row == 1 && cell.col == 3 ) {
-      rowData.push(val);
-    }
   }
-  drawBodyRow(tbody, rowData);
+  drawBodyRow(tbody, mData);
 }
 
 
