@@ -40,7 +40,7 @@ function drawTable(parent) {
   table.classList.add('display', 'responsive', 'table', 'table-striped', 'table-hover');
   table.setAttribute('id', 'responsiveTable');
   table.setAttribute('width', '100%');
-  parent.appendChild(table);
+  parent.append(table);
   return table;
 }
 function drawHead(table) {
