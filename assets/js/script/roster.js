@@ -11,7 +11,11 @@ function drawCell(tr, val) {
 }
 function drawTh(tr, val) {
   var th = document.createElement('th'); // Create an empty <td></td> element
-  th.classList.add('th-selector');
+  var classes;
+  if ( val == 'Intended Major' || val == 'High School Coach' || val == 'Parents' || val == 'Siblings' || val == 'Bio' ) {
+    classes = 'none';
+  }
+  th.classList.add(classes);
   tr.append(th);
   th.append(val);
   return th;
@@ -105,6 +109,7 @@ function readData(parent) {
 document.addEventListener('DOMContentLoaded', function() {
   //var deferDataTables = $.Deferred();
   function fun() {
+
     readData(document.getElementById('data'));
     var th = document.querySelectorAll('.th-selector');
     for ( var t=0; t<th.length; t++ ) {
