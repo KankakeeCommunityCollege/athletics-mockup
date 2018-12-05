@@ -1,3 +1,10 @@
+function documentLoading() {
+  document.getElementById('page-top').addEventListener('load', loadingBar);
+  function loadingBar() {
+    document.getElementById('myMessage').innerHTML = 'LOADED';
+  }
+}
+documentLoading();
 document.addEventListener('DOMContentLoaded', function() {
   // Define some deferred variables of things to do later.
   var deferSlick = $.Deferred();
@@ -220,4 +227,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   checkPageLocation();  // Fire the nuclear missiles!
+
 });

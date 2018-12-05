@@ -62,8 +62,15 @@ document.addEventListener('DOMContentLoaded', function() {
           html += '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
         }
         function drawModalBody() {
+          var jerseyHTML,
+            num = entry['gsx$jersey']['$t'];
+          if ( num !== ' ' ) {
+            jerseyHTML = '#' + num;
+          } else {
+            jerseyHTML = '';
+          }
           html += '<div class="modal-body"><div class="text-center float-md-left"><img class="roster__img" alt="Photo of player ' + playerName + '" src="../../assets/img/placeholder.png" data-src="../../uploads/roster-img/' + entry['gsx$image']['$t'] + '.jpg"></div>';
-          html += '<h6 class="roster__player">#' + entry['gsx$jersey']['$t'] + ' ' + playerName + '</h6>';
+          html += '<h6 class="roster__player">' + jerseyHTML + ' ' + playerName + '</h6>';
           html += '<p><span><strong>POSITION: </strong>' + entry['gsx$position']['$t'] + '</span><br><span><strong>CLASS: </strong>' + entry['gsx$class']['$t'] + '</span><br>' + playerWeight + playerWeight + '<strong>HOMETOWN: </strong>' + entry['gsx$hometown']['$t'] + '</span><br><span><strong>HIGH SCHOOL: </strong>' + entry['gsx$highschool']['$t'] + '</span></p></div>';
         }
         function drawModalFooter() {

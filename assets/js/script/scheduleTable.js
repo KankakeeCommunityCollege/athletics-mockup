@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         html += '<th class="all">Where</th>'; // Display on all devices
         html += '<th class="desktop">Status</th>'; // Display on desktop and large devices only
         html += '<th class="desktop">Summary</th>'; // Display on desktop and large devices only
+        html += '<th class="desktop">Record</th>';
         html += '</tr>';
         html += '</thead>';
         html += '<tbody>';
@@ -84,6 +85,8 @@ document.addEventListener('DOMContentLoaded', function() {
       buildTableHead();
       // loop to build html output for each row (build the data into the table)
       var entry = data.feed.entry;  // Define 'entry' var from Google Sheet
+      var wCount = 0,
+        lCount = 0;
       entry.forEach(function(entry) { // Run a 'forEach()' loop on the entrys:
         // Set the background color for the first column in the table:
         function setColor(colorCode) { // Home games get a red background and away games get a blue background
@@ -123,18 +126,29 @@ document.addEventListener('DOMContentLoaded', function() {
         // Function to wrap the incoming data in HTML table markup:
         function buildTableRows() {
           var startDate = entry['gsx$start']['$t'];  // Define vars for: 'start' column
+          var status = entry['gsx$status']['$t'];
           var d = new Date(startDate), // Define 'd' as a JS date object created from the dates in the 'start' column
             m = monthNames[d.getMonth()], // Define 'm' as the start date converted to text (e.g. Apr.) by running it throught he monthNames[] array
             day = d.getDate(), // Define 'day' as the date for the game
             sortingDate = d.getTime(); // Define 'sortingDate' as the JS getTime() values of the dates
+          if ( status == 'W' ) {
+            wCount += 1;
+          } else if ( status == 'L' ) {
+            lCount += 1;
+          }
           html += '<tr>';  // Begin the row
           html += '<td>' + sortingDate + '</td>';  // Opponent Column
           html += '<td align="center" class="mx-auto" style="vertical-align:top;background-color:' + color + ';color:#ffffff;">' + m + ' ' + day + endDate + '</td>'; // Date Column: gets the appropriate background color and an end-date tacked-on if it exists.
           html += '<td align="left">' + entry['gsx$opponent']['$t'] + '</td>';  // Opponent Column
           html += '<td>' + entry['gsx$time']['$t'] + timeZone + '</td>';  // Time  Column: If there is a timezone other than CST, add the timezone in parenthesis
           html += '<td align="left">' + entry['gsx$where']['$t'] + '</td>';  // Where Column
-          html += '<td>' + entry['gsx$status']['$t'] + '</td>';  // Status Column
-          html += '<td>' + entry['gsx$summary']['$t'] + '</td>';  // Summary Column
+          html += '<td class="schedule-page__align-center--offset" align="center">' + entry['gsx$status']['$t'] + '</td>';  // Status Column
+          html += '<td class="schedule-page__align-center--offset" align="center">' + entry['gsx$summary']['$t'] + '</td>';  // Summary Column
+          if ( status == 'W' || status == 'L' || status == 'Canceled' ) {
+            html += '<td class="schedule-page__align-center--offset" align="center">' + wCount + ' - ' + lCount + '</td>';
+          } else {
+            html += '<td class="schedule-page__align-center--offset" align="center">' + ' ' + '</td>';
+          }
           html += '</tr>'; // End the row
         }
         buildTableRows();

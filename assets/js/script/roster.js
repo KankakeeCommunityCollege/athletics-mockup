@@ -66,6 +66,9 @@ function readData(parent) {
     var val = cell["$t"];
     var a = document.createElement('a');
     var modalHref;
+    if ( val == '#NA!' ) {
+      val = ' ';
+    }
     if ( cell.col == 3 && val !== 'Player' ) {
       modalHref = '#' + val.replace(/[\W_]+/g, '');
       a.setAttribute('href', modalHref);
@@ -107,18 +110,29 @@ document.addEventListener('DOMContentLoaded', function() {
         element.classList.add('min-tablet-l');
       } else if ( element.innerHTML == 'Hometown' || element.innerHTML == 'High School' || element.innerHTML == 'Height' || element.innerHTML == 'Weight' ) {
         element.classList.add('desktop');
-      } else if ( element.innerHTML == 'High School Coach' || element.innerHTML == 'Parents' || element.innerHTML == 'Siblings' || element.innerHTML == 'Intended Major' ) {
+      } else if ( element.innerHTML == 'High School Coach' || element.innerHTML == 'Parents' || element.innerHTML == 'Siblings' || element.innerHTML == 'Intended Major' || element.innerHTML == 'Bio' ) {
         element.classList.add('none');
       }
     });
-    $('#responsiveTable').DataTable( {
-      responsive: true, // Activate responsive powers GO!
-      paging: false, // Don't paginate. Schedule schould all be on one page
-      'order': [], // Initial column ordering
-      'columnDefs': [
-        { 'visible': false, 'targets': 0 }
-      ]
-    } );
+    function dataTablesGo() {
+      var deferSearch = $.Deferred();
+      $.when(deferSearch).done(function() {
+        $('input[type="search"].form-control').attr('placeholder', 'Search Roster...');
+      });
+      function addData() {
+        $('#responsiveTable').DataTable( {
+          responsive: true, // Activate responsive powers GO!
+          paging: false, // Don't paginate. Schedule schould all be on one page
+          'order': [], // Initial column ordering
+          'columnDefs': [
+            { 'visible': false, 'targets': 0 }
+          ]
+        } );
+        deferSearch.resolve();
+      }
+      addData();
+    }
+    dataTablesGo();
   }
   function toRosterOrNotToRosterThatIsTheQuestion() {
     var currentUrl = window.location.href,  // Defin currentUrl as the user's current browser URL
