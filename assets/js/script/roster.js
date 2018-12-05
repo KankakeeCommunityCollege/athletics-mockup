@@ -111,18 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
   function fun() {
 
     readData(document.getElementById('data'));
-    var th = document.querySelectorAll('.th-selector');
-    for ( var t=0; t<th.length; t++ ) {
-      if ( [t].innerHTML == 'Jersey' || [t].innerHTML == 'Player' || [t].innerHTML == 'Position' ) {
-        [t].classList.add('all');
-      } else if ( [t].innerHTML == 'Class' ) {
-        [t].classList.add('min-tablet-l');
-      } else if ( [t].innerHTML == 'Hometown' || [t].innerHTML == 'High School' || [t].innerHTML == 'Height' || [t].innerHTML == 'Weight' ) {
-        [t].classList.add('desktop');
-      } else if ( [t].innerHTML == 'High School Coach' || [t].innerHTML == 'Parents' || [t].innerHTML == 'Siblings' || [t].innerHTML == 'Intended Major' || [t].innerHTML == 'Bio' ) {
-        [t].classList.add('none');
-      }
-    }
     function dataTablesGo() {
       var deferSearch = $.Deferred();
       $.when(deferSearch).done(function() {
