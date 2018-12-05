@@ -11,6 +11,7 @@ function drawCell(tr, val) {
 }
 function drawTh(tr, val) {
   var th = document.createElement('th'); // Create an empty <td></td> element
+  th.classList.add('th-selector');
   tr.append(th);
   th.append(val);
   return th;
@@ -102,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //var deferDataTables = $.Deferred();
   function fun() {
     readData(document.getElementById('data'));
-    var th = document.querySelectorAll('th');
+    var th = document.querySelectorAll('.th-selector');
     th.forEach(function(element) {
       if ( element.innerHTML == 'Jersey' || element.innerHTML == 'Player' || element.innerHTML == 'Position' ) {
         element.classList.add('all');
