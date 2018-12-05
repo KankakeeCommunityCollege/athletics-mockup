@@ -104,17 +104,17 @@ document.addEventListener('DOMContentLoaded', function() {
   function fun() {
     readData(document.getElementById('data'));
     var th = document.querySelectorAll('.th-selector');
-    th.forEach(function(element) {
-      if ( element.innerHTML == 'Jersey' || element.innerHTML == 'Player' || element.innerHTML == 'Position' ) {
-        element.classList.add('all');
-      } else if ( element.innerHTML == 'Class' ) {
-        element.classList.add('min-tablet-l');
-      } else if ( element.innerHTML == 'Hometown' || element.innerHTML == 'High School' || element.innerHTML == 'Height' || element.innerHTML == 'Weight' ) {
-        element.classList.add('desktop');
-      } else if ( element.innerHTML == 'High School Coach' || element.innerHTML == 'Parents' || element.innerHTML == 'Siblings' || element.innerHTML == 'Intended Major' || element.innerHTML == 'Bio' ) {
-        element.classList.add('none');
+    for ( var t=0; t<th.length; t++ ) {
+      if ( [t].innerHTML == 'Jersey' || [t].innerHTML == 'Player' || [t].innerHTML == 'Position' ) {
+        [t].classList.add('all');
+      } else if ( [t].innerHTML == 'Class' ) {
+        [t].classList.add('min-tablet-l');
+      } else if ( [t].innerHTML == 'Hometown' || [t].innerHTML == 'High School' || [t].innerHTML == 'Height' || [t].innerHTML == 'Weight' ) {
+        [t].classList.add('desktop');
+      } else if ( [t].innerHTML == 'High School Coach' || [t].innerHTML == 'Parents' || [t].innerHTML == 'Siblings' || [t].innerHTML == 'Intended Major' || [t].innerHTML == 'Bio' ) {
+        [t].classList.add('none');
       }
-    });
+    }
     function dataTablesGo() {
       var deferSearch = $.Deferred();
       $.when(deferSearch).done(function() {
