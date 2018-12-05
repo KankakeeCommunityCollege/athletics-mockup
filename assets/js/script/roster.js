@@ -36,11 +36,11 @@ function drawBodyRow(tbody, rowData) {
   return tr;
 }
 function drawTable(parent) {
-  var table = document.createElement("table");
+  var table = document.createElement('table');
   table.classList.add('display', 'responsive', 'table', 'table-striped', 'table-hover');
   table.setAttribute('id', 'responsiveTable');
   table.setAttribute('width', '100%');
-  parent.append(table);
+  parent.appendChild(table);
   return table;
 }
 function drawHead(table) {
