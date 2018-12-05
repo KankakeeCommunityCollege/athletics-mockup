@@ -1,35 +1,19 @@
 ---
-layout: sub-nav
+layout: table-sort
 baseurl: ../../
 title: Softball Roster
 description: "KCC offers intercollegiate men's basketball, women's basketball, baseball, softball, men's soccer and volleyball. The Cavaliers compete in Region IV of the NJCAA."
 base: softball
+sheet_key: "14pczY6IjNEy3zdqyNRhCZFLfWLEP4Uv3EGwIp7uXrLo"
+sheet_number: "5"
 ---
 
-<section id="table-area" class="roster-container">
-  <div class="container">
+<section class="positioning__roster-table--m" id="table-area">
+  <div class="container container__table">
     <div class="row">
       <div class="col-md-12">
-        {% assign mydata=site.data.softball-roster %}
-        <div class="table-responsive">
-          <table class="table table-striped table-hover">
-              <!-- <caption>Table caption</caption> -->
-              <thead>
-              {% for column in mydata[0] %}
-                  <th>{{ column[0] }}</th>
-              {% endfor %}
-              </thead>
-              <tbody>
-              {% for row in mydata %}
-                  <tr>
-                  {% for cell in row %}
-                      <td>{{ cell[1] }}</td>
-                  {% endfor %}
-                  </tr>
-              {% endfor %}
-              </tbody>
-          </table>
-        </div>
+        <div id="data"></div>
+        <div id="modalDiv"></div>
       </div>
     </div>
   </div>

@@ -9,6 +9,7 @@
 @import '1-base/tables';
 @import '1-base/buttons';
 @import '1-base/lists';
+@import '1-base/datatables';
 
 // Modular components
 @import '3-modules/mega-nav';
@@ -25,12 +26,14 @@
 @import '3-modules/alert';
 @import '3-modules/error';
 @import '3-modules/season-preview';
+@import '3-modules/schedule-slider';
 
 // Layout items
 // @import "4-layout/header";
 @import '4-layout/positioning';
 @import '4-layout/banners';
 @import '4-layout/svg';
+@import '4-layout/key';
 
 // Page specific styling
 // Home/index page

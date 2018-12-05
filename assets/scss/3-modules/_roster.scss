@@ -1,3 +1,39 @@
 .roster-container {
   margin-top: 190px;
 }
+
+.roster__img {
+  border: solid 5px $primary-blue;
+  margin-bottom: 15px;
+  max-width: 300px;
+  width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+  .roster__img {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+
+.roster__link {
+  position: relative;
+}
+
+.roster__link::after {
+  content: '';
+  left: -25px;
+  padding-bottom: 25px;
+  padding-left: 50px;
+  padding-right: 75px;
+  padding-top: 25px;
+  position: absolute;
+  top: -12px;
+}
+
+.roster__player {
+  color: $primary-red;
+  font-family: $secondaryfont-stack;
+  font-size: 2rem;
+  font-weight: $secondaryfont-weight-black;
+}

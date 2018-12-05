@@ -63,10 +63,14 @@ javascript:
     - "assets/js/script/sliders.js" # custom slick slider JS
     - "!assets/js/script/schedule-old.js" # Custom JS for schedule pages
     - "assets/js/script/youtube-carousel.js" # Custom JS for YouTube video carousel
-    - "assets/js/script/init.js" # Initiate the schedule.js
+    - "!assets/js/script/init.js" # Initiate the schedule.js
     - "assets/js/script/lazyload.js" # lazload.js called within youtube-carousel.js
     - "assets/js/script/moreButton.js"
     - "assets/js/script/schedule.js"
+    - "assets/js/script/scheduleTable.js"
+    - "assets/js/script/scheduleSlider.js"
+    - "assets/js/script/roster.js"
+    - "assets/js/script/rosterModal.js"
 
 javascriptSlim:
   dest:
@@ -86,10 +90,13 @@ javascriptSchedule:
   filename: "schedule.min.js"
   notification: "Running JavaScript Schedule"
   src:
-    - "assets/js/schedule/stickyTableHeader.js"
-    - "assets/js/schedule/stickyTableCustom.js"
-    - "assets/js/schedule/schedule-pages.js"
-    - "assets/js/schedule/initSchedulePage.js"
+    - "!assets/js/schedule/stickyTableHeader.js"
+    - "!assets/js/schedule/stickyTableCustom.js"
+    - "!assets/js/schedule/schedule-pages.js"
+    - "!assets/js/schedule/initSchedulePage.js"
+    - "!assets/js/schedule/scheduleTable.js"
+    - "!assets/js/schedule/scheduleTableDev.js"
+    - "assets/js/schedule/scheduleTableDevelopment.js"
 
 javascriptLazy:
   dest:
@@ -118,6 +125,12 @@ watch: # 'Watch' for changes in all the following:
   javascript:
     - "assets/js/script/all.min.js"
     - "assets/js/script/*.js"
+    - "assets/js/schedule/schedule.min.js"
+    - "assets/js/schedule/*.js"
+    - "assets/js/lazy/lazyLoad.min.js"
+    - "assets/js/lazy/*.js"
+    - "assets/js/slim/all.slim.min.js"
+    - "assets/js/slim/*.js"
   sass: "assets/scss/**/*.scss"
   contentSass: "assets/scss/**/*.scss"
   pages:

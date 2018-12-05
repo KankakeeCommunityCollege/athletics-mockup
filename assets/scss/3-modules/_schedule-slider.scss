@@ -1,0 +1,94 @@
+
+.schedule-slider__row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.schedule-slider__l {
+  color: $white;
+  height: 130px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  vertical-align: top;
+}
+
+.schedule-slider__m,
+.schedule-slider__m2 {
+  font-family: $secondaryfont-stack;
+  font-size: .95rem;
+  letter-spacing: .025rem;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+.schedule-slider__day,
+.schedule-slider__day2 {
+  font-family: $secondaryfont-stack;
+  font-size: 2.2rem;
+  letter-spacing: .025rem;
+  line-height: 1;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+.schedule-slider__dash {
+  line-height: .15;
+  margin-bottom: 3px;
+}
+
+.schedule-slider__r {
+  background-color: $white;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.schedule-slider__sport {
+  color: $grey-1;
+  font-family: $secondaryfont-stack;
+  font-weight: $secondaryfont-weight-boldish;
+  font-size: .9rem;
+  letter-spacing: .025rem;
+  margin-top: 3px;
+  text-transform: uppercase;
+
+  &--wrapper {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      border-bottom: 1px solid $grey-1;
+      bottom: -1px;
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 80%;
+    }
+  }
+}
+
+.schedule-slider__opponent {
+  color: $primary-red;
+  font-family: $secondaryfont-stack;
+  font-weight: $secondaryfont-weight-bold;
+  font-size: 1.2rem;
+  line-height: 1;
+  letter-spacing: .025rem;
+  margin-bottom: .12rem;
+  margin-top: 3px;
+}
+
+.schedule-slider__where {
+  color: $grey-1;
+  line-height: 1;
+  margin-bottom: .25rem;
+}
+
+.schedule-slider__time {
+  color: $primary-red;
+  font-family: $secondaryfont-stack;
+  font-weight: $secondaryfont-weight-bold;
+  font-size: .9rem;
+  line-height: 1;
+}

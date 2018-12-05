@@ -151,22 +151,22 @@ button#load-more {
 }
 
 .slick-next {
-  right: 20px;
+  right: -21px;
   z-index: 999;
 }
 
 .slick-prev {
-  left: 20px;
+  left: -21px;
   z-index: 999;
 }
 
 @media screen and (min-width: 600px) {
   .slick-next {
-    right: -22px;
+    right: -42px;
   }
 
   .slick-prev {
-    left: -22px;
+    left: -42px;
   }
 }
 
@@ -181,4 +181,9 @@ button#load-more {
 .yt_player-positioning {
   margin-left: auto;
   margin-right: auto;
+}
+
+#scheduleDiv {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
