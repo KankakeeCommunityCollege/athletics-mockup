@@ -38,9 +38,12 @@ function drawBodyRow(tbody, rowData) {
 }
 function drawTable(parent) {
   var table = document.createElement('table');
-  table.classList.add('display', 'responsive', 'table', 'table-striped', 'table-hover');
-  table.setAttribute('id', 'responsiveTable');
+  table.classList.add('display');
+  table.classList.add('table');
+  table.classList.add('table-striped');
+  table.classList.add('table-hover');
   table.setAttribute('width', '100%');
+  table.setAttribute('id', 'responsiveTable');
   parent.append(table);
   return table;
 }
