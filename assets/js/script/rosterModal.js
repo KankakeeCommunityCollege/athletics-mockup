@@ -64,6 +64,27 @@ document.addEventListener('DOMContentLoaded', function() {
         function drawModalBody() {
           var jerseyHTML,
             num = entry['gsx$jersey']['$t'];
+          var extraCols = [ 'highschoolcoach', 'parents', 'siblings', 'bio' ];
+          var extraGSX = [];
+          extraCols.forEach(function(col) {
+            var thisGSX = "entry['gsx$" + col + "']";
+            console.log(thisGSX);
+            if ( thisGSX ) {
+              extraGSX.push(thisGSX['$t']);
+            }
+          });
+          console.log(extraGSX);
+          var extraHTML = '';
+          var bio = entry['gsx$bio'],
+            hsCoach = entry['gsx$highschoolcoach'];
+          if ( bio ) {
+            var dat = bio['$t'];
+            extraHTML += '<span><strong>BIO:<br>' + '</strong>' + dat + '</span><br>';
+          } else if ( hsCoach ) {
+
+          } else {
+            extraHTML += '';
+          }
           if ( num !== ' ' ) {
             jerseyHTML = '#' + num;
           } else {
@@ -71,7 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
           }
           html += '<div class="modal-body"><div class="text-center float-md-left"><img class="roster__img" alt="Photo of player ' + playerName + '" src="../../assets/img/placeholder.png" data-src="../../uploads/roster-img/' + entry['gsx$image']['$t'] + '.jpg"></div>';
           html += '<h6 class="roster__player">' + jerseyHTML + ' ' + playerName + '</h6>';
-          html += '<p><span><strong>POSITION: </strong>' + entry['gsx$position']['$t'] + '</span><br><span><strong>CLASS: </strong>' + entry['gsx$class']['$t'] + '</span><br>' + playerWeight + playerWeight + '<strong>HOMETOWN: </strong>' + entry['gsx$hometown']['$t'] + '</span><br><span><strong>HIGH SCHOOL: </strong>' + entry['gsx$highschool']['$t'] + '</span></p></div>';
+          html += '<p><span><strong>POSITION: </strong>' + entry['gsx$position']['$t'] + '</span><br><span><strong>CLASS: </strong>' + entry['gsx$class']['$t'] + '</span><br>' + playerWeight + playerWeight + '<strong>HOMETOWN: </strong>' + entry['gsx$hometown']['$t'] + '</span><br><span><strong>HIGH SCHOOL: </strong>' + entry['gsx$highschool']['$t'] + '</span><br>';
+          html += extraHTML;
+          html += '</p></div>';
         }
         function drawModalFooter() {
           html += '<div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div></div></div></div>';
