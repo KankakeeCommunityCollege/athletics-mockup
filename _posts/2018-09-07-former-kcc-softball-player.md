@@ -4,7 +4,6 @@ date: 2018-09-07 07:00:00
 categories:
   - softball
   - news
-  - general
 sport-category: General
 news_thumb_image: /uploads/roan.jpg
 description: Former KCC Softball Player
