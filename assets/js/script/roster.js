@@ -12,8 +12,9 @@ function drawCell(tr, val) {
 function drawTh(tr, val) {
   var th = document.createElement('th'); // Create an empty <td></td> element
   var classes;
+  var hideBio;
   if ( val == 'Intended Major' || val == 'High School Coach' || val == 'Parents' || val == 'Siblings' || val == 'Bio' ) {
-    classes = 'none';
+    classes = 'never';
   }
   th.classList.add(classes);
   tr.append(th);
