@@ -77,8 +77,20 @@ document.addEventListener('DOMContentLoaded', function() {
           var extraGSX = '';
           var extraCols = [entry['gsx$highschoolcoach'], entry['gsx$parents'], entry['gsx$siblings'], entry['gsx$bio']];
           extraCols.forEach(function(col) {
+
             if ( col ) {
-              extraGSX += col['$t'];
+              var extraColTitle = ['High School Coach', 'Parents', 'Siblings', 'Bio'];
+              var thisTitle;
+              if ( col == entry['gsx$highschoolcoach'] ) {
+                thisTitle = '<span><strong>' + extraColTitle[0] + ':</strong> ';
+              } else if ( col == entry['gsx$parents'] ) {
+                thisTitle = '<span><strong>' + extraColTitle[1] + ':</strong> ';
+              } else if ( col == entry['gsx$siblings'] ) {
+                thisTitle = '<span><strong>' + extraColTitle[2] + ':</strong> ';
+              } else if ( col == entry['gsx$bio'] ) {
+                thisTitle = '<span><strong>' + extraColTitle[3] + ':</strong> ';
+              }
+              extraGSX += thisTitle + col['$t'] + '</span><br>';
             }
           });
           var extraHTML = '';
