@@ -71,6 +71,7 @@ javascript:
     - "assets/js/script/scheduleSlider.js"
     - "assets/js/script/roster.js"
     - "assets/js/script/rosterModal.js"
+    - "assets/js/script/footerDate.js"
 
 javascriptSlim:
   dest:
