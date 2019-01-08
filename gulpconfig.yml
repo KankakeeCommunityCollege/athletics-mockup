@@ -80,9 +80,9 @@ javascriptSlim:
   filename: "all.slim.min.js"
   notification: "Running JavaScript Slim"
   src:
+    - "assets/js/slim/footerDate.js"
     - "assets/js/slim/lazyload.js" # lazload.js called within youtube-carousel.js
     - "assets/js/slim/accordian.js"
-    - "!assets/js/slim/table.js"
 
 javascriptSchedule:
   dest:
