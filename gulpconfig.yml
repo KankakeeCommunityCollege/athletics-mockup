@@ -60,53 +60,49 @@ javascript:
   filename: "all.min.js"
   notification: "Running JavaScript"
   src:
-    - "assets/js/script/sliders.js" # custom slick slider JS
-    - "!assets/js/script/schedule-old.js" # Custom JS for schedule pages
-    - "assets/js/script/youtube-carousel.js" # Custom JS for YouTube video carousel
-    - "!assets/js/script/init.js" # Initiate the schedule.js
     - "assets/js/script/lazyload.js" # lazload.js called within youtube-carousel.js
+    - "assets/js/script/sliders.js" # custom slick slider JS
     - "assets/js/script/moreButton.js"
-    - "assets/js/script/schedule.js"
-    - "assets/js/script/scheduleTable.js"
-    - "assets/js/script/scheduleSlider.js"
-    - "assets/js/script/roster.js"
-    - "assets/js/script/rosterModal.js"
+    - "assets/js/script/accordian.js"
     - "assets/js/script/footerDate.js"
 
-javascriptSlim:
+javascriptytCarousel:
   dest:
-    jekyllRoot: "assets/js/slim/"
-    buildDir: "_site/assets/js/slim/"
-  filename: "all.slim.min.js"
-  notification: "Running JavaScript Slim"
+    jekyllRoot: "assets/js/ytCarousel/"
+    buildDir: "_site/assets/js/ytCarousel/"
+  filename: "ytCarousel.min.js"
+  notification: "Running ytCarousel JavaScript"
   src:
-    - "assets/js/slim/footerDate.js"
-    - "assets/js/slim/lazyload.js" # lazload.js called within youtube-carousel.js
-    - "assets/js/slim/accordian.js"
+    - "assets/js/ytCarousel/youtube-carousel.js"
+    - "assets/js/ytCarousel/schedule.js"
 
-javascriptSchedule:
+javascriptGames:
   dest:
-    jekyllRoot: "assets/js/schedule/"
-    buildDir: "_site/assets/js/schedule/"
-  filename: "schedule.min.js"
-  notification: "Running JavaScript Schedule"
+    jekyllRoot: "assets/js/games/"
+    buildDir: "_site/assets/js/games/"
+  filename: "scheduleSlider.min.js"
+  notification: "Running JavaScript ScheduleSlider"
   src:
-    - "!assets/js/schedule/stickyTableHeader.js"
-    - "!assets/js/schedule/stickyTableCustom.js"
-    - "!assets/js/schedule/schedule-pages.js"
-    - "!assets/js/schedule/initSchedulePage.js"
-    - "!assets/js/schedule/scheduleTable.js"
-    - "!assets/js/schedule/scheduleTableDev.js"
-    - "assets/js/schedule/scheduleTableDevelopment.js"
+    - "assets/js/games/scheduleSlider.js"
 
-javascriptLazy:
+javascriptTable:
   dest:
-    jekyllRoot: "assets/js/lazy/"
-    buildDir: "_site/assets/js/lazy/"
-  filename: "lazyLoad.min.js"
-  notification: "Running Lazy Load JavaScript"
+    jekyllRoot: "assets/js/table/"
+    buildDir: "_site/assets/js/table/"
+  filename: "scheduleTable.min.js"
+  notification: "Running scheduleTable JavaScript"
   src:
-    - "assets/js/lazy/lazyLoadOnly.js"
+    - "assets/js/table/scheduleTable.js"
+
+javascriptRoster:
+  dest:
+    jekyllRoot: "assets/js/roster/"
+    buildDir: "_site/assets/js/roster/"
+  filename: "roster.min.js"
+  notification: "Running Roster JavaScript"
+  src:
+    - "assets/js/roster/roster.js"
+    - "assets/js/roster/rosterModal.js"
 
 sitemap:
   src:

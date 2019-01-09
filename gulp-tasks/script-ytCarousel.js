@@ -17,14 +17,12 @@ function loadConfig() {
 var config = loadConfig();
 module.exports = config;
 
-
-
-gulp.task('javascriptGames', function() {
-  browserSync.notify(config.javascriptGames.notification);
-  return gulp.src(config.javascriptGames.src)
+gulp.task('javascriptytCarousel', function() {
+  browserSync.notify(config.javascriptytCarousel.notification);
+  return gulp.src(config.javascriptytCarousel.src)
     .pipe(sourcemaps.init())
-    .pipe(concat(config.javascriptGames.filename))
+    .pipe(concat(config.javascriptytCarousel.filename))
     .pipe(gulpif(PRODUCTION, uglify())) // Uglify me captain! (on production builds only)
-    .pipe(gulp.dest(config.javascriptGames.dest.jekyllRoot))
-    .pipe(gulp.dest(config.javascriptGames.dest.buildDir));
+    .pipe(gulp.dest(config.javascriptytCarousel.dest.jekyllRoot))
+    .pipe(gulp.dest(config.javascriptytCarousel.dest.buildDir));
 });

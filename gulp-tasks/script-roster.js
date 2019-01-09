@@ -17,12 +17,14 @@ function loadConfig() {
 var config = loadConfig();
 module.exports = config;
 
-gulp.task('javascriptSlim', function() {
-  browserSync.notify(config.javascriptSlim.notification);
-  return gulp.src(config.javascriptSlim.src)
+
+
+gulp.task('javascriptRoster', function() {
+  browserSync.notify(config.javascriptRoster.notification);
+  return gulp.src(config.javascriptRoster.src)
     .pipe(sourcemaps.init())
-    .pipe(concat(config.javascriptSlim.filename))
+    .pipe(concat(config.javascriptRoster.filename))
     .pipe(gulpif(PRODUCTION, uglify())) // Uglify me captain! (on production builds only)
-    .pipe(gulp.dest(config.javascriptSlim.dest.jekyllRoot))
-    .pipe(gulp.dest(config.javascriptSlim.dest.buildDir));
+    .pipe(gulp.dest(config.javascriptRoster.dest.jekyllRoot))
+    .pipe(gulp.dest(config.javascriptRoster.dest.buildDir));
 });

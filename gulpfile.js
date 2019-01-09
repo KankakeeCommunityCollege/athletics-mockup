@@ -20,7 +20,7 @@ var config = loadConfig();
 module.exports = config;
 
 gulp.task('build', function(done) { // This runs the following tasks (above): clean (cleans _site/), jekyll-build (jekyll does its thing), SASS and JS tasks (compile them), copy (copies static assets like images to the site build)
-  sequence( 'clean', 'jekyll-build', 'sitemap', ['sass', 'contentSass', 'javascript', 'javascriptSlim', 'javascriptSchedule', 'javascriptLazy'], 'copy', done);
+  sequence( 'clean', 'jekyll-build', 'sitemap', ['sass', 'contentSass', 'javascript', 'javascriptytCarousel', 'javascriptGames', 'javascriptTable', 'javascriptRoster'], 'copy', done);
 });
 
 gulp.task('default', function(done) { // Default gulp task (run via 'gulp' in terminal)
@@ -30,9 +30,10 @@ gulp.task('default', function(done) { // Default gulp task (run via 'gulp' in te
 gulp.task('watch', function() { // Watch for changes to be piped into browserSync on saving of files:
   gulp.watch(config.watch.pages, ['build', browserSync.reload]); // Watch for new pages and changes.
   gulp.watch(config.watch.javascript, ['javascript', browserSync.reload]); // JS changes
-  gulp.watch(config.watch.javascriptSlim, ['javascriptSlim', browserSync.reload]); // JS changes
-  gulp.watch(config.watch.javascriptSchedule, ['javascriptSchedule', browserSync.reload]); // JS changes
-  gulp.watch(config.watch.javascriptLazy, ['javascriptLazy', browserSync.reload]); // JS changes
+  gulp.watch(config.watch.javascriptytCarousel, ['javascriptytCarousel', browserSync.reload]); // JS changes
+  gulp.watch(config.watch.javascriptGames, ['javascriptGames', browserSync.reload]); // JS changes
+  gulp.watch(config.watch.javascriptTable, ['javascriptTable', browserSync.reload]); // JS changes
+  gulp.watch(config.watch.javascriptRoster, ['javascriptRoster', browserSync.reload]); // JS changes
   gulp.watch(config.watch.sass, ['sass', browserSync.reload]); // SASS/SCSS changes
   gulp.watch(config.watch.contentSass, ['contentSass', browserSync.reload]); // SASS/SCSS changes
   gulp.watch(config.watch.images, ['copy', browserSync.reload]); // Watch for new static assets like images
