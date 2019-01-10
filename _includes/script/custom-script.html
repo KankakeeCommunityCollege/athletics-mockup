@@ -1,8 +1,2 @@
 <!-- custom compiled and minified javascript -->
 <script src="{{page.baseurl}}assets/js/script/all.min.js"></script>
-<!-- Script link to Google Sheets URL for building-out tables (script will not appear if page doesnt have an associated sheet) -->
-{% if page.sheet_key %}
-<!-- Put this code in only if the page has a sheet_key defined in the YAML front-matter -->
-<!-- This script must remain after roster.js (compiled into all.min.js) in the page DOM the callback/function to work! -->
-<script src="https://spreadsheets.google.com/feeds/cells/{{ page.sheet_key }}/{{ page.sheet_number }}/public/values?alt=json-in-script&callback=doData"></script>
-{% endif %}

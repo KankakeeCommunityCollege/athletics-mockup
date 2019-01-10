@@ -19,12 +19,12 @@ module.exports = config;
 
 
 
-gulp.task('javascriptLazy', function() {
-  browserSync.notify(config.javascriptLazy.notification);
-  return gulp.src(config.javascriptLazy.src)
+gulp.task('javascriptTable', function() {
+  browserSync.notify(config.javascriptTable.notification);
+  return gulp.src(config.javascriptTable.src)
     .pipe(sourcemaps.init())
-    .pipe(concat(config.javascriptLazy.filename))
+    .pipe(concat(config.javascriptTable.filename))
     .pipe(gulpif(PRODUCTION, uglify())) // Uglify me captain! (on production builds only)
-    .pipe(gulp.dest(config.javascriptLazy.dest.jekyllRoot))
-    .pipe(gulp.dest(config.javascriptLazy.dest.buildDir));
+    .pipe(gulp.dest(config.javascriptTable.dest.jekyllRoot))
+    .pipe(gulp.dest(config.javascriptTable.dest.buildDir));
 });
