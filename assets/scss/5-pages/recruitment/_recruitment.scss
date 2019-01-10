@@ -1,10 +1,39 @@
 .recruit-section {
-  margin-top: 260px;
+  margin-top: 160px;
+}
+
+@media screen and (min-width: 360px) {
+  .recruit-section {
+    margin-top: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .recruit-section {
+    margin-top: 180px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .recruit-section {
+    margin-top: 200px;
+  }
 }
 
 .btn-marg-left {
-  margin-left: 40px;
   text-align: right;
+}
+
+@media screen and (min-width: 360px) {
+  .btn-marg-left {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .btn-marg-left {
+    margin-left: 40px;
+  }
 }
 
 .row-space {
