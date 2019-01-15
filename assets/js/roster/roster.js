@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         $('#responsiveTable').DataTable( {
           responsive: true, // Activate responsive powers GO!
           paging: false, // Don't paginate. Schedule schould all be on one page
-          'order': [], // Initial column ordering
+          'order': [[1, 'asc']], // Initial column ordering
           'columnDefs': [
             { 'visible': false, 'targets': 0 }
           ]
