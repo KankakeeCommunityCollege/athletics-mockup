@@ -4,6 +4,7 @@ var spData1 = null,
   spData4 = null,
   spData5 = null,
   spData6 = null,
+  spData7 = null,
   spData8 = null,
   spData9 = null;
 
@@ -25,6 +26,9 @@ function doData5(json) {
 function doData6(json) {
   spData6 = json.feed.entry;
 }
+function doData7(json) {
+  spData7 = json.feed.entry;
+}
 function doData8(json) {
   spData8 = json.feed.entry;
 }
@@ -36,7 +40,7 @@ function drawCell(tr, val) {
   var td = $("<td/>");
   tr.append(td);
   td.append(val);
-  if ( val == 'At Bats' || val == 'Extra Base Hits' || val == 'Stolen Bases' || val == 'Total Bases' || val == 'Doubles' || val == 'Triples' || val == 'Batting Average (minimum 200 AB)' || val == 'Home Runs' || val == 'Innings Pitched' || val == 'Wins' || val == 'Appearances' || val == 'Saves' || val == 'Strike Outs' || val == 'Complete Games' || val == 'ERA' || val == 'Runs' || val == 'Hits' || val == 'Walks' || val == 'RBIs' || val == 'Pro Players/Former Cavs' || val == 'No Hitters' || val == 'Shutouts' || val == 'Sacifices' ) {
+  if ( val == 'At Bats' || val == 'Extra Base Hits' || val == 'Stolen Bases' || val == 'Total Bases' || val == 'Doubles' || val == 'Triples' || val == 'Batting Average (minimum 200 AB)' || val == 'Home Runs' || val == 'Innings Pitched' || val == 'Wins' || val == 'Appearances' || val == 'Saves' || val == 'Strikeouts' || val == 'Complete Games' || val == 'ERA' || val == 'Runs' || val == 'Hits' || val == 'Walks' || val == 'RBIs' || val == 'Pro Players/Former Cavs' || val == 'No Hitters' || val == 'Shutouts' || val == 'Sacifices' || val == 'Fewest Runs' || val == 'Strikeouts' || val == 'Fewest Earned Runs' || val == 'Fewest Hits' || val == 'Fewest Walks' || val == 'Championships / National Awards' ) {
     td.attr('colspan', '3');
     td.attr('align', 'center');
     td.css('background-color', '#bfbfbf');
@@ -169,6 +173,22 @@ function readData6(parent) {
   }
   drawRow(table, rowData);
 }
+function readData7(parent) {
+  var data = spData7;
+  var table = drawTable(parent);
+  var rowData = [];
+
+  for(var r=0; r<data.length; r++) {
+    var cell = data[r]['gs$cell'];
+    var val = cell['$t'];
+    if (cell.col == 1) {
+      drawRow(table, rowData);
+      rowData = [];
+    }
+    rowData.push(val);
+  }
+  drawRow(table, rowData);
+}
 function readData8(parent) {
   var data = spData8;
   var table = drawTable(parent);
@@ -209,6 +229,7 @@ document.addEventListener('DOMContentLoaded', function() {
   readData4($('#data4'));
   readData5($('#data5'));
   readData6($('#data6'));
+  readData7($('#data7'));
   readData8($('#data8'));
-  readData8($('#data9'));
+  readData9($('#data9'));
 });
