@@ -1,33 +1,95 @@
 ---
-layout: page-page
+layout: stats-page
 baseurl: ../../
 title: Baseball Stats
 description: "KCC offers intercollegiate men's basketball, women's basketball, baseball, softball, men's soccer and volleyball. The Cavaliers compete in Region IV of the NJCAA."
 base: baseball
 sub-nav_hidden: true
+sheet_key: 1CjI-KFAmasBUipURvXRtGuu6kWYbrNmo49VPeg7d6Os
+sheet_numbers: "1, 2, 3, 4, 5, 6, 7, 8, 9"
 ---
 
 <section class="container sub-nav-marg">
   <div class="row">
-    <div class="col-md-12">
-      <div class="editable">
-        <div class="row row-space">
-          <div class="col-md-12 text-center">
-            <p class="present-before-paste"><span class="schedule__button-margin"><a class="btn btn-primary" target="_blank" rel="noopener" href="http://region4sports.com/sports/bsb/2017-18/teams/kankakeecommunitycollege?view=lineup">Baseball Stats on NJCAA Region 4 Website </a></span></p>
-          </div>
-          <div>
-            <p class="present-before-paste">&nbsp;</p>
-            <p class="present-before-paste"><a target="_blank" href="/uploads/Baseball - Career Hitting.pdf">Career Hitting</a></p>
-            <p class="present-before-paste"><a target="_blank" href="/uploads/Baseball - Career Pitching.pdf">Career Pitching</a></p>
-            <p class="present-before-paste"><a target="_blank" href="/uploads/Baseball - Player Awards and Honors.pdf">Player Awards and Honors</a></p>
-            <p class="present-before-paste"><a target="_blank" href="/uploads/Baseball - Pro Players and Form Cavs.pdf">Pro Players and Former Cavaliers</a></p>
-            <p class="present-before-paste"><a target="_blank" href="/uploads/Baseball - Season Hitting.pdf">Season Hitting</a></p>
-            <p class="present-before-paste"><a target="_blank" href="/uploads/Baseball - Season Pitching.pdf">Season Pitching</a></p>
-            <p class="present-before-paste"><a target="_blank" href="/uploads/Baseball - Team Championships and Awards.pdf">Team Championships and Awards</a></p>
-            <p class="present-before-paste"><a target="_blank" href="/uploads/Baseball - Team Hitting.pdf">Team Hitting</a></p>
-            <p class="present-before-paste"><a target="_blank" href="/uploads/Baseball - Team Pitching.pdf">Team Pitching</a></p>
-            <p class="present-before-paste">&nbsp;</p>
-          </div>
+    <div class="col">
+      <span id="page-top" class="link__offset" aria-hidden="true"></span>
+      <!-- Baseball statistics tabbed navigation -->
+      <ul class="nav nav-tabs" id="baseballStatisticTab" role="tablist">
+        <li class="nav-tabs">
+          <a class="nav-link active" id="career-hitting-tab" data-toggle="tab" href="#career-hitting" role="tab" aria-controls="career-hitting" aria-selected="true">Career Hitting</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="career-pitching-tab" data-toggle="tab" href="#career-pitching" role="tab" aria-controls="career-pitching" aria-selected="true">Career Pitching</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="player-awards-and-honors-tab" data-toggle="tab" href="#player-awards-and-honors" role="tab" aria-controls="player-awards-and-honors" aria-selected="false">Player Awards and Honors</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="pro-players-and-former-cavaliers-tab" data-toggle="tab" href="#pro-players-and-former-cavaliers" role="tab" aria-controls="pro-players-and-former-cavaliers" aria-selected="false">Pro Players and Former Cavaliers</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="season-hitting-tab" data-toggle="tab" href="#season-hitting" role="tab" aria-controls="season-hitting" aria-selected="false">Season Hitting</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="season-pitching-tab" data-toggle="tab" href="#season-pitching" role="tab" aria-controls="season-pitching" aria-selected="false">Season Pitching</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="team-championships-and-awards-tab" data-toggle="tab" href="#team-championships-and-awards" role="tab" aria-controls="team-championships-and-awards" aria-selected="false">Team Championships and Awards</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="team-hitting-tab" data-toggle="tab" href="#team-hitting" role="tab" aria-controls="team-hitting" aria-selected="false">Team Hitting</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="team-pitching-tab" data-toggle="tab" href="#team-pitching" role="tab" aria-controls="team-pitching" aria-selected="false">Team Pitching</a>
+        </li>
+      </ul>
+
+      <!-- Baseball statistics tab-content -->
+      <div class="tab-content" id="baseballStatisticTabContent">
+        <div class="tab-pane fade show active" id="career-hitting" role="tabpanel" aria-labelledby="career-hitting-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center">Career Hitting</h2>
+          <div id="data1"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade show" id="career-pitching" role="tabpanel" aria-labelledby="career-pitching-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center">Career Pitching</h2>
+          <div id="data2"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade" id="player-awards-and-honors" role="tabpanel" aria-labelledby="player-awards-and-honors-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center">Player Awards and Honors</h2>
+          <div id="data3"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade" id="pro-players-and-former-cavaliers" role="tabpanel" aria-labelledby="pro-players-and-former-cavaliers-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center">Pro Players and Former Cavaliers</h2>
+          <div id="data4"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade" id="season-hitting" role="tabpanel" aria-labelledby="season-hitting-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center">Season Hitting</h2>
+          <div id="data5"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade" id="season-pitching" role="tabpanel" aria-labelledby="season-pitching-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center">Season Pitching</h2>
+          <div id="data6"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade" id="team-championships-and-awards" role="tabpanel" aria-labelledby="team-championships-and-awards-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center">Team Championships and Awards</h2>
+          <div id="data7"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade" id="team-hitting" role="tabpanel" aria-labelledby="team-hitting-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center">Team Hitting</h2>
+          <div id="data8"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade" id="team-pitching" role="tabpanel" aria-labelledby="team-pitching-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center">Team Pitching</h2>
+          <div id="data9"></div>
+          <a href="#page-top">Back to top</a>
         </div>
       </div>
     </div>
