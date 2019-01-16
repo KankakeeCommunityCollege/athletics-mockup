@@ -46,7 +46,7 @@ function drawCell(tr, val) {
     td.css('background-color', '#bfbfbf');
     td.addClass('table__red-category');
   }
-  if ( val == 'KCC All Americans' || val == 'All-Region IV - Second Team' || val == 'Former Cavs 1992-present' || val == 'KCC professionals - 1969-present') {
+  if ( val == 'KCC All Americans' || val == 'All-Region IV - Second Team' || val == 'Former Cavs 1992-present' || val == 'KCC professionals - 1969-present' || val == 'All-Region IV - First Team' ) {
     td.attr('colspan', '4');
     td.attr('align', 'center');
     td.css('background-color', '#bfbfbf');
