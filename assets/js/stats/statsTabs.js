@@ -40,7 +40,7 @@ function drawCell(tr, val) {
   var td = $("<td/>");
   tr.append(td);
   td.append(val);
-  if ( val == 'At Bats' || val == 'Extra Base Hits' || val == 'Stolen Bases' || val == 'Total Bases' || val == 'Doubles' || val == 'Triples' || val == 'Batting Average (minimum 200 AB)' || val == 'Home Runs' || val == 'Innings Pitched' || val == 'Wins' || val == 'Appearances' || val == 'Saves' || val == 'Strikeouts' || val == 'Complete Games' || val == 'ERA' || val == 'Runs' || val == 'Hits' || val == 'Walks' || val == 'RBIs' || val == 'Pro Players/Former Cavs' || val == 'No Hitters' || val == 'Shutouts' || val == 'Sacifices' || val == 'Fewest Runs' || val == 'Strikeouts' || val == 'Fewest Earned Runs' || val == 'Fewest Hits' || val == 'Fewest Walks' || val == 'Championships / National Awards' ) {
+  if ( val == 'At Bats' || val == 'Extra Base Hits' || val == 'Stolen Bases' || val == 'Total Bases' || val == 'Doubles' || val == 'Triples' || val == 'Batting Average (minimum 200 AB)' || val == 'Home Runs' || val == 'Innings Pitched' || val == 'Wins' || val == 'Appearances' || val == 'Saves' || val == 'Strikeouts' || val == 'Complete Games' || val == 'ERA' || val == 'Runs' || val == 'Hits' || val == 'Walks' || val == 'RBIs' || val == 'Pro Players/Former Cavs' || val == 'No Hitters' || val == 'Shutouts' || val == 'Sacifices' || val == 'Fewest Runs' || val == 'Strikeouts' || val == 'Fewest Earned Runs' || val == 'Fewest Hits' || val == 'Fewest Walks' || val == 'Championships / National Awards' || val == 'Batting Average' || val == 'Sacrifices' ) {
     td.attr('colspan', '3');
     td.attr('align', 'center');
     td.css('background-color', '#bfbfbf');
