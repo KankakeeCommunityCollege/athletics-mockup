@@ -1,12 +1,12 @@
 ---
-post_title: 2019 Spring Baseball
+post_title: 2019 Baseball Season Preview
 date: 2019-01-17 07:00:00
 categories:
   - baseball
   - general
 sport-category: General
 news_thumb_image: /siteicon.png
-description: KCC Baseball Season Preview 2019
+description: KCC 2019 Spring Baseball
 ---
 
 The Cavaliers are coming off a 42-17 season and a 3rd place finish in the Region IV Tournament.
