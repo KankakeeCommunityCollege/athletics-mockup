@@ -38,20 +38,35 @@ function doData9(json) {
 
 function drawCell(tr, val) {
   var td = $("<td/>");
-  tr.append(td);
-  td.append(val);
-  if ( val == 'At Bats' || val == 'Extra Base Hits' || val == 'Stolen Bases' || val == 'Total Bases' || val == 'Doubles' || val == 'Triples' || val == 'Batting Average (minimum 200 AB)' || val == 'Home Runs' || val == 'Innings Pitched' || val == 'Wins' || val == 'Appearances' || val == 'Saves' || val == 'Strikeouts' || val == 'Complete Games' || val == 'ERA' || val == 'Runs' || val == 'Hits' || val == 'Walks' || val == 'RBIs' || val == 'Pro Players/Former Cavs' || val == 'No Hitters' || val == 'Shutouts' || val == 'Sacifices' || val == 'Fewest Runs' || val == 'Strikeouts' || val == 'Fewest Earned Runs' || val == 'Fewest Hits' || val == 'Fewest Walks' || val == 'Championships / National Awards' || val == 'Batting Average' || val == 'Sacrifices' ) {
+  var sTwo = /^\*\*\s/;
+  var sThree = /^\*\*\*\s/;
+  var sFour = /^\*\*\*\*\s/;
+  if ( val.indexOf( '*** ' ) > -1 ) {
+    var sT = val.replace(sThree, '');
+    val = sT;
     td.attr('colspan', '3');
     td.attr('align', 'center');
     td.css('background-color', '#bfbfbf');
     td.addClass('table__red-category');
   }
-  if ( val == 'KCC All Americans' || val == 'All-Region IV - Second Team' || val == 'Former Cavs 1992-present' || val == 'KCC professionals - 1969-present' || val == 'All-Region IV - First Team' ) {
+  if ( val.indexOf( '**** ' ) > -1 ) {
+    var sF = val.replace(sFour, '');
+    val = sF;
     td.attr('colspan', '4');
     td.attr('align', 'center');
     td.css('background-color', '#bfbfbf');
     td.addClass('table__red-category');
   }
+  if ( val.indexOf('** ') > -1 ) {
+    var sTw = val.replace(sTwo, '');
+    val = sTw;
+    td.attr('colspan', '2');
+    td.attr('align', 'center');
+    td.css('background-color', '#bfbfbf');
+    td.addClass('table__red-category');
+  }
+  tr.append(td);
+  td.append(val);
   return td;
 }
 function drawRow(table, rowData) {
