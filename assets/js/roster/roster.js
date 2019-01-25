@@ -43,10 +43,7 @@ function drawBodyRow(tbody, rowData) {
 }
 function drawTable(parent) {
   var table = document.createElement('table');
-  table.classList.add('display');
-  table.classList.add('table');
-  table.classList.add('table-striped');
-  table.classList.add('table-hover');
+  table.classList.add('display', 'table', 'table-striped', 'table-hover');
   table.setAttribute('width', '100%');
   table.setAttribute('id', 'responsiveTable');
   parent.append(table);
@@ -121,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
         $('#responsiveTable').DataTable( {
           responsive: true, // Activate responsive powers GO!
           paging: false, // Don't paginate. Schedule schould all be on one page
-          'order': [], // Initial column ordering
+          'order': [[1, 'asc']], // Initial column ordering
           'columnDefs': [
             { 'visible': false, 'targets': 0 }
           ]
