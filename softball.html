@@ -4,6 +4,7 @@ baseurl: ../
 title: Softball
 description: "KCC offers intercollegiate men's basketball, women's basketball, baseball, softball, men's soccer and volleyball. The Cavaliers compete in Region IV of the NJCAA."
 base: softball
+season_preview: false
 sport: 3
 slides:
   - image: uploads/softball-team_D51_2702.jpg
@@ -69,6 +70,18 @@ slides:
       {% include athletics-alert.html %}
     {% endif %}
   {% endfor %}
+  {% if page.season_preview == true %}
+    <div class="row schedule-row">
+      <div class="col">
+        <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/soccer.svg" class="icon-middle" alt="" />&#160;Season Preview</h2>
+        <div class="season-preview__content-bg">
+          <div class="editable">
+          <p>“The Cavaliers look to continue the momentum from the 2017 season into the 2018 campaign” said Coach Barclay. In each season over the last 4 years, the soccer program has made great strides both on the pitch as well as off the pitch. 2017 saw the Cav’s make the quarter finals of region IV for the first time in program history, and place 7 players on the academic All-American team.</p></div> <div id="collapsePreview" class="collapse"><div class="editable"><p>This brings the total of players reaching this accomplishment to 14 in the past 3 years. “We are making a difference in our community for local players, and in turn, we are seeing more and more of the top area players look to KCC as a top option to continue their soccer careers” said Coach Barclay. “Each year, I am overwhelmed by the achievements of these young men that walk through our doors and the community support that we are seeing. Each new recruiting class has a goal to improve upon the previous group….as so far they have been up to the challenge!”</p>
+          <p>The team boasts local players from the area’s top high school programs: Bradley Bourbonnais, Watseka, Clifton, Peotone, Kankakee, Momence, St. Anne, Wilmington, Herscher, Beecher and Merriville,IN.  As well as International players from South Korea and Trinidad & Tobago.</p></div><br /></div><button class="btn btn-primary float-right season-preview__btn--more js-more-btn" type="button" data-toggle="collapse" data-target="#collapsePreview" aria-expanded="false" aria-controls="collapsePreview">More ...</button>
+        </div>
+      </div>
+    </div>
+    {% endif %}
     <div class="row schedule-row">
       <div class="col-md-12">
         <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/calendar.svg" class="icon-middle" alt="Calendar icon" />&#160;Upcoming Games <!-- <a href="{{ page.baseurl }}softball/schedule" class="btn btn-primary schedule__button-margin">View Full Schedule</a> --></h2>

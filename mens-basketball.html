@@ -2,6 +2,7 @@
 layout: sport-page
 baseurl: ../
 title: Men's Basketball
+season_preview: true
 description: >-
   KCC offers intercollegiate men's basketball, women's basketball, baseball,
   softball, men's soccer and volleyball. The Cavaliers compete in Region IV of
@@ -69,23 +70,28 @@ slides:
   {% endfor %}
 
 <!--Added Season Preview Section - 10-9-18 JN-->
-      <div class="row schedule-row">
-      <div class="col">
-        <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/basketball.svg" class="icon-middle" alt="" />&#160;Season Preview</h2>
-        <div class="season-preview__content-bg">
-          <div class="editable">
-              <p>Have you checked out your Kankakee Cavaliers Men&rsquo;s Basketball program lately? Well if not you will see a lot of new faces around campus for the 2018-2019 season. The Cavaliers new head Coach Alex Thorson is gearing up for his first season at the helm. Coach Thorson played at Olivet Nazarene under Hall of Fame Coach Ralph Hodge from 2012-2016, and was a graduate assistant at ONU from 2016-2018. Assisting Coach Thorson is Matt Neaville a native of Champaign Illinois as well as Devin Johnson who currently resides in Kankakee Illinois.</p>
-          </div> <div id="collapsePreview" class="collapse"><div class="editable">
-    <p>With all of the new faces in the office, you will also see a lot of new faces in the classroom for the Cavaliers. Kankakee returns one player from last year&rsquo;s 2017-2018 season. Theo Owens is the only returner and the 6&rsquo;1&rdquo; Guard/Forward is going to have to step up in a leadership role to help this young team have a great season. The Cavaliers also got a transfer guard from Richard Daley, Namon Smith Jr, who averaged 19 points per game last season. These two sophomores will have to show the thirteen new freshman what it takes to compete at the NJCAA Division 1 Level on a daily basis.</p>
-    <p>Thirteen new freshman?? Yes you heard it right. These freshman are ready to step in and not only be successful on the basketball court, but in the classroom as well. The KCC Men&rsquo;s Basketball Team consists of three local players who all played for Barry Bradford and Example Sports. Jalen Chavers played high school basketball under Adrian Provost at Bishop Mac until his senior season when he finished his prep career at Thornwood. Joey Flannery is a 6&rsquo;4&rdquo; Forward who prepped at Wilmington HS. Vashawn Sims is another player who didn&rsquo;t have to go too far to find himself at Kankakee as he prepped at Rich East HS.</p>
-    <p>The Cavaliers have also made some great ties in the Chicagoland area as they brought in four freshman who had highly successful teams that they played for while in High School. Jayden Gasby and Bryan Johnson prepped at Curie High School coached by Mike Oliver which was one of the top teams in the state last season for 4A basketball. Brian Hernandez played under Lou Adams at Orr High School where he won back to back state championships his junior and senior seasons. All three of these players represented Team Rose during the summers in AAU. The last freshman from Chicago is Pierce Coleman who helped lead North Chicago and Coach Coleman to a 4th place finish in state this last season for 3A basketball.</p>
-    <p>Chicago isn&rsquo;t the only area that the Cavaliers branched out to find players for this season. They also attained three players from Central Illinois which is Coach Thorson &amp; Coach Neaville&rsquo;s native area. Jonte Coleman who was coached by Jeff Finke at Champaign Central and is a great addition to the 2018-2019 roster. Another great addition is 6&rsquo;11&rdquo; Jake James who prepped at Limestone High School near Peoria Illinois. Both of these players played for Gavin Sullivan, and the IL Irish over the summer in AAU. Corez Anderson is another new freshman from Central Illinois who played under Verdell Jones at Urbana High School.</p>
-    <p>The Cavaliers didn&rsquo;t stop their recruiting in Illinois though. Joining the Cavaliers for the 2018-2019 season is 6&rsquo;9&rdquo; Ali Alquraishy who prepped at Manuel High School in Indianapolis under Coach Donnie Bowling. Another player who played an extra year after High School at Indiana Elite Prep Academy under Tony Cole is Jacob Collins who is originally from Cincinnati Ohio. KCC didn&rsquo;t stop their recruitment in the United States, as they brought in sharp shooter Oren Amotz from Jerusalem Israel.</p>
-</div><br /></div><button class="btn btn-primary float-right season-preview__btn--more js-more-btn" type="button" data-toggle="collapse" data-target="#collapsePreview" aria-expanded="false" aria-controls="collapsePreview">More ...</button>
+{% if page.season_preview == true %}
+  <div class="row schedule-row">
+    <div class="col">
+      <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/basketball.svg" class="icon-middle" alt="" />&#160;Season Preview</h2>
+      <div class="season-preview__content-bg">
+        <div class="editable">
+          <p>Have you checked out your Kankakee Cavaliers Men&rsquo;s Basketball program lately? Well if not you will see a lot of new faces around campus for the 2018-2019 season. The Cavaliers new head Coach Alex Thorson is gearing up for his first season at the helm. Coach Thorson played at Olivet Nazarene under Hall of Fame Coach Ralph Hodge from 2012-2016, and was a graduate assistant at ONU from 2016-2018. Assisting Coach Thorson is Matt Neaville a native of Champaign Illinois as well as Devin Johnson who currently resides in Kankakee Illinois.</p>
         </div>
+        <div id="collapsePreview" class="collapse">
+          <div class="editable">
+            <p>With all of the new faces in the office, you will also see a lot of new faces in the classroom for the Cavaliers. Kankakee returns one player from last year&rsquo;s 2017-2018 season. Theo Owens is the only returner and the 6&rsquo;1&rdquo; Guard/Forward is going to have to step up in a leadership role to help this young team have a great season. The Cavaliers also got a transfer guard from Richard Daley, Namon Smith Jr, who averaged 19 points per game last season. These two sophomores will have to show the thirteen new freshman what it takes to compete at the NJCAA Division 1 Level on a daily basis.</p>
+            <p>Thirteen new freshman?? Yes you heard it right. These freshman are ready to step in and not only be successful on the basketball court, but in the classroom as well. The KCC Men&rsquo;s Basketball Team consists of three local players who all played for Barry Bradford and Example Sports. Jalen Chavers played high school basketball under Adrian Provost at Bishop Mac until his senior season when he finished his prep career at Thornwood. Joey Flannery is a 6&rsquo;4&rdquo; Forward who prepped at Wilmington HS. Vashawn Sims is another player who didn&rsquo;t have to go too far to find himself at Kankakee as he prepped at Rich East HS.</p>
+            <p>The Cavaliers have also made some great ties in the Chicagoland area as they brought in four freshman who had highly successful teams that they played for while in High School. Jayden Gasby and Bryan Johnson prepped at Curie High School coached by Mike Oliver which was one of the top teams in the state last season for 4A basketball. Brian Hernandez played under Lou Adams at Orr High School where he won back to back state championships his junior and senior seasons. All three of these players represented Team Rose during the summers in AAU. The last freshman from Chicago is Pierce Coleman who helped lead North Chicago and Coach Coleman to a 4th place finish in state this last season for 3A basketball.</p>
+            <p>Chicago isn&rsquo;t the only area that the Cavaliers branched out to find players for this season. They also attained three players from Central Illinois which is Coach Thorson &amp; Coach Neaville&rsquo;s native area. Jonte Coleman who was coached by Jeff Finke at Champaign Central and is a great addition to the 2018-2019 roster. Another great addition is 6&rsquo;11&rdquo; Jake James who prepped at Limestone High School near Peoria Illinois. Both of these players played for Gavin Sullivan, and the IL Irish over the summer in AAU. Corez Anderson is another new freshman from Central Illinois who played under Verdell Jones at Urbana High School.</p>
+            <p>The Cavaliers didn&rsquo;t stop their recruiting in Illinois though. Joining the Cavaliers for the 2018-2019 season is 6&rsquo;9&rdquo; Ali Alquraishy who prepped at Manuel High School in Indianapolis under Coach Donnie Bowling. Another player who played an extra year after High School at Indiana Elite Prep Academy under Tony Cole is Jacob Collins who is originally from Cincinnati Ohio. KCC didn&rsquo;t stop their recruitment in the United States, as they brought in sharp shooter Oren Amotz from Jerusalem Israel.</p>
+          </div><br />
+        </div>
+      <button class="btn btn-primary float-right season-preview__btn--more js-more-btn" type="button" data-toggle="collapse" data-target="#collapsePreview" aria-expanded="false" aria-controls="collapsePreview">More ...</button>
       </div>
     </div>
-
+  </div>
+{% endif %}
 
 <!--  "Upcoming Games" slider  -->
     <div class="row schedule-row">

@@ -2,6 +2,7 @@
 layout: sport-page
 baseurl: ../
 title: Volleyball
+season_preview: true
 description: >-
   KCC offers intercollegiate men's basketball, women's basketball, baseball,
   softball, men's soccer and volleyball. The Cavaliers compete in Region IV of
@@ -72,6 +73,7 @@ slides:
       {% include athletics-alert.html %}
     {% endif %}
   {% endfor %}
+  {% if page.season_preview == true %}
   <div class="row schedule-row">
     <div class="col">
       <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/volleyball.svg" class="icon-middle" alt="" />&#160;Season Preview</h2>
@@ -92,6 +94,7 @@ slides:
       </div>
     </div>
   </div>
+  {% endif %}
     <div class="row schedule-row">
       <div class="col-md-12">
         <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/calendar.svg" class="icon-middle" alt="Calendar icon" />&#160;Upcoming Games<!--  <a href="{{ page.baseurl }}volleyball/schedule" class="btn btn-primary schedule__button-margin">View Full Schedule</a> --></h2>
