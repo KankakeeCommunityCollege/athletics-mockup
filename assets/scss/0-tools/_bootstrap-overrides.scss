@@ -1,0 +1,41 @@
+
+.nav-tabs {
+  border-bottom: 1px solid $grey-5 !important;
+  min-width: 33.33% !important;
+  text-align: center !important;
+}
+
+.nav-tabs .nav-link {
+  background-color: $grey-4 !important;
+  border-left-color: $grey-2 !important;
+  border-left-style: solid !important;
+  border-left-width: 1px !important;
+  border-right-color: $grey-2 !important;
+  border-right-style: solid !important;
+  border-right-width: 1px !important;
+  border-top-color: $grey-2 !important;
+  border-top-style: solid !important;
+  border-top-width: 1px !important;
+  border-bottom-color: $grey-5 !important;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+  background-color: $nav-tab !important;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: $primary-blue !important;
+  border-color: $grey-5 $grey-5 $white !important;
+  color: $white !important;
+  font-weight: bolder !important;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+  background-color: $primary-blue !important;
+  color: $white !important;
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before {
+    top: 4px !important;
+  }

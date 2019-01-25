@@ -104,6 +104,15 @@ javascriptRoster:
     - "assets/js/roster/roster.js"
     - "assets/js/roster/rosterModal.js"
 
+javascriptStats:
+  dest:
+    jekyllRoot: "assets/js/stats/"
+    buildDir: "_site/assets/js/stats/"
+  filename: "stats.min.js"
+  notification: "Running Stats JavaScript"
+  src:
+    - "assets/js/stats/statsTabs.js"
+
 sitemap:
   src:
     - "_site/*.html"
@@ -120,14 +129,17 @@ jekyll:
 watch: # 'Watch' for changes in all the following:
   images: "assets/img/**/*"
   javascript:
-    - "assets/js/script/all.min.js"
-    - "assets/js/script/*.js"
-    - "assets/js/schedule/schedule.min.js"
-    - "assets/js/schedule/*.js"
-    - "assets/js/lazy/lazyLoad.min.js"
-    - "assets/js/lazy/*.js"
-    - "assets/js/slim/all.slim.min.js"
-    - "assets/js/slim/*.js"
+    - "assets/js/**/*.js"
+  javascriptytCarousel:
+    - "assets/js/**/*.js"
+  javascriptGames:
+    - "assets/js/**/*.js"
+  javascriptTable:
+      - "assets/js/**/*.js"
+  javascriptRoster:
+      - "assets/js/**/*.js"
+  javascriptStats:
+      - "assets/js/**/*.js"
   sass: "assets/scss/**/*.scss"
   contentSass: "assets/scss/**/*.scss"
   pages:
