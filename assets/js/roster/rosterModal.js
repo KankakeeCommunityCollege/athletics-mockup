@@ -82,15 +82,15 @@ document.addEventListener('DOMContentLoaded', function() {
               var extraColTitle = ['High School Coach', 'Parents', 'Siblings', 'Bio'];
               var thisTitle;
               if ( col == entry['gsx$highschoolcoach'] ) {
-                thisTitle = '<span><strong>' + extraColTitle[0] + ':</strong> ';
+                thisTitle = '<span><strong class="typography__uppercase">' + extraColTitle[0] + ':</strong> ';
               } else if ( col == entry['gsx$parents'] ) {
-                thisTitle = '<span><strong>' + extraColTitle[1] + ':</strong> ';
+                thisTitle = '<span><strong class="typography__uppercase">' + extraColTitle[1] + ':</strong> ';
               } else if ( col == entry['gsx$siblings'] ) {
-                thisTitle = '<span><strong>' + extraColTitle[2] + ':</strong> ';
+                thisTitle = '<span><strong class="typography__uppercase">' + extraColTitle[2] + ':</strong> ';
               } else if ( col == entry['gsx$bio'] ) {
-                thisTitle = '<span><strong>' + extraColTitle[3] + ':</strong> ';
+                thisTitle = '<span><strong class="typography__uppercase">' + extraColTitle[3] + ':</strong> ';
               }
-              extraGSX += thisTitle + col['$t'] + '</span><br>';
+              extraGSX += thisTitle + col['$t'].replace('•', '<br> •').replace('·', '<br> •') + '</span><br>';
             }
           });
           var extraHTML = '';
