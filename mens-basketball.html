@@ -70,8 +70,7 @@ slides:
   {% endfor %}
 
 <!--Added Season Preview Section - 10-9-18 JN-->
-{% if page.season_preview == true %}
-  <div class="row schedule-row">
+  <div class="row schedule-row{% if page.season_preview == false %} editor-content{% endif %}">
     <div class="col">
       <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/basketball.svg" class="icon-middle" alt="" />&#160;Season Preview</h2>
       <div class="season-preview__content-bg">
@@ -87,11 +86,10 @@ slides:
             <p>The Cavaliers didn&rsquo;t stop their recruiting in Illinois though. Joining the Cavaliers for the 2018-2019 season is 6&rsquo;9&rdquo; Ali Alquraishy who prepped at Manuel High School in Indianapolis under Coach Donnie Bowling. Another player who played an extra year after High School at Indiana Elite Prep Academy under Tony Cole is Jacob Collins who is originally from Cincinnati Ohio. KCC didn&rsquo;t stop their recruitment in the United States, as they brought in sharp shooter Oren Amotz from Jerusalem Israel.</p>
           </div><br />
         </div>
-      <button class="btn btn-primary float-right season-preview__btn--more js-more-btn" type="button" data-toggle="collapse" data-target="#collapsePreview" aria-expanded="false" aria-controls="collapsePreview">More ...</button>
+        <button class="btn btn-primary float-right season-preview__btn--more js-more-btn" type="button" data-toggle="collapse" data-target="#collapsePreview" aria-expanded="false" aria-controls="collapsePreview">More ...</button>
       </div>
     </div>
   </div>
-{% endif %}
 
 <!--  "Upcoming Games" slider  -->
     <div class="row schedule-row">

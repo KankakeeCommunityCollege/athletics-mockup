@@ -78,8 +78,8 @@ slides:
       {% include athletics-alert.html %}
     {% endif %}
   {% endfor %}
-  {% if page.season_preview == true %}
-    <div class="row schedule-row">
+  <!-- season preview -->
+    <div class="row schedule-row{% if page.season_preview == false %} editor-content{% endif %}">
       <div class="col">
         <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/soccer.svg" class="icon-middle" alt="" />&#160;Season Preview</h2>
         <div class="season-preview__content-bg">
@@ -89,7 +89,6 @@ slides:
         </div>
       </div>
     </div>
-  {% endif %}
     <div class="row schedule-row">
       <div class="col-md-12">
         <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/calendar.svg" class="icon-middle" alt="Calendar icon" />&#160;Upcoming Games <!-- <a href="{{ page.baseurl }}soccer/schedule" class="btn btn-primary schedule__button-margin">View Full Schedule</a> --></h2>
