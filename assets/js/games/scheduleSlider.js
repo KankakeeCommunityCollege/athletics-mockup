@@ -1,12 +1,6 @@
-function documentLoading() {
-  document.getElementById('page-top').addEventListener('load', loadingBar);
-  function loadingBar() {
-    document.getElementById('myMessage').innerHTML = 'LOADED';
-  }
-}
-documentLoading();
 document.addEventListener('DOMContentLoaded', function() {
   // Define some deferred variables of things to do later.
+  const host = window.location.host + '/';
   var deferSlick = $.Deferred();
   var currentUrl = window.location.href,  // Defin currentUrl as the user's current browser URL
     noProto = currentUrl.replace(/(^\w+:|^)\/\//, ''),  // Remove the http(s):// protocol from that URL
@@ -34,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
       sheetNumber = 5;  // If on Women's Basketball Schedule page set to '3'
     } else if ( noProto.indexOf('/volleyball') > -1 ) {
       sheetNumber = 6;  // If on Women's Basketball Schedule page set to '3'
-    } else if ( noProto == 'athletics.kcc.edu/' || noProto == 'localhost:3000/' ) {
+    } else if ( noProto === host ) {
       sheetNumber = 7;
     }
     // Make sure the Google Sheet is public or set to Anyone with link can view
@@ -206,26 +200,5 @@ document.addEventListener('DOMContentLoaded', function() {
       ]
     });
   }
-  //  A function that fires the spreadsheetTable() function IF the user is on a schedule page and fires the sliderSchedule() function if the user is on a sport's landing page:
-  function checkPageLocation() {
-    var h = 'athletics.kcc.edu/', // Set h as the domain of the site
-      lh = 'localhost:3000/'; // Set lh as the local domain of the site is when in dev.
-    if ( noProto.indexOf( lh + 'mens-basketball' ) > -1 || noProto.indexOf( h + 'mens-basketball' ) > -1 ) {
-      sliderSchedule();
-    } else if ( noProto.indexOf( lh + 'baseball' ) > -1 || noProto.indexOf( h + 'baseball' ) > -1 ) {
-      sliderSchedule();
-    } else if ( noProto.indexOf( lh + 'womens-basketball' ) > -1 || noProto.indexOf( h + 'womens-basketball' ) > -1 ) {
-      sliderSchedule();
-    } else if ( noProto.indexOf( lh + 'softball' ) > -1 || noProto.indexOf( h + 'softball' ) > -1 ) {
-      sliderSchedule();
-    } else if ( noProto.indexOf( lh + 'soccer' ) > -1 || noProto.indexOf( h + 'soccer' ) > -1 ) {
-      sliderSchedule();
-    } else if ( noProto.indexOf( lh + 'volleyball' ) > -1 || noProto.indexOf( h + 'volleyball' ) > -1 ) {
-      sliderSchedule();
-    } else if ( noProto == h || noProto == lh ) {
-      sliderSchedule();
-    }
-  }
-  checkPageLocation();  // Fire the nuclear missiles!
-
+  sliderSchedule();
 });

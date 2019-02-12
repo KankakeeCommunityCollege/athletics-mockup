@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var monthNames = [ // Define an array of the months to convert JS # value of month into short text version
     'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'
   ];
+  const host = window.location.host + '/';
   // Once deferSpreadsheetTable is resolved, do this function:
   $.when(deferSpreadsheetTable).done(function() {
     // Unleash the DataTables JS library for functional/sortable tables:
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
       sheetNumber = 5;  // If on Women's Basketball Schedule page set to '3'
     } else if ( noProto.indexOf('/volleyball') > -1 ) {
       sheetNumber = 6;  // If on Women's Basketball Schedule page set to '3'
-    } else if ( noProto == 'athletics.kcc.edu/' || noProto == 'localhost:3000/' ) {
+    } else if ( noProto === host ) {
       sheetNumber = 7;
     }
     // Make sure the Google Sheet is public or set to Anyone with link can view
@@ -161,11 +162,5 @@ document.addEventListener('DOMContentLoaded', function() {
       deferSpreadsheetTable.resolve();  // Resolve the deferSpreadsheetTable deferrement
     });
   }
-  //  A function that fires the spreadsheetTable() function IF the user is on a schedule page and fires the sliderSchedule() function if the user is on a sport's landing page:
-  function checkPageLocation() {
-    if ( noProto.indexOf('/schedule') > -1 ) {  // If user's current URL contains '/schedule' in it, do:
-      spreadsheetTable();  // Go-go gadget spreadsheetTable()!
-    }
-  }
-  checkPageLocation();  // Fire the nuclear missiles!
+  spreadsheetTable();
 });
