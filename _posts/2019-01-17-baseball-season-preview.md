@@ -17,7 +17,7 @@ The Cavaliers have several key players back for their sophomore seasons. These i
 
 The freshman will definitely play a key role in the successs of this team. They are led by shortstop Cole Stigleman, who has a dependable glove and a lethal bat. Corner infielders Jaret Humphrey and Michael Machnic will provide some thunder to the middle of the lineup. Nate James also provides a solid middle infielder and a left-handed bat. Outfielders Koltan Moore, Griffin Scaggs and Nate Vargo will also impact the lineup for the Cavaliers. Catcher Nick Anderson provides depth behind the plate or off the bench as a pinch hitter.
 
-On the mound, the team will look to Freshman Nick Laxner, Owen Behrens, Bobby Nowak, Aaron Ball, Jacob Duffy and Tyler Jasmin to solidify the starting rotations. Nolan Lebamoff, Jake Schueter, Tanner Walls, Max Minich and Ike Speiser will compete for innings out of the bullpen.
+On the mound, the team will look to Freshman Nick Laxner, Owen Behrens, Bobby Nowak, Aaron Ball, Jacob Duffy and Tyler Jasmin to solidify the starting rotation. Nolan Lebamoff, Jake Schueter, Tanner Walls, Max Minich and Ike Speiser will compete for innings out of the bullpen.
 
 “We have talent and depth on the pitching staff and will be able to look to multiple players for success this season,” says Head Coach Todd Post. “Pitching and defense is our focus and being consistent in both areas will give us a great chance to win the Region IV Tournament in May.”
 
