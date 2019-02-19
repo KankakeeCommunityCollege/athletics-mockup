@@ -5,7 +5,7 @@ categories:
   - softball
   - general
 sport-category: General
-news_thumb_image: /siteicon.png
+news_thumb_image: /assets/img/cavaliers-16x9-thumb.png
 description: KCC 2019 Spring Softball
 ---
 
