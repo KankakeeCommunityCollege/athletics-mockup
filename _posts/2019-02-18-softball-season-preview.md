@@ -1,5 +1,5 @@
 ---
-post_title: 2019 Softball Season Preview
+post_title: Softball 2019 Season Preview
 date: 2019-02-18 07:00:00
 categories:
   - softball
