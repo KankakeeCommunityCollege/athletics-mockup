@@ -75,20 +75,22 @@ document.addEventListener('DOMContentLoaded', function() {
           //});
           //console.log(extraGSX);
           var extraGSX = '';
-          var extraCols = [entry['gsx$highschoolcoach'], entry['gsx$parents'], entry['gsx$siblings'], entry['gsx$bio']];
+          var extraCols = [entry['gsx$highschoolcoach'], entry['gsx$intendedmajor'], entry['gsx$parents'], entry['gsx$siblings'], entry['gsx$bio']];
           extraCols.forEach(function(col) {
 
             if ( col ) {
-              var extraColTitle = ['High School Coach', 'Parents', 'Siblings', 'Bio'];
+              var extraColTitle = ['High School Coach', 'Major', 'Parents', 'Siblings', 'Bio'];
               var thisTitle;
               if ( col == entry['gsx$highschoolcoach'] ) {
                 thisTitle = '<span><strong class="typography__uppercase">' + extraColTitle[0] + ':</strong> ';
-              } else if ( col == entry['gsx$parents'] ) {
+              } else if ( col == entry['gsx$intendedmajor'] ) {
                 thisTitle = '<span><strong class="typography__uppercase">' + extraColTitle[1] + ':</strong> ';
-              } else if ( col == entry['gsx$siblings'] ) {
+              } else if ( col == entry['gsx$parents'] ) {
                 thisTitle = '<span><strong class="typography__uppercase">' + extraColTitle[2] + ':</strong> ';
-              } else if ( col == entry['gsx$bio'] ) {
+              } else if ( col == entry['gsx$siblings'] ) {
                 thisTitle = '<span><strong class="typography__uppercase">' + extraColTitle[3] + ':</strong> ';
+              } else if ( col == entry['gsx$bio'] ) {
+                thisTitle = '<span><strong class="typography__uppercase">' + extraColTitle[4] + ':</strong> ';
               }
               extraGSX += thisTitle + col['$t'].replace('•', '<br> •').replace('·', '<br> •') + '</span><br>';
             }
