@@ -90,9 +90,13 @@ document.addEventListener('DOMContentLoaded', function() {
               } else if ( col == entry['gsx$siblings'] ) {
                 thisTitle = '<span><strong class="typography__uppercase">' + extraColTitle[3] + ':</strong> ';
               } else if ( col == entry['gsx$bio'] ) {
-                thisTitle = '<span><strong class="typography__uppercase">' + extraColTitle[4] + ':</strong> ';
+                if ( entry['gsx$bio']['$t'] !== ' ' ) {
+                  thisTitle = '<span><strong class="typography__uppercase">' + extraColTitle[4] + ':</strong> ';
+                } else {
+                  thisTitle = '';
+                }
               }
-              extraGSX += thisTitle + col['$t'].replace('•', '<br> •').replace('·', '<br> •') + '</span><br>';
+              extraGSX += thisTitle + col['$t'].replace(/•/g, '<br> •').replace(/·/g, '<br> •') + '</span><br>';
             }
           });
           var extraHTML = '';
