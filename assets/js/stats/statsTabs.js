@@ -37,7 +37,7 @@ function doData9(json) {
 }
 
 function drawCell(tr, val) {
-  var td = $("<td/>");
+  var td = $('<td/>');
   var sTwo = /^\*\*\s/;
   var sThree = /^\*\*\*\s/;
   var sFour = /^\*\*\*\*\s/;
@@ -65,6 +65,9 @@ function drawCell(tr, val) {
     td.css('background-color', '#bfbfbf');
     td.addClass('table__red-category');
   }
+  var addOpenStrongTag = val.replace(/^\*\*/, '<strong>');
+  var addCloseStrongTag = addOpenStrongTag.replace(/\*\*$/, '</strong>');
+  val = addCloseStrongTag;
   tr.append(td);
   td.append(val);
   return td;

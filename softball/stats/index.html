@@ -1,41 +1,76 @@
 ---
-layout: page-page
+layout: stats-page
 baseurl: ../../
 title: Softball Stats
 description: "KCC offers intercollegiate men's basketball, women's basketball, baseball, softball, men's soccer and volleyball. The Cavaliers compete in Region IV of the NJCAA."
-base: softball
+base: Softball
 sub-nav_hidden: true
+sheet_key: 1qZHyYT_fJE6jajEUjFJK8Z8yKYbu76YnJ9ec3Vzk-KM
+sheet_numbers: "1, 2, 3, 4, 5, 6"
 ---
 
-<!--
 <section class="container sub-nav-marg">
   <div class="row">
-      <div class="col-md-12">
-        <div class="editable">
+    <div class="col">
+      <span id="page-top" class="link__offset" aria-hidden="true"></span>
+      <a class="btn btn-link buttons__margin-btm" target="_blank" rel="noopener" href="http://stats.njcaa.org/sports/sball/2017-18/div2/teams/kankakeecommunitycollege">View Softball Stats on NJCAA Region 4 Website</a>
+      <!-- Baseball statistics tabbed navigation -->
+      <ul class="nav nav-tabs" id="softballStatisticTab" role="tablist">
+        <li class="nav-tabs">
+          <a class="nav-link active" id="all-americans-tab" data-toggle="tab" href="#all-americans" role="tab" aria-controls="all-americans" aria-selected="true">All Americans</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="career-records-tab" data-toggle="tab" href="#career-records" role="tab" aria-controls="career-records" aria-selected="true">Career Records</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="individual-hitting-tab" data-toggle="tab" href="#individual-hitting" role="tab" aria-controls="individual-hitting" aria-selected="false">Individual Hitting</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="individual-pitching-tab" data-toggle="tab" href="#individual-pitching" role="tab" aria-controls="individual-pitching" aria-selected="false">Individual Pitching</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="program-history-tab" data-toggle="tab" href="#program-history" role="tab" aria-controls="program-history" aria-selected="false">Program History</a>
+        </li>
+        <li class="nav-tabs">
+          <a class="nav-link" id="team-hitting-tab" data-toggle="tab" href="#team-hitting" role="tab" aria-controls="team-hitting" aria-selected="false">Team Hitting</a>
+        </li>
+      </ul>
 
+      <!-- Baseball statistics tab-content -->
+      <div class="tab-content" id="softballStatisticTabContent">
+        <div class="tab-pane fade show active" id="all-americans" role="tabpanel" aria-labelledby="all-americans-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center editable">All Americans</h2>
+          <div id="data1"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade show" id="career-records" role="tabpanel" aria-labelledby="career-records-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center editable">Career Records</h2>
+          <div id="data2"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade" id="individual-hitting" role="tabpanel" aria-labelledby="individual-hitting-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center editable">Individual Hitting</h2>
+          <div id="data3"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade" id="individual-pitching" role="tabpanel" aria-labelledby="individual-pitching-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center editable">Individual Pitching</h2>
+          <div id="data4"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade" id="program-history" role="tabpanel" aria-labelledby="program-history-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center editable">KCC Softball Program History</h2>
+          <p>The KCC women's softball team won the national title in 2015. Coach Dennis Clark led the Cavaliers to a 5-1 victory in the title game over East Central Community College of Decatur, Miss. The Cavaliers, who play in Division II of the NJCAA, finished the season with a 45-6 record. It was the first national title for the team and for Clark, who was inducted in to the NJCAA Softball Hall of Fame in December 2014.</p>
+          <p>KCC has participated in every NJCAA Division II softball national tournament since 2000.</p>
+          <div id="data5"></div>
+          <a href="#page-top">Back to top</a>
+        </div>
+        <div class="tab-pane fade" id="team-hitting" role="tabpanel" aria-labelledby="team-hitting-tab">
+          <h2 class="main-heading typography__main-heading--margin-top text-center editable">Team Hitting</h2>
+          <div id="data6"></div>
+          <a href="#page-top">Back to top</a>
         </div>
       </div>
+    </div>
   </div>
 </section>
-
--->
-
-<section class="container sub-nav-marg">
-  <div class="row">
-      <div class="col-md-12">
-        <div class="editable">
-            <div class="row row-space">
-                <div class="col-md-12 text-center">
-                    <p><span class="schedule__button-margin"><a class="btn btn-primary" target="_blank" rel="noopener" href="http://stats.njcaa.org/sports/sball/2017-18/div2/teams/kankakeecommunitycollege">Softball Stats on NJCAA Region 4 Website&nbsp;</a></span></p>
-                </div>
-                <div>
-                    <p><a target="_blank" href="/uploads/Softball - All Americans.pdf">All Americans</a></p>
-                    <p><a target="_blank" href="/uploads/Softball Records - Career Records.pdf">Career Records</a></p>
-                    <p><a target="_blank" href="/uploads/Softball Records - Individual Hitting.pdf">Individual Hitting</a></p>
-                    <p><a target="_blank" href="/uploads/Softball Records - Individual Pitching.pdf">Individual Pitching</a></p>
-                    <p><a target="_blank" href="/uploads/Softball - Program History.pdf">Program History</a></p>
-                    <p><a target="_blank" href="/uploads/Softball Records - Team Hitting.pdf">Team Hitting</a></p>
-                    <p>&nbsp;</p>
-                </div>
-            </div>
-        </div></div></div></section>
