@@ -4,13 +4,13 @@ function doData(json) { // There's a callback on this function ( 'https://...&ca
 }
 
 function drawCell(tr, val) {
-  var td = document.createElement('td'); // Create an empty <td></td> element
+  var td = document.createElement('td');
   tr.append(td);
   td.append(val);
   return td;
 }
 function drawTh(tr, val) {
-  var th = document.createElement('th'); // Create an empty <td></td> element
+  var th = document.createElement('th');
   var classes;
   var hideBio;
   if ( val == 'Intended Major' || val == 'High School Coach' || val == 'Parents' || val == 'Siblings' || val == 'Bio' ) {
