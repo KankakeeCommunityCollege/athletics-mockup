@@ -91,9 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
       entry.forEach(function(entry) { // Run a 'forEach()' loop on the entrys:
         // Set the background color for the first column in the table:
         function setColor(colorCode) { // Home games get a red background and away games get a blue background
-          var red = '#c61f48',  // Define 'red' as the KCC Primary Red...
-            blue = '#0f3b63';  // and 'blue' as the KCC Primary Blue hex-code.
-          if ( entry['gsx$where']['$t'] == 'Home' ) {  // If the game location ('where' column) is Home:
+          const red = '#c61f48';
+          const blue = '#0f3b63';
+          var gameLocation = entry['gsx$where']['$t'].trim();
+          if ( gameLocation == 'Home' ) {
             colorCode = red;  // Set the color to primary red
           } else {  // If not, then:
             colorCode = blue;  // Set the color to primary blue
