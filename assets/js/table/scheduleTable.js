@@ -84,10 +84,13 @@ document.addEventListener('DOMContentLoaded', function() {
         html += '<tbody>';
       }
       buildTableHead();
-      // loop to build html output for each row (build the data into the table)
+
       var entry = data.feed.entry;  // Define 'entry' var from Google Sheet
-      var wCount = 0,
-        lCount = 0;
+      var winCount = 0;
+      var lossCount = 0;
+      var tieCount;
+      var tieCountValue = 0;
+
       entry.forEach(function(entry) { // Run a 'forEach()' loop on the entrys:
         // Set the background color for the first column in the table:
         function setColor(colorCode) { // Home games get a red background and away games get a blue background
@@ -134,10 +137,19 @@ document.addEventListener('DOMContentLoaded', function() {
             day = d.getDate(), // Define 'day' as the date for the game
             sortingDate = d.getTime(); // Define 'sortingDate' as the JS getTime() values of the dates
           if ( status == 'W' ) {
-            wCount += 1;
+            winCount += 1;
           } else if ( status == 'L' ) {
-            lCount += 1;
+            lossCount += 1;
+          } else if ( status == 'T' ) {
+            tieCountValue += 1;
           }
+
+          if ( tieCountValue == 0 ) {
+            tieCount = '';
+          } else {
+            tieCount = ' - ' + tieCountValue;
+          }
+
           html += '<tr>';  // Begin the row
           html += '<td>' + sortingDate + '</td>';  // Opponent Column
           html += '<td align="center" class="mx-auto" style="vertical-align:top;background-color:' + color + ';color:#ffffff;">' + m + ' ' + day + endDate + '</td>'; // Date Column: gets the appropriate background color and an end-date tacked-on if it exists.
@@ -146,8 +158,8 @@ document.addEventListener('DOMContentLoaded', function() {
           html += '<td align="left">' + entry['gsx$where']['$t'] + '</td>';  // Where Column
           html += '<td class="schedule-page__align-center--offset" align="center">' + entry['gsx$status']['$t'] + '</td>';  // Status Column
           html += '<td class="schedule-page__align-center--offset" align="center">' + entry['gsx$summary']['$t'] + '</td>';  // Summary Column
-          if ( status == 'W' || status == 'L' || status == 'Canceled' ) {
-            html += '<td class="schedule-page__align-center--offset" align="center">' + wCount + ' - ' + lCount + '</td>';
+          if ( status == 'W' || status == 'L' || status == 'T' || status == 'Canceled' ) {
+            html += '<td class="schedule-page__align-center--offset" align="center">' + winCount + ' - ' + lossCount + tieCount + '</td>';
           } else {
             html += '<td class="schedule-page__align-center--offset" align="center">' + ' ' + '</td>';
           }
