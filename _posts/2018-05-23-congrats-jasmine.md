@@ -4,7 +4,7 @@ date: 2018-05-23 09:00:00
 categories:
   - womens-basketball
   - news
-sport-category: Womens Basketball
+sport-category: Women's Basketball
 news_thumb_image: /uploads/image-2018-06-06.jpg
 description: Sophomore Jasmine Elliott receives FULL ride!
 ---
