@@ -65,8 +65,8 @@ function drawCell(tr, val) {
     td.css('background-color', '#bfbfbf');
     td.addClass('table__red-category');
   }
-  var addOpenStrongTag = val.replace(/^\*\*/, '<strong>');
-  var addCloseStrongTag = addOpenStrongTag.replace(/\*\*$/, '</strong>');
+  var addOpenStrongTag = val.replace(/^\*\*/, '<strong>').replace(/^__/, '<strong>');
+  var addCloseStrongTag = addOpenStrongTag.replace(/\*\*$/, '</strong>').replace(/__$/, '</strong>');
   val = addCloseStrongTag;
   tr.append(td);
   td.append(val);
