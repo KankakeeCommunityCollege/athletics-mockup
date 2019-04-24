@@ -5,8 +5,7 @@ function requestJson(url) {
     request.onreadystatechange = function() {
       if(request.readyState === XMLHttpRequest.DONE && request.status === 200) {
         var data = JSON.parse(request.responseText);
-        
-        console.log(data);
+        //console.log(data);
         return data;
       }
     }
