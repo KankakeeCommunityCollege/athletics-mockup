@@ -1,3 +1,4 @@
+import lzFunction from './lazyload.js'; // IMPORT THE LAZYLOAD MODULE!!!
 // Custom JavaScript to pull in YouTube playlist:
 var Youtube_carousel = (function youtube_carousel_module(){
 
@@ -147,3 +148,6 @@ var Youtube_carousel = (function youtube_carousel_module(){
   };
 
 })();
+$(document).ready(function() {
+  Youtube_carousel.init();
+});

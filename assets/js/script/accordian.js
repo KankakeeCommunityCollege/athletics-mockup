@@ -34,7 +34,6 @@ $('#collapseFour').on('showCollapsed4', function() {
   $('#plusMinus4').toggleClass('buttons__minus');
 });
 
-lzFunction();
 
 // function toggleAccordian() {
 //   var plusMinus = document.getElementById('plusMinus');

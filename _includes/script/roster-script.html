@@ -1,3 +1,3 @@
-<script src="{{page.baseurl}}assets/js/roster/roster.min.js"></script>
+<script src="{{page.baseurl}}assets/js/dist/roster{% if site.data.hash %}.{{ site.data.hash }}{% endif %}.bundle.js"></script>
 <!-- This script must remain after roster.js (compiled into all.min.js) in the page DOM the callback/function to work! -->
-<script src="https://spreadsheets.google.com/feeds/cells/{{ page.sheet_key }}/{{ page.sheet_number }}/public/values?alt=json-in-script&callback=doData"></script>
+<script class="jsonSheet" src="https://spreadsheets.google.com/feeds/cells/{{ page.sheet_key }}/{{ page.sheet_number }}/public/values?alt=json"></script>
