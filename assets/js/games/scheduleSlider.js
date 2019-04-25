@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
       var games = []; // Degine 'games' var as an empty array
       // run a forEach() loop on the entries...
       entry.forEach(function(entry) { // ...go determine if the game has happened already:
-        var gameDate = entry['gsx$start']['$t'], // Define 'gameDate' as the dates in the 'start' column
+        var gameDate = entry['gsx$start']['$t'].trim(), // Define 'gameDate' as the dates in the 'start' column
           d = new Date(), // Get the current Date/Time
           gd = new Date(gameDate), // Make a new JS Date object from those dates in the 'start' column
-          time = entry['gsx$time']['$t'],
+          time = entry['gsx$time']['$t'].trim(),
           gameTime;
         if ( time !== 'TBA' || time !== undefined || time !== null || time !== '' || time !== ' ' ) {
           gameTime = time;
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
           var splitTime = noAmPm.split(':');
           var hh;
           var mm;
-          var tz = entry['gsx$timezone']['$t'];
+          var tz = entry['gsx$timezone']['$t'].trim();
           for ( var i=0; i<splitTime.length; i++ ) {
             hh = splitTime[0]*1+tzh;
             mm = splitTime[1];
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var color = setColor(entry); // Define 'color' as passing 'entry' through the setColor() function
         // Function to add an ending date if there is one:
         function checkEndDate(endDateValue) {
-          endDateValue = entry['gsx$end']['$t']; // Define the var 'endDate' as the data in the 'end' column of the Google Sheet
+          endDateValue = entry['gsx$end']['$t'].trim(); // Define the var 'endDate' as the data in the 'end' column of the Google Sheet
           if ( endDateValue !== '' ) {  // If an endDate exists (is not a blank cell in the sheet) then do this:
             var d = new Date(endDateValue), // Define 'd' as a new JS date object from the games 'end' column dates
               m = monthNames[d.getMonth()], // Define 'm' as the game end-date's month in short-text form
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var endDate = checkEndDate(entry); // Defin 'endDate' as passing 'entry' through the checkEndDate() function
         // Function to check for a timezone and add the html for it if there is one other than 'CST':
         function checkForTimezone(timeZone) {
-          timeZone = entry['gsx$timezone']['$t'];  // Define the var 'timeZone' as the data in the 'timezone' column of the Google Sheet
+          timeZone = entry['gsx$timezone']['$t'].trim();  // Define the var 'timeZone' as the data in the 'timezone' column of the Google Sheet
           if ( timeZone == '' || timeZone == 'CST' ) {  // If the timezone is empty or equal to 'CST' then do:
             timeZone = '';  // Set timezone as nothing
           } else {  // For everything else, do:
@@ -141,8 +141,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var timeZone = checkForTimezone(entry); // Define 'timeZone' as 'entry' passed-through the checkForTimezone() function
         // Function to build the html for the individual div elements for each game:
         function buildSliderDivs() {
-          var startDate = entry['gsx$start']['$t']; // 'startDate' = start column
-          var sport = entry['gsx$sport']['$t'];
+          var startDate = entry['gsx$start']['$t'].trim(); // 'startDate' = start column
+          var sport = entry['gsx$sport']['$t'].trim();
           var d = new Date(startDate), // Make a new JS Date from the start column dates
             m = monthNames[d.getMonth()], // Make 'm' the month in shor-text form
             day = d.getDate(); // Make 'day' the games Date
@@ -155,9 +155,9 @@ document.addEventListener('DOMContentLoaded', function() {
           html += '<span class="schedule-slider__m d-block">' + m + '</span><span class="schedule-slider__day d-block">' + day + '</span>' + endDate; // Date column w/ end-date added if it exists.
           html += '</div><div class="schedule-slider__r col-10">'; // Close left-side and start the right portion of the slider-slide
           html += '<div class="schedule-slider__sport--wrapper"><span class="schedule-slider__sport d-block">' + sport + '</span></div>'; // Label it w/ the sport name
-          html += '<span class="schedule-slider__opponent d-block">vs. ' + entry['gsx$opponent']['$t'] + '</span>';  // Opponent Column
-          html += '<span class="schedule-slider__where d-block">' + entry['gsx$where']['$t'] + '</span>';  // Where Column
-          html += '<span class="schedule-slider__time d-block">' + entry['gsx$time']['$t'] + timeZone + '</span>';  // Time  Column: If there is a timezone other than CST add the timezone in parenthesis
+          html += '<span class="schedule-slider__opponent d-block">vs. ' + entry['gsx$opponent']['$t'].trim() + '</span>';  // Opponent Column
+          html += '<span class="schedule-slider__where d-block">' + entry['gsx$where']['$t'].trim() + '</span>';  // Where Column
+          html += '<span class="schedule-slider__time d-block">' + entry['gsx$time']['$t'].trim() + timeZone + '</span>';  // Time  Column: If there is a timezone other than CST add the timezone in parenthesis
           html += '</div></div></div>'; // End divs
         }
         buildSliderDivs();

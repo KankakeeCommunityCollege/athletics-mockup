@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var color = setColor(entry);  // Define var 'color' as passing the var 'entry' through the setColor() function
         // Function to check if the game has an End date and build it out (for games that span multiple days e.g. tournaments & such.)
         function checkEndDate(endDateValue) {
-          endDateValue = entry['gsx$end']['$t']; // Define the var 'endDate' as the data in the 'end' column of the Google Sheet
+          endDateValue = entry['gsx$end']['$t'].trim(); // Define the var 'endDate' as the data in the 'end' column of the Google Sheet
           if ( endDateValue !== '' ) {  // If an endDate exists (is not a blank cell in the sheet) then do this:
             var d = new Date(endDateValue), // Define following variables: Turn the date in the 'end' column into a JS date object
               m = monthNames[d.getMonth()], // Run that date through the monethNames[] array to get the Month in text
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var endDate = checkEndDate(entry); // Define 'endDate' as running 'entry' through the checkEndDate() function
         // Function to check for a timezone and add it if there is not 'CST'.
         function checkForTimezone(timeZone) {
-          timeZone = entry['gsx$timezone']['$t'];  // Define the var 'timeZone' as the data in the 'timezone' column of the Google Sheet
+          timeZone = entry['gsx$timezone']['$t'].trim();  // Define the var 'timeZone' as the data in the 'timezone' column of the Google Sheet
           if ( timeZone == '' || timeZone == 'CST' ) {  // If the timezone is empty or equal to 'CST' then do:
             timeZone = '';  // Set timezone as nothing
           } else {  // For everything else, do:
@@ -130,8 +130,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var timeZone = checkForTimezone(entry); // Define the var 'timeZone' as passing 'entry' through the checkForTimezone() function
         // Function to wrap the incoming data in HTML table markup:
         function buildTableRows() {
-          var startDate = entry['gsx$start']['$t'];  // Define vars for: 'start' column
-          var status = entry['gsx$status']['$t'];
+          var startDate = entry['gsx$start']['$t'].trim();  // Define vars for: 'start' column
+          var status = entry['gsx$status']['$t'].trim();
           var d = new Date(startDate), // Define 'd' as a JS date object created from the dates in the 'start' column
             m = monthNames[d.getMonth()], // Define 'm' as the start date converted to text (e.g. Apr.) by running it throught he monthNames[] array
             day = d.getDate(), // Define 'day' as the date for the game
@@ -153,12 +153,12 @@ document.addEventListener('DOMContentLoaded', function() {
           html += '<tr>';  // Begin the row
           html += '<td>' + sortingDate + '</td>';  // Opponent Column
           html += '<td align="center" class="mx-auto" style="vertical-align:top;background-color:' + color + ';color:#ffffff;">' + m + ' ' + day + endDate + '</td>'; // Date Column: gets the appropriate background color and an end-date tacked-on if it exists.
-          html += '<td align="left">' + entry['gsx$opponent']['$t'] + '</td>';  // Opponent Column
-          html += '<td>' + entry['gsx$time']['$t'] + timeZone + '</td>';  // Time  Column: If there is a timezone other than CST, add the timezone in parenthesis
-          html += '<td align="left">' + entry['gsx$where']['$t'] + '</td>';  // Where Column
-          html += '<td class="schedule-page__align-center--offset" align="center">' + entry['gsx$status']['$t'] + '</td>';  // Status Column
-          html += '<td class="schedule-page__align-center--offset" align="center">' + entry['gsx$summary']['$t'] + '</td>';  // Summary Column
-          if ( status == 'W' || status == 'L' || status == 'T' || status == 'Canceled' ) {
+          html += '<td align="left">' + entry['gsx$opponent']['$t'].trim() + '</td>';  // Opponent Column
+          html += '<td>' + entry['gsx$time']['$t'].trim() + timeZone + '</td>';  // Time  Column: If there is a timezone other than CST, add the timezone in parenthesis
+          html += '<td align="left">' + entry['gsx$where']['$t'].trim() + '</td>';  // Where Column
+          html += '<td class="schedule-page__align-center--offset" align="center">' + entry['gsx$status']['$t'].trim() + '</td>';  // Status Column
+          html += '<td class="schedule-page__align-center--offset" align="center">' + entry['gsx$summary']['$t'].trim() + '</td>';  // Summary Column
+          if ( status == 'W' || status == 'L' || status == 'T' ) {
             html += '<td class="schedule-page__align-center--offset" align="center">' + winCount + ' - ' + lossCount + tieCount + '</td>';
           } else {
             html += '<td class="schedule-page__align-center--offset" align="center">' + ' ' + '</td>';
