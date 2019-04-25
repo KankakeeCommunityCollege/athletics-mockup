@@ -4,6 +4,13 @@
   margin-right: 0;
 }
 
+@media screen and (min-width: 992px) {
+  .schedule-slider__row {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+}
+
 .schedule-slider__l {
   color: $white;
   height: 130px;
