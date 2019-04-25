@@ -3,8 +3,7 @@ post_title: Softball 2019 Season Preview
 date: 2019-02-18 07:00:00
 categories:
   - softball
-  - general
-sport-category: General
+sport-category: Softball
 news_thumb_image: /assets/img/cavaliers-16x9-thumb.png
 description: KCC 2019 Spring Softball
 ---
