@@ -5,7 +5,7 @@ categories:
   - news
   - general
 sport-category:
-news_thumb_image: /favicon.ico
+news_thumb_image: /assets/img/njcaa-shieldlogo_150.png
 description: NJCAA  Academic All Americans
 ---
 
