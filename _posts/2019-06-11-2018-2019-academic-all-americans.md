@@ -5,8 +5,8 @@ categories:
   - news
   - general
 sport-category:
-news_thumb_image: /siteicon.png
-description: 18-19 Academic All Americans
+news_thumb_image: /favicon.ico
+description: NJCAA  Academic All Americans
 ---
 
 Congratulations to the KCC Academic Student Athletes
