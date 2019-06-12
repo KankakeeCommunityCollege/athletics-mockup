@@ -1,5 +1,6 @@
 function parseSheet(json, parent) {
-  let spData = json.feed.entry;
+  let spData = null;
+  spData = json.feed.entry;
   //console.log(spData);
   let data = spData;
   const table = drawTable(parent);

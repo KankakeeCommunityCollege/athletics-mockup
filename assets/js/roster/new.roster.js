@@ -25,7 +25,7 @@ function requestJson(url, parent, resolve, modalParent) {
 
 function loadJson(a, parent, resolve) {
   for (var i = 0, len = a.length; i < len; i++) {
-    return requestJson(a[i], parent, resolve);
+    requestJson(a[i], parent, resolve);
   }
 }
 
@@ -33,7 +33,7 @@ function makeListFeedUrls(a, modalParent, resolve) {
   for (var i = 0, len = a.length; i < len; i++) {
     let listUrl = a[i].replace('/feeds/cells/', '/feeds/list/');
     //console.log(listUrl);
-    return requestJson(listUrl, modalParent, resolve);
+    requestJson(listUrl, modalParent, resolve);
   }
 }
 
@@ -70,6 +70,4 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
-  //loadJson(getJsonSheetSources());
-  //readData(document.getElementById('data'));
 });

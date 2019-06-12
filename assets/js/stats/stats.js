@@ -1,1 +1,1 @@
-import './statsTabs.js';
+import './new.statsTabs.js';
