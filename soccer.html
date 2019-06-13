@@ -93,41 +93,7 @@ slides:
       <div class="col-md-12">
         <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/calendar.svg" class="icon-middle" alt="Calendar icon" />&#160;Upcoming Games <!-- <a href="{{ page.baseurl }}soccer/schedule" class="btn btn-primary schedule__button-margin">View Full Schedule</a> --></h2>
         <div id="scheduleDiv" class="baseball slick games" style="padding:15px">
-          <div class="schedule-slider-temp">
-            <div>
-              <div class="row schedule-slider__row">
-                <div class="schedule-slider__l text-center col-2" style="background-color:#999">
-                </div>
-                <div class="schedule-slider__r col-10">
-                  <div class="schedule-slider__sport--wrapper">
-                    <span class="schedule-slider__sport d-block">&nbsp;</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="row schedule-slider__row">
-                <div class="schedule-slider__l text-center col-2" style="background-color:#999">
-                </div>
-                <div class="schedule-slider__r col-10">
-                  <div class="schedule-slider__sport--wrapper">
-                    <span class="schedule-slider__sport d-block">&nbsp;</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="row schedule-slider__row">
-                <div class="schedule-slider__l text-center col-2" style="background-color:#999">
-                </div>
-                <div class="schedule-slider__r col-10">
-                  <div class="schedule-slider__sport--wrapper">
-                    <span class="schedule-slider__sport d-block">&nbsp;</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% include loading-slider.html %}
         </div>
       </div>
     </div>
