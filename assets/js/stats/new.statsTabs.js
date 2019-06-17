@@ -1,4 +1,4 @@
-import getJsonSheetSources from '../roster/getJsonSheetSources.js'; // Returns an array of the URLs of all the Sheets JSON feeds script tags in the page.
+import getJsonSheetSources from '../old-roster/getJsonSheetSources.js'; // Returns an array of the URLs of all the Sheets JSON feeds script tags in the page.
 import createTabs from './createTabs.js';
 import createTabContent from './createTabContent.js';
 

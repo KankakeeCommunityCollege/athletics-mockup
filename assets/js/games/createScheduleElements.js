@@ -59,7 +59,7 @@ function createScheduleElements(response) {
         html += '<div class="schedule-slider__sport--wrapper"><span class="schedule-slider__sport d-block">' + sport + '</span></div>';
         html += '<span class="schedule-slider__opponent d-block">vs. ' + opponent + '</span>';
         html += '<span class="schedule-slider__where d-block">' + where + '</span>';
-        html += '<span class="schedule-slider__time d-block">' + time + timezone + '</span>';
+        html += '<span class="schedule-slider__time d-block">' + time + ' ' + timezone + '</span>';
         html += '</div></div></div>';
     }
 

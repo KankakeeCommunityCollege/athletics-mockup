@@ -1,102 +1,95 @@
-function parseSheet(json, parent) {
-  let spData = null;
-  spData = json.feed.entry;
-  //console.log(spData);
-  let data = spData;
-  const table = drawTable(parent);
-  const thead = drawHead(table);
-  const tbody = drawBody(table);
-  let rowData = [];
+import createModalElements from './createModalElements.js';
 
-  for(var r=0; r<data.length; r++) {
-    var cell = data[r]['gs$cell'];
-    var val = cell['$t'];
-    var a = document.createElement('a');
-    var modalHref;
-    if ( val == '#NA!' ) {
-      val = ' ';
-    }
-    if ( cell.col == 3 && val !== 'Player' ) {
-      modalHref = '#' + val.replace(/[\W_]+/g, '');
-      a.setAttribute('href', modalHref);
-      a.setAttribute('data-toggle', 'modal');
-      a.append(val);
-      rowData.push(a);
-    }
-    if ( cell.row == 2 ) {
-      if ( cell.col == 1 ) {
-        drawHeadRow(thead, rowData);
-        rowData = [];
-      }
-    } else {
-      if ( cell.col == 1 ) {
-        drawBodyRow(tbody, rowData);
-        rowData = [];
-      }
-    }
-    if ( cell.col != 3 ) {
-      rowData.push(val);
-    }
-    if ( cell.row == 1 && cell.col == 3 ) {
-      rowData.push(val);
-    }
+function createTableElements(response) {
+  const parent = document.getElementById('data');
+  const table = createTableElement(parent);
+  const thead = createTableHeadingElement(table);
+  const tbody = createTableBodyElement(table);
+  // Handle the results here (response.result has the parsed body).
+  //console.log("Response", response.result);
+  let sheetData = response.result.values;
+  let arrayLength = sheetData.length;
+  let headingData = sheetData[0];
+  let tableData = sheetData.slice(1, arrayLength); // is an array of arrays
+
+  //
+  //
+  createModalElements(response);
+  //
+  //
+
+  //console.log(tableData);
+  createHeadingRow(thead, headingData);
+
+  for (let i = 0; i < tableData.length; i++) {
+    let rowData = tableData[i];
+    //console.log(headingData[i]);
+    let name = rowData[2];
+    let id = name.replace(/[\W_]+/g, '');
+    let targetModalId = id + 'Modal';
+    //console.log('targetModalId = ' + targetModalId);
+    rowData[2] = '<button type="button" class="btn btn-link buttons__roster--name" data-toggle="modal" data-target="#' + targetModalId + '" >' + name + '</button>';
+    createBodyRow(tbody, tableData[i], id);
   }
-  drawBodyRow(tbody, rowData);
-}
-function drawCell(tr, val) {
-  var td = document.createElement('td');
-  tr.append(td);
-  td.append(val);
-  return td;
-}
-function drawTh(tr, val) {
-  var th = document.createElement('th');
-  var classes;
-  var hideBio;
-  if ( val == 'Intended Major' || val == 'High School Coach' || val == 'Parents' || val == 'Siblings' || val == 'Bio' ) {
-    classes = 'never';
+
+  function createTableElement(parent) {
+    const table = document.createElement('table');
+    table.classList.add('display', 'table', 'table-striped', 'table-hover');
+    table.setAttribute('width', '100%');
+    table.setAttribute('id', 'responsiveTable');
+    parent.appendChild(table);
+    return table;
   }
-  th.classList.add(classes);
-  tr.append(th);
-  th.append(val);
-  return th;
-}
-function drawHeadRow(thead, rowData) {
-  if (rowData == null) return null;
-  if (rowData.length == 0) return null;
-  var tr = document.createElement('tr');
-  thead.append(tr);
-  for(var c=0; c<rowData.length; c++) {
-    drawTh(tr, rowData[c]);
+
+  function createTableHeadingElement(table) {
+    const thead = document.createElement('thead');
+    table.appendChild(thead);
+    return thead;
   }
-  return tr;
-}
-function drawBodyRow(tbody, rowData) {
-  if (rowData == null) return null;
-  if (rowData.length == 0) return null;
-  var tr = document.createElement('tr');
-  tbody.append(tr);
-  for(var c=0; c<rowData.length; c++) {
-    drawCell(tr, rowData[c]);
+
+  function createTableBodyElement(table) {
+    const tbody = document.createElement('tbody');
+    table.appendChild(tbody);
+    return tbody;
   }
-  return tr;
+
+  function createHeadingCells(tr, val) {
+    const th = document.createElement('th');
+    tr.appendChild(th);
+    val === 'Image' || val === 'Bio' ? th.classList.add('none') // Add DataTable's 'all' & 'none' classes.
+    : val === 'Jersey' || val === 'player' ? th.classList.add('all') // Add DataTable's 'all' & 'none' classes.
+    : null;
+    val = val + ':';
+    th.innerHTML = val;
+    return th;
+  }
+
+  function createHeadingRow(thead, data) {
+    const tr = document.createElement('tr');
+    thead.appendChild(tr);
+    for (var i = 0; i < data.length; i++) {
+      createHeadingCells(tr, data[i]);
+    }
+    return tr;
+  }
+
+  function createBodyRow(tbody, data, id) {
+    const tr = document.createElement('tr');
+    tbody.appendChild(tr);
+    //const rowData = tableData[i];
+    //const targetModalId = data[2];
+    //console.log('targetModalId = ' + targetModalId);
+    for (var i = 0; i < data.length; i++) {
+      createCells(tr, data[i], id);
+    }
+    return tr;
+  }
+
+  function createCells(tr, val, id) {
+    const td = document.createElement('td');
+    tr.appendChild(td);
+    td.innerHTML = val;
+    return td;
+  }
 }
-function drawTable(parent) {
-  var table = document.createElement('table');
-  table.classList.add('display', 'table', 'table-striped', 'table-hover');
-  table.setAttribute('width', '100%');
-  table.setAttribute('id', 'responsiveTable');
-  parent.append(table);
-  return table;
-}
-function drawHead(table) {
-  var thead = document.createElement('thead');
-  table.append(thead);
-  return thead;
-}
-function drawBody(table) {
-  var tbody = document.createElement('tbody');
-  table.append(tbody);
-  return tbody;
-}
-module.exports = parseSheet;
+export default createTableElements;

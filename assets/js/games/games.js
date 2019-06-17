@@ -1,5 +1,5 @@
 //import './scheduleSlider.js';
-import start from './sheetsAPI.js';
+import start from './gamesSheetsAPI.js';
 
 document.addEventListener('DOMContentLoaded', function() {
   $('.schedule-slider-temp').slick({
