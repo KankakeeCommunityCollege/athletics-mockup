@@ -4,7 +4,7 @@ date: 2019-06-11 07:00:00
 categories:
   - news
   - general
-sport-category:
+sport-category: Baseball
 news_thumb_image: /assets/img/njcaa-shieldlogo_150.png
 description: NJCAA  Academic All Americans
 ---
