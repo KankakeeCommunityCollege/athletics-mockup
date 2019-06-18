@@ -76,17 +76,26 @@ function createModalElements(response) {
   //const headingDataCopy = headingData.slice(0);
   const validData = data.slice(1, dataLength);
 
+
+
   for (var i = 0; i < validData.length; i++) {
     //console.log('headingDataCopy ' + headingDataCopy);
     let modalContent = [];
     let playerStats = [];
     let rowData = validData[i];
+    let stat = headingData[i];
     let src = rowData[0].trim();
     let jersey = rowData[1].trim();
     let name = rowData[2].trim();
+
+    let playerStat = '<span><strong>' + rowData + '</strong>&nbsp;' + headingData + '</span>'
     let img = '<div class="text-center float-md-left"><img alt="Photo of player ' + name + '" class="roster__img" src="/uploads/roster-img/' + src + '.jpg"></div>';
     let nameH6 = '<h6 class="roster__player">#' + jersey + ' ' + name + '</h6>';
+    let statistic = '<span><strong>' + stat + '</strong>&nbsp;' + rowData + '</span><br>';
     const isNotFirstThreeColumns = i >= 4;
+    playerStats.push(statistic);
+    modalContent.push(img, nameH6);
+    console.log('STATISTIC ' + playerStats);
 
     // ==================================================================================
     //  \   /\   / - e - s
@@ -110,7 +119,6 @@ function createModalElements(response) {
 
     console.log('headingData: ' + headingData[i]);
 
-    modalContent.push(img, nameH6);
 
 
     //console.log('STATS' + playerStats);
