@@ -65,81 +65,75 @@ function createBody(content, name, modalContent) {
   return body;
 }
 
+
+function createPlayerImage(name, src, body) {
+  const div = document.createElement('div');
+  const img = document.createElement('img');
+  let alt = 'Photo of player ' + name;
+  let source = '../../uploads/roster-img/' + src + '.jpg';
+  div.classList.add('text-center', 'float-md-left');
+  img.setAttribute('alt', alt);
+  img.setAttribute('src', source);
+  img.classList.add('roster__img');
+  div.appendChild(img);
+  body.appendChild(div);
+  return body;
+}
+
+function createNameHeading(name, jersey, body) {
+  const h6 = document.createElement('h6');
+  h6.classList.add('roster__player');
+  h6.innerHTML = '#' + jersey + ' ' + name;
+  body.appendChild(h6);
+  return body;
+}
+
+function createPlayerStats(cellCol, cellData) {
+  //console.log(cellCol);
+  //console.log(cellData);
+  const p = document.createElement('p');
+  const span = document.createElement('span');
+  const strong = document.createElement('strong');
+  p.classList.add('mb-0'); //Bootstrap Class (margin-bottom: 0)
+  strong.innerHTML = cellCol + ':';
+  p.appendChild(strong);
+  span.innerHTML = '&nbsp' + cellData;
+  p.appendChild(span);
+  return p;
+}
+
+function createModalFooter(content) {
+  const div = document.createElement('div');
+  const button = document.createElement('button');
+  div.classList.add('modal-footer');
+  button.setAttribute('type', 'button');
+  button.setAttribute('data-dismiss', 'modal');
+  button.classList.add('btn', 'btn-secondary');
+  button.innerHTML = 'Close';
+  div.appendChild(button);
+  content.appendChild(div);
+  return content;
+}
+
 function createModalElements(response) {
   //console.log(response);
   const parent = document.getElementById('modalDiv');
 
-
   const data = response.result.values;
   const headingData = data[0];
   const dataLength = data.length;
-  //const headingDataCopy = headingData.slice(0);
   const validData = data.slice(1, dataLength);
 
-
-
   for (var i = 0; i < validData.length; i++) {
-    //console.log('headingDataCopy ' + headingDataCopy);
-    let modalContent = [];
-    let playerStats = [];
     let rowData = validData[i];
+    let modalContent = [];
     let stat = headingData[i];
     let src = rowData[0].trim();
     let jersey = rowData[1].trim();
     let name = rowData[2].trim();
 
-    let playerStat = '<span><strong>' + rowData + '</strong>&nbsp;' + headingData + '</span>'
-    let img = '<div class="text-center float-md-left"><img alt="Photo of player ' + name + '" class="roster__img" src="/uploads/roster-img/' + src + '.jpg"></div>';
-    let nameH6 = '<h6 class="roster__player">#' + jersey + ' ' + name + '</h6>';
-    let statistic = '<span><strong>' + stat + '</strong>&nbsp;' + rowData + '</span><br>';
     const isNotFirstThreeColumns = i >= 4;
-    playerStats.push(statistic);
-    modalContent.push(img, nameH6);
-    console.log('STATISTIC ' + playerStats);
 
-    // ==================================================================================
-    //  \   /\   / - e - s
-    // ==================================================================================
-    //   \/   \/
-    // ==================================================================================
-    //
-    // ==================================================================================
-    //
-    // ==================================================================================
-    // TODO: Create modal's content containing list of player's stats.
-    //==================================================================================
-    //
-    //==================================================================================
-    //
-    //==================================================================================
-    //
-    //==================================================================================
-    //
-    //==================================================================================
-
-    console.log('headingData: ' + headingData[i]);
-
-
-
-    //console.log('STATS' + playerStats);
-    //playerStatsHTML = '<p>' + playerStats.join('') + '</p>';
-    //modalContent.push(playerStatsHTML);
-    //modalContent = modalContent.join('');
-
-    //name ? console.log('Name -> ' + name): null;
-    //const modalContent = '<p>Modal content....</p>';
-    //console.log('modalContent => ' + modalContent);
-
-    //let position = '<span><strong>Position: </strong>' + rowData[3].trim() + '</span><br>';
-    //let height = '<span><strong>Height: </strong>' + rowData[4].trim() + '</span><br>';
-    //let weight = '<span><strong>Weight: </strong>' + rowData[5].trim() + '</span><br>';
-    //let bat = '<span><strong>Bat-Throw: </strong>' + rowData[6].trim() + '</span><br>';
-    //let year = '<span><strong>Class: </strong>' + rowData[7].trim() + '</span><br>';
-    //let hs = '<span><strong>High School: </strong>' + rowData[8].trim() + '</span><br>';
-    //let town = '<span><strong>Hometown: </strong>' + rowData[9].trim() + '</span><br>';
-    //let bio = '<span><strong>Bio: </strong>' + rowData[10].trim() + '</span>';
-    //let modalContent = imgHTML + '<p>' + nameH6 + year + weight + height + town + hs + bio + '</p>'
-    //console.log(playerStats);
     let id = name.replace(/[\W_]+/g, '');
     const modal = createModal(parent, id);
     const doc = createDoc(modal);
@@ -147,6 +141,31 @@ function createModalElements(response) {
     const header = createHeader(content);
     const title = createTitle(header, name, id);
     const body = createBody(content, name, modalContent);
+    const playerImg =  createPlayerImage(name, src, body)
+    const nameHeading = createNameHeading(name, jersey, body);
+    let playerStatsArray = [];
+
+    for (var r = 2; r < rowData.length; r++) {
+      let cellData = rowData[r];
+      let cellCol = headingData[r];
+      //console.log(cellData + ' r = ' + r);
+      const playerStats = createPlayerStats(cellCol, cellData);
+      playerStatsArray.push(playerStats);
+    }
+    //console.log(playerStatsArray);
+
+    function wrapStats(playerStatsArray, body) {
+      const p = document.createElement('p');
+      for (var x = 0; x < playerStatsArray.length; x++) {
+        let statItem = playerStatsArray[x];
+        p.appendChild(statItem);
+      }
+      body.appendChild(p);
+      return body;
+    }
+    wrapStats(playerStatsArray, body);
+    const footer = createModalFooter(content);
+
   }
 
 }

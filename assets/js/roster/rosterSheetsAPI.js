@@ -18,23 +18,26 @@ function start() {
       return gapi.client.sheets.spreadsheets.values.get(sheetParams)
         .then(function(response) {
           let createTablePromise = new Promise((resolve, reject) => {
-            console.log(response);
-            // Create the HTML to inject into the DOM here
-            //createScheduleElements(response);
+            //console.log(response);
             createTableElements(response);
             resolve();
-
           });
           createTablePromise.then(() => {
-            // Do Slick Slider Stuff here
-            $('#responsiveTable').DataTable( {
-              responsive: true, // Activate responsive powers GO!
-              paging: false, // Don't paginate. Schedule schould all be on one page
-              'order': [[1, 'asc']]//, // Initial column ordering
-              //'columnDefs': [
-              //  { 'visible': false, 'targets': [0,10] }
-              //]
-            } );
+            let dataTablesPromise = new Promise((resolve, reject) => {
+              // Do Slick Slider Stuff here
+              $('#responsiveTable').DataTable( {
+                responsive: true, // Activate responsive powers GO!
+                paging: false, // Don't paginate. Schedule schould all be on one page
+                'order': [[1, 'asc']]//, // Initial column ordering
+                //'columnDefs': [
+                //  { 'visible': false, 'targets': [0,10] }
+                //]
+              });
+              resolve();
+            });
+            dataTablesPromise.then(() => {
+              document.querySelector('input[type="search"].form-control').setAttribute('placeholder', 'Search roster...');
+            });
           });
         },
         function(err) {

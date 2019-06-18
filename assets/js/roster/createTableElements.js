@@ -37,6 +37,7 @@ function createTableElements(response) {
     table.classList.add('display', 'table', 'table-striped', 'table-hover');
     table.setAttribute('width', '100%');
     table.setAttribute('id', 'responsiveTable');
+    parent.innerHTML = '';
     parent.appendChild(table);
     return table;
   }
