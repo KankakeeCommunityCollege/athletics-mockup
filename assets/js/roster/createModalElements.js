@@ -89,7 +89,6 @@ function createNameHeading(name, jersey, body) {
 }
 
 function createPlayerStats(cellCol, cellData) {
-  console.log('CellDATA = ' + cellData);
   const p = document.createElement('p');
   const cellIsBlank = cellData == ' ';
 
@@ -155,11 +154,9 @@ function createModalElements(response) {
     for (var r = 2; r < rowData.length; r++) {
       let cellData = rowData[r];
       let cellCol = headingData[r];
-      //console.log(cellData + ' r = ' + r);
       const playerStats = createPlayerStats(cellCol, cellData);
       playerStatsArray.push(playerStats);
     }
-    //console.log(playerStatsArray);
 
     function wrapStats(playerStatsArray, body) {
       const p = document.createElement('p');

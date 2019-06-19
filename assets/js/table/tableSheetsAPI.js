@@ -30,7 +30,7 @@ function start() {
                 paging: false, // Don't paginate. Schedule schould all be on one page
                 'order': [[1, 'asc']], // Initial column ordering
                 'columnDefs': [
-                  { 'visible': false, 'targets': [8] }
+                  { 'visible': false, 'targets': [1,8] }
                 ]
               });
               resolve();

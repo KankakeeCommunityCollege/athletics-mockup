@@ -1,4 +1,7 @@
 function createTableElements(response) {
+  const monthNames = [ // Define an array of the months to convert JS # value of month into short text version
+    'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'
+  ];
   const parent = document.getElementById('data');
   const table = createTableElement(parent);
   const thead = createTableHeadingElement(table);
@@ -12,15 +15,27 @@ function createTableElements(response) {
 
   createHeadingRow(thead, headingData);
 
-  for (let i = 0; i < tableData.length; i++) {
+  for (let i = 0; i < tableData.length; i++) { // Iterates over the spreadsheets rows
     let rowData = tableData[i];
     //console.log(headingData[i]);
-    let name = rowData[2];
-    let id = name.replace(/[\W_]+/g, '');
-    let targetModalId = id + 'Modal';
-    //console.log('targetModalId = ' + targetModalId);
-    rowData[2] = '<button type="button" class="btn btn-link buttons__roster--name" data-toggle="modal" data-target="#' + targetModalId + '" >' + name + '</button>';
-    createBodyRow(tbody, tableData[i], id);
+    let start = rowData[0];
+    let end = rowData[1];
+    let endDate = '';
+
+    function formatDate(date) {
+      let dateArray = date.split(/\//);
+      let day = dateArray[0];
+      let monthNumber = dateArray[1];
+      let month = monthNames[ day - 1 ];
+      let formatedDate = month + ' ' + day;
+      return formatedDate;
+    }
+    end ? endDate = ' - ' + formatDate(end)
+    : null;
+    rowData[0] = formatDate(start) + endDate;
+
+    createBodyRow(tbody, tableData[i]);
+    //console.log(end);
   }
 
   function createTableElement(parent) {
@@ -48,9 +63,6 @@ function createTableElements(response) {
   function createHeadingCells(tr, val) {
     const th = document.createElement('th');
     tr.appendChild(th);
-    val === 'Image' || val === 'Bio' ? th.classList.add('none') // Add DataTable's 'all' & 'none' classes.
-    : val === 'Jersey' || val === 'player' ? th.classList.add('all') // Add DataTable's 'all' & 'none' classes.
-    : null;
     val = val + ':';
     th.innerHTML = val;
     return th;
@@ -65,23 +77,42 @@ function createTableElements(response) {
     return tr;
   }
 
-  function createBodyRow(tbody, data, id) {
+  function createCells(tr, val) {
+    const td = document.createElement('td');
+    tr.appendChild(td);
+    td.innerHTML = val;
+    return td;
+  }
+
+  function createDateCells(tr, val, location) {
+    const td = document.createElement('td');
+    const red = '#c61f48';
+    const blue = '#0f3b63';
+    const gameIsAtHome = location.trim() == 'Home';
+    let color;
+    tr.appendChild(td);
+    gameIsAtHome ? color = red
+    : color = blue;
+    td.setAttribute('align', 'center');
+    td.style.cssText = 'color:#ffffff;background-color:' + color + ';'
+    td.innerHTML = val;
+    return td;
+  }
+
+  function createBodyRow(tbody, data) {
     const tr = document.createElement('tr');
     tbody.appendChild(tr);
     //const rowData = tableData[i];
     //const targetModalId = data[2];
     //console.log('targetModalId = ' + targetModalId);
     for (var i = 0; i < data.length; i++) {
-      createCells(tr, data[i], id);
+      let location = data[5];
+      data[i] === data[0] ? createDateCells(tr, data[i], location)
+      : createCells(tr, data[i]);
     }
     return tr;
   }
 
-  function createCells(tr, val, id) {
-    const td = document.createElement('td');
-    tr.appendChild(td);
-    td.innerHTML = val;
-    return td;
-  }
+
 }
 export default createTableElements;

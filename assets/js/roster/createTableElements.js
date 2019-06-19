@@ -2,7 +2,6 @@ import createModalElements from './createModalElements.js';
 
 function createTableElements(response) {
 
-
   function createTableElement(parent) {
     const table = document.createElement('table');
     table.classList.add('display', 'table', 'table-striped', 'table-hover');
@@ -48,9 +47,6 @@ function createTableElements(response) {
   function createBodyRow(tbody, data, id) {
     const tr = document.createElement('tr');
     tbody.appendChild(tr);
-    //const rowData = tableData[i];
-    //const targetModalId = data[2];
-    //console.log('targetModalId = ' + targetModalId);
     for (var i = 0; i < data.length; i++) {
       createCells(tr, data[i], id);
     }
@@ -76,22 +72,14 @@ function createTableElements(response) {
   let headingData = sheetData[0];
   let tableData = sheetData.slice(1, arrayLength); // is an array of arrays
 
-  //
-  //
   createModalElements(response);
-  //
-  //
-
-  //console.log(tableData);
   createHeadingRow(thead, headingData);
 
   for (let i = 0; i < tableData.length; i++) {
     let rowData = tableData[i];
-    //console.log(headingData[i]);
     let name = rowData[2];
     let id = name.replace(/[\W_]+/g, '');
     let targetModalId = id + 'Modal';
-    //console.log('targetModalId = ' + targetModalId);
     rowData[2] = '<button type="button" class="btn btn-link buttons__roster--name" data-toggle="modal" data-target="#' + targetModalId + '" >' + name + '</button>';
     createBodyRow(tbody, tableData[i], id);
   }
