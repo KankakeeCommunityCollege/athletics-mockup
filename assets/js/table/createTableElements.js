@@ -1,7 +1,13 @@
 function createTableElements(response) {
+  //console.log(response);
   const monthNames = [ // Define an array of the months to convert JS # value of month into short text version
     'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'
   ];
+  var winCount = 0;
+  var lossCount = 0;
+  var tieCount;
+  var tieCountValue = 0;
+
   const parent = document.getElementById('data');
   const table = createTableElement(parent);
   const thead = createTableHeadingElement(table);
@@ -12,6 +18,8 @@ function createTableElements(response) {
   let arrayLength = sheetData.length;
   let headingData = sheetData[0];
   let tableData = sheetData.slice(1, arrayLength); // is an array of arrays
+
+  headingData[9] = 'Record';
 
   createHeadingRow(thead, headingData);
 
@@ -101,14 +109,29 @@ function createTableElements(response) {
 
   function createBodyRow(tbody, data) {
     const tr = document.createElement('tr');
+    let record;
+    let status = data[6].trim();
+    console.log(status);
+    status == 'W' ? winCount += 1
+    : status == 'L' ? lossCount += 1
+    : status == 'T' ? tieCountValue += 1
+    : null;
+
+    tieCountValue === 0 ? tieCount = ''
+    : tieCount = ' - ' + tieCountValue;
+
+    status == '' ? record = '' : record = winCount + ' - ' + lossCount + tieCount;
+    console.log('RECORD = ' + record);
+
+    data[9] = record;
+
     tbody.appendChild(tr);
-    //const rowData = tableData[i];
-    //const targetModalId = data[2];
-    //console.log('targetModalId = ' + targetModalId);
     for (var i = 0; i < data.length; i++) {
       let location = data[5];
+
       data[i] === data[0] ? createDateCells(tr, data[i], location)
       : createCells(tr, data[i]);
+
     }
     return tr;
   }
