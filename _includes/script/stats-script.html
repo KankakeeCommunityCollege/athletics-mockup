@@ -1,9 +1,1 @@
-<script class="jsonSheet">
-  const params = {
-    "spreadsheetId": "{{ page.sheet_key}}",
-    "range": "Sheet1",
-    "majorDimension": "ROWS"
-  }
-</script>
 <script src="{{page.baseurl}}assets/js/dist/stats{% if site.data.hash %}.{{ site.data.hash }}{% endif %}.bundle.js"></script>
-{% assign sheets = page.sheet_numbers | split: ", " %}

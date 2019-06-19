@@ -1,5 +1,4 @@
-function setSheetParameters() {
-  console.log('SET SHEET PARAMETERS IS FIRED');
+function setStatsParameters(rangeArray) {
   let sheetParams = {}; // The thing we are here for
   const host = window.location.host + '/';
   const url = window.location.href.replace(/(^\w+:|^)\/\//, '');
@@ -10,13 +9,8 @@ function setSheetParameters() {
   const urlIsWomensBasketball = url.indexOf('/womens-basketball') > -1;
   const urlIsSoftball = url.indexOf('/softball') > -1;
   const urlIsVolleyball = url.indexOf('/volleyball') > -1;
-  const urlIsRoster = url.indexOf('/roster') > -1;
-  const urlIsSchedule = url.indexOf('/schedule') > -1;
   const urlIsStats = url.indexOf('/stats') > -1;
-  const urlIsIndex = url === host;
   // Sheet Keys
-  const gamesId = "13cd6P3Ze7bBJugzlQ2Uk2dFWc677wE68ghL94JZcnmI";
-  const rosterId = "14pczY6IjNEy3zdqyNRhCZFLfWLEP4Uv3EGwIp7uXrLo";
   const baseballStatsId = '1CjI-KFAmasBUipURvXRtGuu6kWYbrNmo49VPeg7d6Os';
   const mensBasketballStatsId = '/1zBMYYFRJLLgUu9XKR8voz37o5Nz1dMVAdfy3cj3W_PI';
   const soccerStatsId = '1CR7waySsJVjNEq7OuWGA7y1-FXWnE4hsvybYUg9l8cw';
@@ -26,21 +20,6 @@ function setSheetParameters() {
 
   function setStatParams() {
     setRange([]);
-    sheetParams.includeGridData = false;
-  }
-
-  function checkIds(i) {
-    urlIsRoster ? setId(rosterId)
-    : urlIsSchedule ? setId(gamesId)
-    : urlIsStats ? setStatsId(i)
-    : setId(gamesId);
-  }
-
-  function checkRanges(r) {
-    urlIsRoster || urlIsSchedule ? setRange(r)
-    : urlIsStats ? setStatParams()
-    : urlIsIndex ? setRange(r + ' Current')
-    : setRange(r + ' Current');
   }
 
   function setId(i) {
@@ -61,17 +40,17 @@ function setSheetParameters() {
     : null;
   }
 
-  function setParams(r) {
-    checkIds(r);
-    checkRanges(r);
+  function setParams(r, range) {
+    setStatsId(r);
+    setRange(range);
   }
-  urlIsBaseball ? setParams('Baseball')
-  : urlIsMensBasketball ? setParams('Mens Basketball')
-  : urlIsSoccer ? setParams('Soccer')
-  : urlIsWomensBasketball ? setParams('Womens Basketball')
-  : urlIsSoftball ? setParams('Softball')
-  : urlIsVolleyball ? setParams('Volleyball')
-  : setParams('All');
+  urlIsBaseball ? setParams('Baseball', rangeArray)
+  : urlIsMensBasketball ? setParams('Mens Basketball', rangeArray)
+  : urlIsSoccer ? setParams('Soccer', rangeArray)
+  : urlIsWomensBasketball ? setParams('Womens Basketball', rangeArray)
+  : urlIsSoftball ? setParams('Softball', rangeArray)
+  : urlIsVolleyball ? setParams('Volleyball', rangeArray)
+  : null;
 
   console.log(sheetParams);
   return sheetParams;
@@ -80,4 +59,4 @@ function setSheetParameters() {
 //  USAGE:
 //    const sheetParams = setSheetParameters();
 //
-module.exports = setSheetParameters;
+module.exports = setStatsParameters;
