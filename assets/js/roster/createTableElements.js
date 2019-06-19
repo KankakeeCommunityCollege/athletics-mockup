@@ -1,36 +1,7 @@
 import createModalElements from './createModalElements.js';
 
 function createTableElements(response) {
-  const parent = document.getElementById('data');
-  const table = createTableElement(parent);
-  const thead = createTableHeadingElement(table);
-  const tbody = createTableBodyElement(table);
-  // Handle the results here (response.result has the parsed body).
-  //console.log("Response", response.result);
-  let sheetData = response.result.values;
-  let arrayLength = sheetData.length;
-  let headingData = sheetData[0];
-  let tableData = sheetData.slice(1, arrayLength); // is an array of arrays
 
-  //
-  //
-  createModalElements(response);
-  //
-  //
-
-  //console.log(tableData);
-  createHeadingRow(thead, headingData);
-
-  for (let i = 0; i < tableData.length; i++) {
-    let rowData = tableData[i];
-    //console.log(headingData[i]);
-    let name = rowData[2];
-    let id = name.replace(/[\W_]+/g, '');
-    let targetModalId = id + 'Modal';
-    //console.log('targetModalId = ' + targetModalId);
-    rowData[2] = '<button type="button" class="btn btn-link buttons__roster--name" data-toggle="modal" data-target="#' + targetModalId + '" >' + name + '</button>';
-    createBodyRow(tbody, tableData[i], id);
-  }
 
   function createTableElement(parent) {
     const table = document.createElement('table');
@@ -57,7 +28,7 @@ function createTableElements(response) {
   function createHeadingCells(tr, val) {
     const th = document.createElement('th');
     tr.appendChild(th);
-    val === 'Image' || val === 'Bio' ? th.classList.add('none') // Add DataTable's 'all' & 'none' classes.
+    val === 'Image' || val === 'Bio' || val === 'Intended Major' || val === 'High School Coach' || val === 'Parents' || val === 'Siblings' ? th.classList.add('none') // Add DataTable's 'all' & 'none' classes.
     : val === 'Jersey' || val === 'player' ? th.classList.add('all') // Add DataTable's 'all' & 'none' classes.
     : null;
     val = val + ':';
@@ -91,6 +62,38 @@ function createTableElements(response) {
     tr.appendChild(td);
     td.innerHTML = val;
     return td;
+  }
+
+
+  const parent = document.getElementById('data');
+  const table = createTableElement(parent);
+  const thead = createTableHeadingElement(table);
+  const tbody = createTableBodyElement(table);
+  // Handle the results here (response.result has the parsed body).
+  //console.log("Response", response.result);
+  let sheetData = response.result.values;
+  let arrayLength = sheetData.length;
+  let headingData = sheetData[0];
+  let tableData = sheetData.slice(1, arrayLength); // is an array of arrays
+
+  //
+  //
+  createModalElements(response);
+  //
+  //
+
+  //console.log(tableData);
+  createHeadingRow(thead, headingData);
+
+  for (let i = 0; i < tableData.length; i++) {
+    let rowData = tableData[i];
+    //console.log(headingData[i]);
+    let name = rowData[2];
+    let id = name.replace(/[\W_]+/g, '');
+    let targetModalId = id + 'Modal';
+    //console.log('targetModalId = ' + targetModalId);
+    rowData[2] = '<button type="button" class="btn btn-link buttons__roster--name" data-toggle="modal" data-target="#' + targetModalId + '" >' + name + '</button>';
+    createBodyRow(tbody, tableData[i], id);
   }
 }
 export default createTableElements;

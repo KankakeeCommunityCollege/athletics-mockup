@@ -89,16 +89,23 @@ function createNameHeading(name, jersey, body) {
 }
 
 function createPlayerStats(cellCol, cellData) {
-  //console.log(cellCol);
-  //console.log(cellData);
+  console.log('CellDATA = ' + cellData);
   const p = document.createElement('p');
-  const span = document.createElement('span');
-  const strong = document.createElement('strong');
-  p.classList.add('mb-0'); //Bootstrap Class (margin-bottom: 0)
-  strong.innerHTML = cellCol + ':';
-  p.appendChild(strong);
-  span.innerHTML = '&nbsp' + cellData;
-  p.appendChild(span);
+  const cellIsBlank = cellData == ' ';
+
+  function createStat(cellCol, cellData) {
+    const span = document.createElement('span');
+    const strong = document.createElement('strong');
+    p.classList.add('mb-0'); //Bootstrap Class (margin-bottom: 0)
+    strong.innerHTML = cellCol + ':';
+    p.appendChild(strong);
+    span.innerHTML = '&nbsp' + cellData;
+    p.appendChild(span);
+    return p;
+  }
+
+  cellIsBlank ? p.innerHTML = ''
+  : createStat(cellCol, cellData);
   return p;
 }
 
