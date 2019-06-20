@@ -1,5 +1,4 @@
 function setSheetParameters() {
-  console.log('SET SHEET PARAMETERS IS FIRED');
   let sheetParams = {}; // The thing we are here for
   const host = window.location.host + '/';
   const url = window.location.href.replace(/(^\w+:|^)\/\//, '');

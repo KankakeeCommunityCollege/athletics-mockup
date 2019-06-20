@@ -1,6 +1,6 @@
 import setSheetParameters from '../shared/setSheetParameters.js';
 import setStatsParameters from './setStatsParameters.js';
-//import createTableElements from './createTableElements.js';
+import createTableElements from './createTableElements.js';
 
 function start() {
   const params = {
@@ -9,8 +9,6 @@ function start() {
   };
   const sheetParams = setSheetParameters();
   //console.log(sheetParams);
-  let headingData, rowData;
-  // Initializes the client with the API key and the Translate API.
   gapi.client.init(params).then(function() {
     // Executes an API request, and returns a Promise.
     function execute() {
@@ -27,6 +25,17 @@ function start() {
 
               statsRange.push(sheetTitle);
             }
+            //console.log(statsRange);
+            let statsParams = setStatsParameters(statsRange);
+
+            return gapi.client.sheets.spreadsheets.values.batchGet(statsParams)
+              .then(function(batchResponse) {
+                //console.log(batchResponse);
+                createTableElements(batchResponse);
+              },
+              function(error) {
+                console.error("Execute error", error);
+              });
             //createTableElements(response);
 
             //

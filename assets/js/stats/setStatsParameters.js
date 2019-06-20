@@ -18,19 +18,15 @@ function setStatsParameters(rangeArray) {
   const volleyballStatsId = '1tzACDaWtF9Vohd20ooWsTxSyRaAxAKvpnvxmoO6biAI';
   const womensBasketballStatsId = '1-RkDZ4YpX4XGFvOL7jgXuCm_rLD843NjzPoWJ-Otnf8';
 
-  function setStatParams() {
-    setRange([]);
-  }
-
   function setId(i) {
     sheetParams.spreadsheetId = i;
   }
 
   function setRange(r) {
-    sheetParams.range = r;
+    sheetParams.ranges = r;
   }
 
-  function setStatsId(p) {
+  function setStatsId() {
     urlIsBaseball ? setId(baseballStatsId)
     : urlIsMensBasketball ? setId(mensBasketballStatsId)
     : urlIsSoccer ? setId(soccerStatsId)
@@ -40,17 +36,12 @@ function setStatsParameters(rangeArray) {
     : null;
   }
 
-  function setParams(r, range) {
-    setStatsId(r);
-    setRange(range);
+  function setParams(r) {
+    setStatsId();
+    setRange(r);
   }
-  urlIsBaseball ? setParams('Baseball', rangeArray)
-  : urlIsMensBasketball ? setParams('Mens Basketball', rangeArray)
-  : urlIsSoccer ? setParams('Soccer', rangeArray)
-  : urlIsWomensBasketball ? setParams('Womens Basketball', rangeArray)
-  : urlIsSoftball ? setParams('Softball', rangeArray)
-  : urlIsVolleyball ? setParams('Volleyball', rangeArray)
-  : null;
+
+  setParams(rangeArray); // AAAaaahhhh, the first actual call to anything
 
   console.log(sheetParams);
   return sheetParams;
