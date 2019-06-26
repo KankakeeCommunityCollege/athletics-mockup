@@ -32,9 +32,10 @@ function createTableElements(response) {
 
     function formatDate(date) {
       let dateArray = date.split(/\//);
-      let day = dateArray[0];
-      let monthNumber = dateArray[1];
-      let month = monthNames[ day - 1 ];
+      console.log(dateArray);
+      let day = dateArray[1];
+      let monthNumber = dateArray[0] - 1;
+      let month = monthNames[ monthNumber ];
       let formatedDate = month + ' ' + day;
       return formatedDate;
     }
@@ -121,7 +122,7 @@ function createTableElements(response) {
     : tieCount = ' - ' + tieCountValue;
 
     status == '' ? record = '' : record = winCount + ' - ' + lossCount + tieCount;
-    console.log('RECORD = ' + record);
+    //console.log('RECORD = ' + record);
 
     data[9] = record;
 

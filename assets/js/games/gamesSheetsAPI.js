@@ -9,8 +9,8 @@ function start() {
   };
   const sheetParams = setSheetParameters();
   //console.log(sheetParams);
-  let headingData, rowData;
-  // Initializes the client with the API key and the Translate API.
+  // Initializes the client with the API key
+  // No O Auth is needed for read-only public sheets.
   gapi.client.init(params).then(function() {
     // Executes an API request, and returns a Promise.
     function execute() {
