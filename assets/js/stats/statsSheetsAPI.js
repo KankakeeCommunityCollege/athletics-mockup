@@ -1,6 +1,6 @@
 import setSheetParameters from '../shared/setSheetParameters.js';
 import setStatsParameters from './setStatsParameters.js';
-import createTableElements from './createTableElements.js';
+import createTabHTML from './createTabHTML.js';
 
 function start() {
   const params = {
@@ -31,7 +31,7 @@ function start() {
             return gapi.client.sheets.spreadsheets.values.batchGet(statsParams)
               .then(function(batchResponse) {
                 //console.log(batchResponse);
-                createTableElements(batchResponse);
+                createTabHTML(batchResponse);
               },
               function(error) {
                 console.error("Execute error", error);

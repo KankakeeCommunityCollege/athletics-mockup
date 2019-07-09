@@ -55,6 +55,8 @@ function createTableElements(response) {
 
   function createCells(tr, val, id) {
     const td = document.createElement('td');
+    const cellIsBlank = val === '_no-data_';
+    cellIsBlank ? val = ' ' : null;
     tr.appendChild(td);
     td.innerHTML = val;
     return td;
@@ -69,8 +71,8 @@ function createTableElements(response) {
   //console.log("Response", response.result);
   let sheetData = response.result.values;
   let arrayLength = sheetData.length;
-  let headingData = sheetData[0];
-  let tableData = sheetData.slice(1, arrayLength); // is an array of arrays
+  let headingData = sheetData[1];
+  let tableData = sheetData.slice(2, arrayLength); // is an array of arrays
 
   createModalElements(response);
   createHeadingRow(thead, headingData);

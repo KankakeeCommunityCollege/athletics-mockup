@@ -15,7 +15,7 @@ function setSheetParameters() {
   const urlIsIndex = url === host;
   // Sheet Keys
   const gamesId = "13cd6P3Ze7bBJugzlQ2Uk2dFWc677wE68ghL94JZcnmI";
-  const rosterId = "14pczY6IjNEy3zdqyNRhCZFLfWLEP4Uv3EGwIp7uXrLo";
+  const rosterId = "1odoxnNnm3ldZFpND9SDj6JhPXIct60FVJSFvcshX2aw";
   const baseballStatsId = '1CjI-KFAmasBUipURvXRtGuu6kWYbrNmo49VPeg7d6Os';
   const mensBasketballStatsId = '/1zBMYYFRJLLgUu9XKR8voz37o5Nz1dMVAdfy3cj3W_PI';
   const soccerStatsId = '1CR7waySsJVjNEq7OuWGA7y1-FXWnE4hsvybYUg9l8cw';
@@ -72,7 +72,7 @@ function setSheetParameters() {
   : urlIsVolleyball ? setParams('Volleyball')
   : setParams('All');
 
-  console.log(sheetParams);
+  //console.log(sheetParams);
   return sheetParams;
 }
 //

@@ -90,7 +90,7 @@ function createNameHeading(name, jersey, body) {
 
 function createPlayerStats(cellCol, cellData) {
   const p = document.createElement('p');
-  const cellIsBlank = cellData == ' ';
+  const cellIsBlank = cellData == ' ' || cellData === '_no-data_';
 
   function createStat(cellCol, cellData) {
     const span = document.createElement('span');
@@ -126,9 +126,9 @@ function createModalElements(response) {
   const parent = document.getElementById('modalDiv');
 
   const data = response.result.values;
-  const headingData = data[0];
+  const headingData = data[1];
   const dataLength = data.length;
-  const validData = data.slice(1, dataLength);
+  const validData = data.slice(2, dataLength);
 
   for (var i = 0; i < validData.length; i++) {
     let rowData = validData[i];
