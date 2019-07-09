@@ -21,19 +21,14 @@ sub-nav_hidden: true
 
 <section class="container sub-nav-marg">
   <div class="row">
-      <div class="col-md-12">
-        <div class="editable">
-            <div class="row row-space">
-                <div class="col-md-12 text-center">
-                    <p><span class="schedule__button-margin"><a class="btn btn-primary" target="_blank" rel="noopener" href="http://njcaa.org/sports/mbkb/2018-19/div1/teams/kankakeecommunitycollege">Basketball Stats on NJCAA Region 4 Website </a></span></p>
-                </div>
-                <div>
-                    <p>&nbsp;</p>
-                    <p><a target="_blank" href="/uploads/Mens BBall - All Americans.pdf">All Americans</a></p>
-                    <p><a target="_blank" href="/uploads/Mens Basketball Records - Career.pdf">Career Records</a></p>
-                    <p><a target="_blank" href="/uploads/Mens Basketball Records - Individual.pdf">Individual Records</a></p>
-                    <p><a target="_blank" href="/uploads/Mens Basketball Records - Team-by-Team.pdf">Team by Team Records</a></p>
-                    <p><a target="_blank" href="/uploads/Mens Basketball Records - Team.pdf">Team Records</a></p>
-                </div>
-            </div>
-        </div></div></div></section>
+    <div class="col">
+      <span id="page-top" class="link__offset" aria-hidden="true"></span>
+      <a class="btn btn-primary buttons__margin-btm" target="_blank" rel="noopener" href="http://njcaa.org/sports/mbkb/2018-19/div1/teams/kankakeecommunitycollege">Basketball Stats on NJCAA Region 4 Website </a>
+      <div id="data">
+        <div class="text-center">
+          <img src="{{ page.baseurl }}assets/img/loader.gif" alt="" class="img-fluid img__w-100">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

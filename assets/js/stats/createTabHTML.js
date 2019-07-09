@@ -16,15 +16,19 @@ function createTabContent() {
 }
 
 function createTabPane(tabName, i) {
+  const tabPane = document.createElement('div');
+  const h2 = document.createElement('h2');
   const tabLabel = tabName.toLowerCase().replace(/\s|\//g, '-')
   const tabId = tabLabel + '-tab';
-  const tabPane = document.createElement('div');
   const tabIsFirstTab = i == 0;
+  h2.classList.add('main-heading', 'typography__main-heading--margin-top', 'text-center');
+  h2.innerHTML = tabName;
   tabIsFirstTab ? tabPane.classList.add('show', 'active') : null;
   tabPane.classList.add('tab-pane', 'fade');
   tabPane.setAttribute('id', tabLabel);
   tabPane.setAttribute('role', 'tabpanel');
   tabPane.setAttribute('aria-labelledby', tabId);
+  tabPane.appendChild(h2);
   return tabPane;
 }
 

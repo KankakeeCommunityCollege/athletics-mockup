@@ -12,7 +12,7 @@ function setStatsParameters(rangeArray) {
   const urlIsStats = url.indexOf('/stats') > -1;
   // Sheet Keys
   const baseballStatsId = '1CjI-KFAmasBUipURvXRtGuu6kWYbrNmo49VPeg7d6Os';
-  const mensBasketballStatsId = '/1zBMYYFRJLLgUu9XKR8voz37o5Nz1dMVAdfy3cj3W_PI';
+  const mensBasketballStatsId = '1zBMYYFRJLLgUu9XKR8voz37o5Nz1dMVAdfy3cj3W_PI';
   const soccerStatsId = '1CR7waySsJVjNEq7OuWGA7y1-FXWnE4hsvybYUg9l8cw';
   const softballStatsId = '1qZHyYT_fJE6jajEUjFJK8Z8yKYbu76YnJ9ec3Vzk-KM';
   const volleyballStatsId = '1tzACDaWtF9Vohd20ooWsTxSyRaAxAKvpnvxmoO6biAI';
@@ -43,7 +43,7 @@ function setStatsParameters(rangeArray) {
 
   setParams(rangeArray); // AAAaaahhhh, the first actual call to anything
 
-  //console.log(sheetParams);
+  console.log(sheetParams);
   return sheetParams;
 }
 //

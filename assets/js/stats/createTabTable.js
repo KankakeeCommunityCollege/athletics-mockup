@@ -1,12 +1,20 @@
 function addColSpan(tr, td, val, reg, span) {
   val = val.replace(reg, '');
   td.setAttribute('colspan', span);
+  td.classList.add('table__red-category');
   tr.appendChild(td);
   td.innerHTML = val;
   return td;
 }
 
 function appendRow(tr, td, val) {
+  const highlightRegExp = /^__(.+)__$/g;
+  const highlightTest = val.search(highlightRegExp);
+  const valContainsHighlighting = highlightTest != -1;
+  if (valContainsHighlighting) {
+    td.classList.add('table__highlighted-cell');
+    val = val.replace(/^__|__$/g, '');
+  }
   tr.appendChild(td);
   td.innerHTML = val;
   return td;
@@ -32,9 +40,10 @@ function testColSpanAmount(tr, td, val) {
 }
 
 function createCells(tr, val) {
-  const colSpanRegExp = /^\*\*.+/g;
-  const valTest = val.search(colSpanRegExp);
-  const valContainsColSpan = valTest != -1;
+  val = val.trim();
+  const colSpanRegExp = /^\*\*[^\d\w]\*?\*?/g;
+  const colTest = val.search(colSpanRegExp);
+  const valContainsColSpan = colTest != -1;
   const td = document.createElement('td');
   valContainsColSpan ?
     testColSpanAmount(tr, td, val)
@@ -53,11 +62,17 @@ function createTableRow(data, table) {
 
 function createTableElement(parent) {
   const table = document.createElement('table');
+  const tbody = document.createElement('tbody');
+  const a = document.createElement('a');
+  a.setAttribute('href', '#page-top');
+  a.innerHTML = 'Back to top';
   table.classList.add('table', 'table-striped', 'table-hover');
   table.setAttribute('width', '100%');
   table.setAttribute('id', 'responsiveTable');
+  table.appendChild(tbody);
   parent.appendChild(table);
-  return table;
+  parent.appendChild(a);
+  return tbody;
 }
 
 function createTabTable(parent, tableData, tabName) {
