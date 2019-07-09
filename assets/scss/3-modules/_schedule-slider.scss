@@ -2,6 +2,14 @@
 .schedule-slider__row {
   margin-left: 0;
   margin-right: 0;
+  box-shadow: 0 0 5px rgba(0,0,0,.1);
+}
+
+@media screen and (min-width: 992px) {
+  .schedule-slider__row {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
 }
 
 .schedule-slider__l {

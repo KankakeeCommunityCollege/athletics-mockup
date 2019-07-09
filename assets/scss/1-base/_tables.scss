@@ -18,7 +18,18 @@ th {
 }
 
 .table__red-category {
+  background-color: $grey-6;
   color: $primary-red;
   font-family: $secondaryfont-stack;
   font-weight: $secondaryfont-weight-bold;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.table__highlighted-cell {
+  background-color: #e0e0e0;
+  color: $primary-blue;
+  font-family: $secondaryfont-stack;
+  font-weight: $secondaryfont-weight-bold;
+  font-size: 1.2em;
 }

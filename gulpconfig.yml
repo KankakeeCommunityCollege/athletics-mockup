@@ -1,3 +1,4 @@
+# Configurations used in the gulpfile.js
 browsersync:
   notify: true
   open:   false # set to true to open localhost:3000 in chrome browser upon execution of gulp command.
@@ -7,21 +8,18 @@ browsersync:
   xip:    false
   browser: "Google Chrome"
 
+# Clean the jekyll _site/ build dir.
 clean:
-  # The jekyll build dir
   - "_site" # clean these folders on execution of gulp command
 #  - "_posts/*"
 
+# Copy task coppies ONLY static assets like images into site build
 copy:
   # Paths to static assets that aren't (S)CSS or JavaScript
-  # because these are completely handled by the sass and javascript tasks
-  # The two comments above this one came from the template.
-  # We copy all JS and SCSS because Google Chrome Inspect will tell you where the style is located within the sass structure.
+  # because these are completely handled by the sass and javascript tasks.
   assets:
-    # all files below the assets dir
-    # everything gets copied to site build becuase some JS files are linked directly into pages and not compiled into all.min.js)
     - "assets/**/*"
-    # exclusions: (Don't copy these items because they are handled by other gulp tasks)
+    # exclusions: (Don't copy these items because they are handled by other gulp tasks):
     - "!assets/{js,scss,css}/**/*"   # js, scss and css files
     - "!assets/css{,/**}"            # css dir
     - "!assets/js{,/**}"             # js dir
@@ -29,6 +27,7 @@ copy:
   dist: "_site/assets/"
   notification: "Running Copy"
 
+# Main Gulp Sass task (for main.css).
 sass:
   # Autoprefixer will make sure your CSS works with these browsers
   compatibility:    # These are pretty standard autoprefixer compatibility settings
@@ -38,114 +37,44 @@ sass:
   dest:
     jekyllRoot: "assets/css/"
     buildDir: "_site/assets/css/"
-  notification: "Running Sass"
+  notification: "Running Main Sass"
   src: "assets/scss/main.scss"
 
-contentSass:
-  # Autoprefixer will make sure your CSS works with these browsers
-  compatibility:    # These are pretty standard autoprefixer compatibility settings
+# Gulp task to create stylesheet for custom options in CloudCannon (CMS customizations). Editors can use these styles as option in the CMS.
+cmsScss:
+  compatibility:
     - "last 2 versions"
     - "ie >= 9"
     - "defaults"
   dest:
     jekyllRoot: "assets/css/"
     buildDir: "_site/assets/css/"
-  notification: "Running contentSass"
+  notification: "Running cmsScss"
   src: "assets/scss/content.scss"
 
-javascript:
-  dest:
-    jekyllRoot: "assets/js/script/"
-    buildDir: "_site/assets/js/script/"
-  filename: "all.min.js"
-  notification: "Running JavaScript"
-  src:
-    - "assets/js/script/lazyload.js" # lazload.js called within youtube-carousel.js
-    - "assets/js/script/sliders.js" # custom slick slider JS
-    - "assets/js/script/moreButton.js"
-    - "assets/js/script/accordian.js"
-    - "assets/js/script/footerDate.js"
-
-javascriptytCarousel:
-  dest:
-    jekyllRoot: "assets/js/ytCarousel/"
-    buildDir: "_site/assets/js/ytCarousel/"
-  filename: "ytCarousel.min.js"
-  notification: "Running ytCarousel JavaScript"
-  src:
-    - "assets/js/ytCarousel/youtube-carousel.js"
-    - "assets/js/ytCarousel/schedule.js"
-
-javascriptGames:
-  dest:
-    jekyllRoot: "assets/js/games/"
-    buildDir: "_site/assets/js/games/"
-  filename: "scheduleSlider.min.js"
-  notification: "Running JavaScript ScheduleSlider"
-  src:
-    - "assets/js/games/scheduleSlider.js"
-
-javascriptTable:
-  dest:
-    jekyllRoot: "assets/js/table/"
-    buildDir: "_site/assets/js/table/"
-  filename: "scheduleTable.min.js"
-  notification: "Running scheduleTable JavaScript"
-  src:
-    - "assets/js/table/scheduleTable.js"
-
-javascriptRoster:
-  dest:
-    jekyllRoot: "assets/js/roster/"
-    buildDir: "_site/assets/js/roster/"
-  filename: "roster.min.js"
-  notification: "Running Roster JavaScript"
-  src:
-    - "assets/js/roster/roster.js"
-    - "assets/js/roster/rosterModal.js"
-
-javascriptStats:
-  dest:
-    jekyllRoot: "assets/js/stats/"
-    buildDir: "_site/assets/js/stats/"
-  filename: "stats.min.js"
-  notification: "Running Stats JavaScript"
-  src:
-    - "assets/js/stats/statsTabs.js"
-
+# Gulp task to create sitemap on production builds (`$ gulp --production`).
 sitemap:
-  src:
+  src: # Defines what items should be in used in creating the sitemap.
     - "_site/*.html"
     - "_site/**/*.html"
     - "_site/**/**/*.html"
-    - "_site/**/*.pdf"
+    - "_site/**/*.pdf" # Yes, PDF's too.
     - "_site/**/**/*.pdf"
-  siteUrl:
-    - "https://athletics.kcc.edu"
+  notification: "Running sitemap"
+  siteUrl: "https://athletics.kcc.edu"
 
 jekyll:
   notification: "Running jekyll"
 
 watch: # 'Watch' for changes in all the following:
-  images: "assets/img/**/*"
-  javascript:
-    - "assets/js/**/*.js"
-  javascriptytCarousel:
-    - "assets/js/**/*.js"
-  javascriptGames:
-    - "assets/js/**/*.js"
-  javascriptTable:
-      - "assets/js/**/*.js"
-  javascriptRoster:
-      - "assets/js/**/*.js"
-  javascriptStats:
-      - "assets/js/**/*.js"
+  images:
+    - "assets/img/**/*"
+    - "uploads/**/*"
   sass: "assets/scss/**/*.scss"
-  contentSass: "assets/scss/**/*.scss"
+  cmsScss: "assets/scss/**/*.scss"
   pages:
-    - "*.{md,html,yml,xml}"
-    - "{_data,_includes,_layouts,_pages,_posts,_alerts}/**/*.{md,html,yml,xml}"
-    # All these subfolders are added because the watch task was not looking deep enough
+    - "*.{md,html,yml,xml}" # watch the project root.
+    - "{_data,_includes,_layouts,_pages,_posts,_alerts}/**/*.{md,html,yml,xml}" # watch standard jekyll dirs.
     - "about/**/*.*"
     - "baseball/**/*.*"
     - "facilities/**/*.*"
@@ -156,5 +85,7 @@ watch: # 'Watch' for changes in all the following:
     - "volleyball/**/*.*"
     - "womens-basketball/**/*.*"
     # !exlclusions:
-    - "!_site/**/*.*"
-    - "!assets/**/*.*"
+    # These are important exceptions that should be excluded from watching!
+    - "!sitemap.xml" # When you run `$ gulp --production`, sitemap gets copied-out to project root. This would then, be picked up by watch, which would kick-off another build, causing another change in the sitemap.xml file (i.e. an infinite loop)
+    - "!_site/**/*" # This is always going to change.
+    - "!assets/**/*" # Don't watch 'assets/' dir. SASS & JS changes get injected into the '_site' dir & localhost:3000/ whithout having to re-run the whole 'build' task. Images are watched seperately
