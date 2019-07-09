@@ -43,7 +43,7 @@ function setStatsParameters(rangeArray) {
 
   setParams(rangeArray); // AAAaaahhhh, the first actual call to anything
 
-  console.log(sheetParams);
+  //console.log(sheetParams);
   return sheetParams;
 }
 //
