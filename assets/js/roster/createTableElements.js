@@ -55,7 +55,7 @@ function createTableElements(response) {
 
   function createCells(tr, val, id) {
     const td = document.createElement('td');
-    const cellIsBlank = val === '_no-data_';
+    const cellIsBlank = val === '_na_';
     cellIsBlank ? val = ' ' : null;
     tr.appendChild(td);
     td.innerHTML = val;

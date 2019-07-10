@@ -28,7 +28,7 @@ function start() {
               $('#responsiveTable').DataTable( {
                 responsive: true, // Activate responsive powers GO!
                 paging: false, // Don't paginate. Schedule schould all be on one page
-                'order': [[1, 'asc']]//, // Initial column ordering
+                'order': []//, // Initial column ordering
                 //'columnDefs': [
                 //  { 'visible': false, 'targets': [0,10] }
                 //]

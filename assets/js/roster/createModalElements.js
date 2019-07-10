@@ -90,7 +90,7 @@ function createNameHeading(name, jersey, body) {
 
 function createPlayerStats(cellCol, cellData) {
   const p = document.createElement('p');
-  const cellIsBlank = cellData == ' ' || cellData === '_no-data_';
+  const cellIsBlank = cellData == ' ' || cellData === '_na_';
 
   function createStat(cellCol, cellData) {
     const span = document.createElement('span');
