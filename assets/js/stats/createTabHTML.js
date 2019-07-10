@@ -88,9 +88,22 @@ function createTabHTML(response) {
     //
     //console.log(tabValues);
     //
+    let tableData;
+    let blurb = null;
+    let firstRow = tabValues[0].toString();
+    let tabValuesLength = tabValues.length;
+    let reg = /^>>>/g;
+    if ( firstRow.search(reg) !== -1 ) {
+      console.log('MATCH');
+      tableData = tabValues.splice(1, tabValuesLength);
+      blurb = tabValues.splice(0,1);
+      console.log(blurb);
+    } else {
+      tableData = tabValues;
+    }
     let ulWithTabs = createTabLinks(tabName, ul, i);
     let tabPane = createTabPane(tabName, i);
-    let tabPaneWithTable = createTabTable(tabPane, tabValues, tabName);
+    let tabPaneWithTable = createTabTable(tabPane, tableData, tabName);
     //console.log(tabPaneWithTable);
     assembleTabbedNav(parent, ulWithTabs, tabContent, tabPaneWithTable); // Wonder twins UNITE!
   }
