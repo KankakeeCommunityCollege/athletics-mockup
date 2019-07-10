@@ -83,7 +83,10 @@ function createPlayerImage(name, src, body) {
 function createNameHeading(name, jersey, body) {
   const h6 = document.createElement('h6');
   h6.classList.add('roster__player');
-  h6.innerHTML = '#' + jersey + ' ' + name;
+  const jerseyIsNotBlank = jersey !== '_na_';
+  jerseyIsNotBlank ?
+    h6.innerHTML = '#' + jersey + ' ' + name
+    : h6.innerHTML = name;
   body.appendChild(h6);
   return body;
 }
