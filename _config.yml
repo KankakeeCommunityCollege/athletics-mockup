@@ -6,6 +6,8 @@ collections:
     _hide_content: true
   alerts:
     output: false
+  contacts:
+    output: false
 defaults:
 - scope:
     path: ''
@@ -55,6 +57,15 @@ exclude:
 
 uploads_dir: # specifies the default uploads directory for CloudCannon
   - "uploads/"
+
+contacts_sports:
+  baseball: Baseball
+  men's basketball: Mens's Basketball
+  soccer: Soccer
+  women's basketball: Women's Basketball
+  softball: Softball
+  volleyball: Volleyball
+
 
 _comments:
   title: This is the page title. <br/>Please don't change page titles without talking to web services first. <br/> Changing the page title may affect search engine results.

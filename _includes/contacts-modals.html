@@ -1,0 +1,39 @@
+{% assign sorted_contacts = site.contacts | sort: "display_order" %}
+{% if page.title == "Baseball" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "baseball" %}
+{% elsif page.title == "Men's Basketball" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "men's basketball" %}
+{% elsif page.title == "Soccer" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "soccer" %}
+{% elsif page.title == "Women's Basketball" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "women's basketball" %}
+{% elsif page.title == "Softball" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "softball" %}
+{% elsif page.title == "Volleyball" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "volleyball" %}
+{% endif %}
+{% for contact in coaches %}
+<div class="modal fade" id="modalCoach{{ forloop.index }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title sr-only">{{ contact.contacts_title }} {{ contact.name }} Bio</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="{{ page.baseurl }}{% if contact.portrait %}{{ contact.portrait }}{% else %}uploads/blank-male-avatar-1.jpg{% endif %}" alt="Photo of {{ contact.contacts_title }} {{ contact.name }}" class="img-fluid float-left coach-modal-img editable" title="Photo of {{ contact.contacts_title }} {{ contact.name }}" />
+        <h5 class="coach-name editable">{{ contact.name }}</h5>
+        <h6 class="coach-title editable">{{ contact.contacts_title }}</h6>
+        <div>
+          {{ contact.content }}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}

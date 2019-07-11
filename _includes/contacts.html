@@ -1,0 +1,33 @@
+{% assign sorted_contacts = site.contacts | sort: "display_order" %}
+{% if page.title == "Baseball" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "baseball" %}
+{% elsif page.title == "Men's Basketball" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "men's basketball" %}
+{% elsif page.title == "Soccer" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "soccer" %}
+{% elsif page.title == "Women's Basketball" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "women's basketball" %}
+{% elsif page.title == "Softball" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "softball" %}
+{% elsif page.title == "Volleyball" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "volleyball" %}
+{% endif %}
+{% for contact in coaches %}
+<div class="col-md-4 coaches__col-bottom-margin">
+  <!-- Coach 1 row -->
+  <div class="row">
+    <!-- Coach 1 left image div (inner-left column) -->
+    <div class="col-6 float-left"><a data-toggle="modal" href="#modalCoach{{ forloop.index }}"><img src="{{ page.baseurl }}{% if contact.portrait %}{{ contact.portrait }}{% else %}uploads/blank-male-avatar-1.jpg{% endif %}" alt="Photo of {{ contact.contacts_title }} {{ contact.name }}" class="img-fluid coach-img modal-link" title="Photo of {{ contact.contacts_title }} {{ contact.name }}" /></a></div>
+    <!-- Coach 1 right info div (inner-right column) -->
+    <div class="col-6 float-right coaches__info">
+      <a data-toggle="modal" href="#modalCoach{{ forloop.index }}" class="modal-link"><h5 class="coach-name">{{ contact.name }}</h5>
+      <h6 class="coach-title">{{ contact.contacts_title }}</h6></a>
+      <p>
+        {% if contact.phone %}<a href="tel:1{{ contact.phone | replace: '-', '' }}">{{ contact.phone }}</a><br />{% endif %}
+        {% if contact.email %}<a href="mailto:{{ contact.email }}">{{ contact.email }}</a>{% endif %}
+      </p>
+      <a data-toggle="modal" class="btn btn-primary" href="#modalCoach{{ forloop.index }}">View Bio</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
