@@ -16,7 +16,7 @@ function setSheetParameters() {
   // Sheet Keys
   const gamesId = "13cd6P3Ze7bBJugzlQ2Uk2dFWc677wE68ghL94JZcnmI";
   const rosterId = "1odoxnNnm3ldZFpND9SDj6JhPXIct60FVJSFvcshX2aw";
-  const baseballStatsId = '1f7iwZCQc5uVmBDiGxmuCp8O4Y_7gT2IybWpIJlYGQbI';
+  const baseballStatsId = '1CjI-KFAmasBUipURvXRtGuu6kWYbrNmo49VPeg7d6Os';
   const mensBasketballStatsId = '1zBMYYFRJLLgUu9XKR8voz37o5Nz1dMVAdfy3cj3W_PI';
   const soccerStatsId = '1CR7waySsJVjNEq7OuWGA7y1-FXWnE4hsvybYUg9l8cw';
   const softballStatsId = '1qZHyYT_fJE6jajEUjFJK8Z8yKYbu76YnJ9ec3Vzk-KM';

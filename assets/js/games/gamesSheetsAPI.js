@@ -49,7 +49,7 @@ function start() {
                     slidesToShow: 1,
                     slidesToScroll: 1
                   }
-                },
+                }
               ]
             });
           });
