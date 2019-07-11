@@ -48,7 +48,7 @@
         <!-- Custom CSS Stylesheet for CloudCannon CMS -->
         <link rel="stylesheet" href="{{page.baseurl}}assets/css/content.css">
         <!-- Custom CSS Stylesheet -->
-        <link rel="stylesheet" href="{{page.baseurl}}assets/css/main.css">
+        <link rel="stylesheet" href="{{page.baseurl}}assets/css/main.css{% if site.data.cache_bust_css %}?version={{ site.data.cache_bust_css | truncate: 32, '' }}{% endif %}">
         <!--[if IE]>
      <style type="text/css">
 
