@@ -9,6 +9,7 @@ function start() {
   };
   const sheetParams = setSheetParameters();
   //console.log(sheetParams);
+  //console.log(sheetParams);
   gapi.client.init(params).then(function() {
     // Executes an API request, and returns a Promise.
     function execute() {

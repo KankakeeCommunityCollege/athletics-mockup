@@ -75,15 +75,34 @@ function createTableElement(parent) {
   return tbody;
 }
 
-function createTabTable(parent, tableData, tabName) {
-  //console.log(parent);
+function createStatIntro(blurb) {
+  let introWrapper = document.createElement('div');
+  introWrapper.innerHTML = blurb;
+  return introWrapper;
+}
+
+function createTabTable(parent, tableData, tabName, blurb) {
+  //console.log(blurb);
+  const blurbIsNotNull = blurb !== null;
+  let copy;
+
+  blurbIsNotNull ?
+    copy = createStatIntro(blurb)
+  : copy = null;
+
+  blurbIsNotNull ?
+    parent.appendChild(copy)
+  : null;
+
   const table = createTableElement(parent);
-  //console.log(table);
+
   for (let i = 0; i < tableData.length; i++) {
     let rowData = tableData[i];
     const tr = createTableRow(rowData, table);
     //createBodyRow(tbody, tableData[i], id);
   }
+  //console.log(table);
+
   //console.log(parent);
   return parent;
 }

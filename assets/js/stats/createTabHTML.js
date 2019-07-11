@@ -1,4 +1,5 @@
-import createTabTable from './createTabTable.js'
+import createTabTable from './createTabTable.js';
+import testForMarkdown from './markdownify.js';
 
 function createTabsUl() {
   const ul = document.createElement('ul');
@@ -43,7 +44,6 @@ function createTabLinks(tabName, ul, i) {
   const li = document.createElement('li');
   const a = document.createElement('a');
   const tabIsFirstTab = i == 0;
-  //console.log(tabId);
   li.classList.add('nav-tabs');
   a.classList.add('nav-link');
   tabIsFirstTab ? setActive() : ariaSelected = 'false';
@@ -67,31 +67,51 @@ function assembleTabbedNav(parent, ulWithTabs, tabContent, tabPaneWithTable) {
 }
 
 function createTabHTML(response) {
-  let sheetData = response.result.valueRanges;
+  //console.log(response); // response the JS Object containing Sheet workbook's data that's returned from the Sheets API.
+  // 'response' is actually a batchResponse from API's `.batchGet()` method
+  let sheetData = response.result.valueRanges; // Array of JS Objects. Each Object represents a Sheet tab.
   const parent = document.getElementById('data');
   const ul = createTabsUl();
   const tabContent = createTabContent();
 
   for (let i = 0; i < sheetData.length; i++) {
-    let tabData = sheetData[i];
-    let tabName = tabData.range.match(/^'.+'!/g).toString().replace(/'|!/g, '');
-    let tabValues = tabData.values;
+    let tabData = sheetData[i]; // JS Object
+    //console.log(tabData);
+    let tabName = tabData.range.match(/^'.+'!/g).toString().replace(/'|!/g, ''); // Extract the Name from the A1 Range ('Sheet 1',!A1-H999) notation in the Object.
+    let tabValues = tabData.values; // Is an array of arrays respresented in the comment below...
     //
-    // tabValues is an array of arrays for each row
+    // tabValues is an array containing 1 array for each row:
     //
-    //  i.e.
-    //      [
-    //        ['cell', 'cell', 'cell'], // row
-    //        ['cell', 'cell', 'cell'], // row
-    //        ['cell', 'cell', 'cell'] // row
-    //      ]
+    // tabvalues = [
+    //                ['<cell-value>', '<cell-value>', '<cell-value>'], // row
+    //                ['<cell-value>', '<cell-value>', '<cell-value>'], // row
+    //                ['<cell-value>', '<cell-value>', '<cell-value>'] // row
+    //            ]
     //
     //console.log(tabValues);
     //
+    let tableData;
+    let blurb = null;
+    let firstRow = tabValues[0].toString();
+    //console.log(firstRow);
+    let tabValuesLength = tabValues.length;
+    let reg = /^>>>/g;
+    if ( firstRow.search(reg) !== -1 ) {
+      tableData = tabValues.splice(1, tabValuesLength);
+      blurb = tabValues.splice(0,1);
+    } else {
+      tableData = tabValues;
+    }
+    const blurbIsNotNull = blurb !== null;
+
+    blurbIsNotNull ?
+      blurb = testForMarkdown(blurb)
+    : null;
+
     let ulWithTabs = createTabLinks(tabName, ul, i);
     let tabPane = createTabPane(tabName, i);
-    let tabPaneWithTable = createTabTable(tabPane, tabValues, tabName);
-    //console.log(tabPaneWithTable);
+    let tabPaneWithTable = createTabTable(tabPane, tableData, tabName, blurb);
+
     assembleTabbedNav(parent, ulWithTabs, tabContent, tabPaneWithTable); // Wonder twins UNITE!
   }
 }
