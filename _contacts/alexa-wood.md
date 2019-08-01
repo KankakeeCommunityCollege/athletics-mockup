@@ -12,4 +12,4 @@ Alexa Wood graduated from Clifton Central High School where she played volleybal
 
 After graduating from Central Coach Wood went to play her Freshman year at Benedictine University. Then coming home to KCC for her sophomore year where she was first in the region for blocks.
 
-As a new coach, Alexa is excited to further her career in volleyball and is looking forward to a great first season as a coach.
+As a new coach, Alexa is excited to further her career in volleyball and is looking forward to a great second season as a coach.
