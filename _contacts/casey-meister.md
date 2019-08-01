@@ -8,7 +8,7 @@ phone: 815‑802‑8614
 email: cmeister@kcc.edu
 ---
 
-A former KCC player, Casey Hadley Meister is in her fifth season as women's basketball assistant coach. Meister has experience as a community college, NCAA Division I, and NAIA Division I athlete. With her playing and coaching experience, she provides guidance to the student-athletes on reaching the next level, plus valuable input and game planning for the staff.
+A former KCC player, Casey Hadley Meister is in her sixth season as women's basketball assistant coach. Meister has experience as a community college, NCAA Division I, and NAIA Division I athlete. With her playing and coaching experience, she provides guidance to the student-athletes on reaching the next level, plus valuable input and game planning for the staff.
 
 Meister has six years coaching experience at Tri-Point High School, 2008-11 as an assistant and 2011-14 as head coach. As assistant for her father, Marcus Hadley, Tri-Point went from a few wins per season to a .500 record. Then, while she was head coach, Tri-Point became even more competitive and finished second in the River Valley Conference all three seasons. Three players from Tri-Point also attended KCC on basketball scholarships during this time.
 
