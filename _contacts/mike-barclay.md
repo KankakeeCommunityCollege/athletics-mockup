@@ -8,7 +8,7 @@ phone: 815‑802‑8618
 email: mbarclay@kcc.edu
 ---
 
-Mike Barclay is entering his fifth year as Head Soccer Coach for the Cavaliers. He was the assistant coach during the 2012 and 2013 seasons.
+Mike Barclay is entering his sixth year as Head Soccer Coach for the Cavaliers. He was the assistant coach during the 2012 and 2013 seasons.
 
 Coach Barclay was a three-time all-region, two-time all-sectional and two-time all-state goalie for Downers Grove South High School (1983-85). For three seasons, Coach Barclay played NCAA Division I collegiate soccer for Eastern Illinois University in Charleston. He still holds rankings as no. 1 in saves percentage, no. 2 in goals against average and no. 3 in total saves in EIU history. In 1989, Coach Barclay lead the Panthers to the NCAA Division I National Indoor Championship for the first time in school history. He also played for one season in the semi-pro Chicago Metro League.
 
