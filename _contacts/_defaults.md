@@ -1,9 +1,9 @@
 ---
-name: Name
-contacts_title: What kind of Coach?
+name: ''
+contacts_title: 'Head/Assistant Coach'
 contacts_sport:
-display_order:
-portrait: uploads/blank-male-avatar-1.jpg
-phone:
-email:
+display_order: 1
+portrait: 'assets/img/blank-contact.svg'
+phone: 888-888-8888
+email: exampleemail@kcc.edu
 ---
