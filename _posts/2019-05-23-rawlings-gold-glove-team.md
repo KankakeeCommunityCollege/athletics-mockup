@@ -5,7 +5,7 @@ categories:
   - baseball
 sport-category: Baseball
 news_thumb_image: /njcaaregionivweb.jpg
-description: 2019 Division II All North Central District Region IV
+description:
 ---
 
 Congratulations Dylan Post and Nick Crowe
