@@ -7,6 +7,7 @@ categories:
   - softball
 sport-category: General
 news_thumb_image: /assets/img/cavaliers-16x9-thumb.png
+news_thumb_alt:
 description: Congratulations!
 ---
 

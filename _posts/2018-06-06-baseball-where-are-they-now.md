@@ -6,6 +6,7 @@ categories:
   - news
 sport-category: Baseball
 news_thumb_image: /uploads/aerial-baseball-field.jpg
+news_thumb_alt:
 description: Where are the 2018 Baseball athletes headed
 ---
 

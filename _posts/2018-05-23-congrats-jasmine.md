@@ -6,6 +6,7 @@ categories:
   - news
 sport-category: Women's Basketball
 news_thumb_image: /uploads/image-2018-06-06.jpg
+news_thumb_alt:
 description: Sophomore Jasmine Elliott receives FULL ride!
 ---
 

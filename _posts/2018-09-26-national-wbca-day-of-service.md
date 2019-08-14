@@ -5,6 +5,7 @@ categories:
   - womens-basketball
 sport-category: Womens Basketball
 news_thumb_image: /uploads/wbb4.jpg
+news_thumb_alt:
 description: Lady Cavaliers giving back
 ---
 

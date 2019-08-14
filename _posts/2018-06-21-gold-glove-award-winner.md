@@ -6,6 +6,7 @@ categories:
   - news
 sport-category: Baseball
 news_thumb_image: /assets/img/Gold Glove Team.PNG
+news_thumb_alt:
 description: Congratulations Brennan Kelly!
 ---
 

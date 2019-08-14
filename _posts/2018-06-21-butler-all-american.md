@@ -6,6 +6,7 @@ categories:
   - news
 sport-category: Baseball
 news_thumb_image: /uploads/allamericanbutler.PNG
+news_thumb_alt:
 description: Congratulations Bryce Butler!
 ---
 

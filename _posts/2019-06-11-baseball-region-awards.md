@@ -5,7 +5,8 @@ categories:
   - baseball
   - news
 sport-category: Baseball
-news_thumb_image: /njcaaregionivweb.jpg
+news_thumb_image: uploads/njcaaregionivweb.jpg
+news_thumb_alt:
 description: 2019 DII Region IV All Region Awards
 ---
 

@@ -6,6 +6,7 @@ categories:
   - news
 sport-category: Soccer
 news_thumb_image: /uploads/jmccleary.jpg
+news_thumb_alt:
 description: Way to go Jacob!
 ---
 

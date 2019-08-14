@@ -6,6 +6,7 @@ categories:
   - news
 sport-category: Volleyball
 news_thumb_image: /uploads/volleyball_thumb.jpg
+news_thumb_alt:
 description:
 ---
 

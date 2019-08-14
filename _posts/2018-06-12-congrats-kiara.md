@@ -6,6 +6,7 @@ categories:
   - news
 sport-category: Women's Basketball
 news_thumb_image: /uploads/image-2018-06-21.jpg
+news_thumb_alt:
 description: Sophomore Kiara Moses accepts FULL ride!
 ---
 

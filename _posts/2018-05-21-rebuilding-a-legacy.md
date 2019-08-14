@@ -6,6 +6,7 @@ categories:
   - news
 sport-category: Men's Basketball
 news_thumb_image: /uploads/mbb-recruits.jpg
+news_thumb_alt:
 description: Coach Thorson's 18-19 Recruits
 ---
 

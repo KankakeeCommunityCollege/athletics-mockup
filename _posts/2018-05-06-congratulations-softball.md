@@ -6,6 +6,7 @@ categories:
   - news
 sport-category: Softball
 news_thumb_image: /uploads/softball-region-champs.jpg
+news_thumb_alt:
 description: Regional Champions
 ---
 

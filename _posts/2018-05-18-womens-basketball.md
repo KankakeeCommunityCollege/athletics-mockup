@@ -6,6 +6,7 @@ categories:
   - news
 sport-category: Women's Basketball
 news_thumb_image: /uploads/womens-basketball-wheelchair-game.jpg
+news_thumb_alt:
 description: Lady Cavaliers support Option CIL!
 ---
 

@@ -5,6 +5,7 @@ categories:
   - softball
 sport-category: Softball
 news_thumb_image: /uploads/roan.jpg
+news_thumb_alt:
 description: Former KCC Softball Player
 ---
 

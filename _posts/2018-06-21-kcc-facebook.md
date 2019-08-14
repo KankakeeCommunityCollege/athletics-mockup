@@ -6,6 +6,7 @@ categories:
   - general
 sport-category: General News
 news_thumb_image: /uploads/fb.PNG
+news_thumb_alt:
 description: Athletics on Social Media
 ---
 
