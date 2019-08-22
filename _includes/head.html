@@ -10,17 +10,7 @@
         <!-- YouTube API -->
         <meta name="yt-api-k" value="AIzaSyBpxv9JNl4AX816ScNmZcqHkLncMUeiAws" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <script>
-        (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
-
-        ga("create", "UA-4328282-19", "auto");
-        ga("send", "pageview");
-        </script>
-        <!--  https://youtube.com/embed/lirlq5CSEUA?controls=0&showinfo=0&rel=0  -->
-        <link rel="preload" href="https://youtube.com/embed/lirlq5CSEUA?controls=0&showinfo=0&rel=0" as="script">
+        {% include script/google-tag.html %}
         <!-- Latest compiled and minified Bootstrap 4 -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- dataTables stylesheets -->

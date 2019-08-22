@@ -1,5 +1,5 @@
 title: "Kankakee Community College"
-google_analytics_key: UA-4328282-19
+google-tag_key: 'GTM-KRL8533'
 collections:
   posts:
     output: false
