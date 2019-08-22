@@ -17,7 +17,7 @@
   <!-- Coach 1 row -->
   <div class="row">
     <!-- Coach 1 left image div (inner-left column) -->
-    <div class="col-6 float-left"><a data-toggle="modal" href="#modalCoach{{ forloop.index }}"><img src="{{ page.baseurl }}{% if contact.portrait %}{{ contact.portrait }}{% else %}uploads/blank-male-avatar-1.jpg{% endif %}" alt="Photo of {{ contact.contacts_title }} {{ contact.name }}" class="img-fluid coach-img modal-link" title="Photo of {{ contact.contacts_title }} {{ contact.name }}" /></a></div>
+    <div class="col-6 float-left"><a data-toggle="modal" href="#modalCoach{{ forloop.index }}"><img src="{{ page.baseurl }}{% if contact.portrait %}{{ contact.portrait }}{% else %}uploads/blank-male-avatar-1.jpg{% endif %}" alt="{{ contact.contacts_title }} {{ contact.name }}" class="img-fluid coach-img modal-link" title="Photo of {{ contact.contacts_title }} {{ contact.name }}" /></a></div>
     <!-- Coach 1 right info div (inner-right column) -->
     <div class="col-6 float-right coaches__info">
       <a data-toggle="modal" href="#modalCoach{{ forloop.index }}" class="modal-link"><h5 class="coach-name">{{ contact.name }}</h5>
