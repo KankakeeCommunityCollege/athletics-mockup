@@ -2,7 +2,7 @@
 import start from './gamesSheetsAPI.js';
 
 document.addEventListener('DOMContentLoaded', function() {
-  $('.schedule-slider-temp').slick({
+  $('.schedule-slider-temp').slick({ // This is a placeholder slider with loading.gif's while the actual schedule loads/builds.
     dots: false, // No dots bellow the slider
     infinite: false, // No infinite scrolling of slides
     autoplay: false, // No autoplaying the slides

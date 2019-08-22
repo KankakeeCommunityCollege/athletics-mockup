@@ -2,6 +2,15 @@
 import createScheduleElements from './createScheduleElements.js';
 import setSheetParameters from '../shared/setSheetParameters.js';
 
+function catchUndefinedResponses(response) {
+  const firstArray = response.result.values[0];
+  const firstItem = firstArray[0];
+  const responseIsUndefined = response === undefined || firstItem === undefined || response === 'undefined' || firstItem === 'undefined';
+  if ( responseIsUndefined ) {
+    return gapi.load('client', start);
+  }
+}
+
 function start() {
   const params = {
     'apiKey': 'AIzaSyCEBsbXfFcdbkASlg-PodD1rT_Fe3Nw62A',
@@ -16,6 +25,7 @@ function start() {
     function execute() {
       return gapi.client.sheets.spreadsheets.values.get(sheetParams)
         .then(function(response) {
+          catchUndefinedResponses(response);
           let createTablePromise = new Promise((resolve, reject) => {
             //console.log(response);
             // Create the HTML to inject into the DOM here

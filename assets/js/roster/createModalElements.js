@@ -70,7 +70,7 @@ function createPlayerImage(name, src, body) {
   const div = document.createElement('div');
   const img = document.createElement('img');
   let alt = 'Photo of player ' + name;
-  let source = '../../uploads/roster-img/' + src + '.jpg';
+  let source = 'https://cdn.kcc.edu/athletics/roster-img/' + src + '.jpg';
   div.classList.add('text-center', 'float-md-left');
   img.setAttribute('alt', alt);
   img.setAttribute('src', source);
