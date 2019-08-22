@@ -2,7 +2,7 @@
 <li class="no-bullet news__list-item">
   <div class="news__cell-left">
     <a data-toggle="modal" href="#post{{ forloop.index }}" class="news__link">
-      <img src="{{ post.news_thumb_image }}" class="news__thumb" alt="{{ post.news_thumb_alt }}">
+      <img src="{{ page.baseurl }}{{ post.news_thumb_image }}" class="news__thumb" alt="{{ post.news_thumb_alt }}">
     </a>
   </div>
   <div class="news__cell-right">
