@@ -4,7 +4,7 @@ contacts_title: Assistant Coach
 contacts_sport: volleyball
 display_order: 3
 portrait: assets/img/blank-contact.svg
-phone: 888-888-8888
+phone:
 email:
 ---
 
