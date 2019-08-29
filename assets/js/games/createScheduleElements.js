@@ -1,3 +1,12 @@
+function checkTime(time, timezone) {
+  let timeIsTBD = time === 'TBD' || time === 'TBA' || time === 'tba' || time === 'tbd' || time === '';
+  if (timeIsTBD) {
+    return timezone = '';
+  } else {
+    return timezone;
+  }
+}
+
 function createMonth(date) {
   const monthNames = [ // Define an array of the months to convert JS # value of month into short text version
     'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'June', 'July', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.'
@@ -43,11 +52,11 @@ function createScheduleElements(response) {
         const end = rowData[1];
         const opponent = rowData[2];
         const time = rowData[3];
-        const timezone  = rowData[4];
         const where  = rowData[5];
         const status = rowData[6];
         const summary  = rowData[7];
         const sport = rowData[8];
+        const timezone = checkTime(rowData[3],rowData[4]);
         const monthText = createMonth(start);
         const day = createDay(start);
         const color = setColorCode(where);
