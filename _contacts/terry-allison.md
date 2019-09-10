@@ -3,7 +3,7 @@ name: Terry Allison
 contacts_title: Head Coach
 contacts_sport: volleyball
 display_order: 1
-portrait: uploads/blank-male-avatar-1.jpg
+portrait: uploads/volleyball_allison-DSC_7131.jpg
 phone:
 email: tallison@kcc.edu
 ---

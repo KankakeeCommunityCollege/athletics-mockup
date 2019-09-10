@@ -3,7 +3,7 @@ name: Alexa Wood
 contacts_title: Assistant Volleyball Coach
 contacts_sport: volleyball
 display_order: 2
-portrait: uploads/alexa-wood.jpg
+portrait: uploads/volleyball_wood-DSC_7104.jpg
 phone:
 email: amwood@kcc.edu
 ---

@@ -3,7 +3,7 @@ name: Jessi Holmes
 contacts_title: Assistant Coach
 contacts_sport: volleyball
 display_order: 3
-portrait: assets/img/blank-contact.svg
+portrait: uploads/volleyball_holmes-DSC_7123.jpg
 phone:
 email:
 ---
