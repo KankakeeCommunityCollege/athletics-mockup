@@ -14,6 +14,8 @@ Being employed by the college has brought about many positive experiences over t
 
 Over the last 20 seasons with Denson at the helm, the Lady Cavaliers have compiled a 476-142 record, and a winning percentage of .770. He has continued to build upon the program's history of success, and the Cavaliers have won the Region IV championship 22 times in the last 29 years.
 
+In 2018-19 season, Coach Denson was inducted into the Region IV Hall of Fame in the category of Women's Basketball coach and Administrator. Along with this, he was inducted into the IBCA (Illinois Basketball Coaches Association) Hall of Fame.
+
 Denson came to KCC as a Fitness Center specialist and athletic trainer in 1992, and is currently the assistant athletic director.
 
 Denson graduated from Farmington East High School in Farmington. He earned a bachelor’s degree from Eureka College. He resides in Kankakee with his wife, Deb, and their son, David.
