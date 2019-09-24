@@ -99,7 +99,7 @@ slides:
         <h2 class="main-heading grey-bg"><img src="assets/img/news.svg" class="icon-middle" alt="News icon">&#160;News  <a href="{{ page.baseurl }}news" class="btn btn-primary schedule__button-margin">View All News</a></h2>
         <div class="news__scroll">
           <ul class="news__list">
-            {% for post in site.posts limit: 10 %}
+            {% for post in site.posts %}
               {% include news-item.html %}
               {% include news-item-modal.html %}
             {% endfor %}
