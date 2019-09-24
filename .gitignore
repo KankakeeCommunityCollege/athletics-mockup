@@ -48,3 +48,6 @@ adobe/*
 
 # Yarn error log
 yarn-error.log
+
+# Jekyll 4's new `/.jekyll-cache/` dir
+.jekyll-cache/
