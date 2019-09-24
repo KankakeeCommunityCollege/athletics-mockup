@@ -12,7 +12,7 @@ A native of the Peoria area, Donnie Denson has worked at KCC for the past 27 yea
 
 Being employed by the college has brought about many positive experiences over the years for Denson. This is the 27th season he has been associated with the women’s basketball team in some capacity. He was an assistant coach of the Lady Cavaliers from 1997 until being named head coach for the 2000-01 season.
 
-Over the last 20 seasons with Denson at the helm, the Lady Cavaliers have compiled a 464-137 record, and a winning percentage of .775. He has continued to build upon the program's history of success, and the Cavaliers have won the Region IV championship 22 times in the last 28 years.
+Over the last 20 seasons with Denson at the helm, the Lady Cavaliers have compiled a 476-142 record, and a winning percentage of .770. He has continued to build upon the program's history of success, and the Cavaliers have won the Region IV championship 22 times in the last 29 years.
 
 Denson came to KCC as a Fitness Center specialist and athletic trainer in 1992, and is currently the assistant athletic director.
 
