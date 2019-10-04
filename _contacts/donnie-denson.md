@@ -3,7 +3,7 @@ name: Donnie Denson
 contacts_title: Head Coach
 contacts_sport: women's basketball
 display_order: 1
-portrait: uploads/10-ddenson-coach.jpg
+portrait: uploads/denson-dsc_0632.jpg
 phone: 815‑802‑8614
 email: ddenson@kcc.edu
 ---
