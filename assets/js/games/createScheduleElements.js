@@ -84,8 +84,8 @@ function zeroOutTimes(date) {
   return date;
 }
 
-function badValuesFilter(value) {
-  const THE_CHECK = value[0] === 'Start' || value[0] === '' ;
+function badValuesFilter(value) { // Since the if statement meant to filter out bad rows didn't work in the `pushTabDataRows()` function, I used a filter function instead
+  const THE_CHECK = value[0] === 'Start' || value[0] === '' ;  // Checking the first value for 'Start' or a blank string: if the first value is 'Start' its one of the header-rows
   if (THE_CHECK) {
     return false;
   } else {
@@ -106,8 +106,14 @@ function pastDatesFilter(value) {
   }
 }
 
-function pushTabDataRows(row, valuesArr) {
-  if ( row[0] !== 'Start' || row[0] !== undefined ) {
+// =================== TODO ==================== //
+//  TODO:                                        //
+//    REMOVE THE FUNCTION `pushTabDataRows()`    //
+//                                               //
+// ================= ENDTODO =================== //
+
+function pushTabDataRows(row, valuesArr) { // THIS FUNCTION DOESN'T ACTUALLY DO ANYTHING
+  if ( row[0] !== 'Start' || row[0] !== undefined ) { // This is supposed to be looking for the table-header rows (with all the column labels) or rows with undefined items
     return valuesArr.push(row);
   } else {
     return valuesArr;
@@ -124,7 +130,7 @@ function loopOverTabDataRows(tabData, valuesArr) {
 function createValuesFromValueRanges(valueRanges) {
   let valuesArr = [];
   for (var i = 0; i < valueRanges.length; i++) {
-    let tabData = valueRanges[i].values;
+    let tabData = valueRanges[i].values; // valueRanges is an array containing an Object for each data-range (in our case one for each sheet) in the `values.batchGet()` call. // We can access the data in the sheet using the `values` key
     loopOverTabDataRows(tabData, valuesArr);
   }
 
@@ -133,11 +139,11 @@ function createValuesFromValueRanges(valueRanges) {
   return arrFilteredForPastDates;
 }
 
-function setValues(response) {
-  if (response.result.values) {
+function setValues(response) {  // This function sets the variable `values` depending on if it was a `values.batchGet()` call or a `values.get()` call
+  if (response.result.values) { // If it's a `values.get()` API call, the response object will have `response.result.values` and this contains the sheets user-inputed data
     return reponse.result.values;
-  } else if (response.result.valueRanges) {
-    return createValuesFromValueRanges(response.result.valueRanges);
+  } else if (response.result.valueRanges) {  // If it's a `values.batchGet()` call to the API the response is different. Instead we need to look for `response.result.valueRanges`
+    return createValuesFromValueRanges(response.result.valueRanges);  // valueRanges is a little different response from the API so we need to do some manipulation for data consisitency
   }
 }
 
@@ -154,7 +160,7 @@ function createScheduleElements(response) {
 
   //setNoGamesHtml(noGamesHtml);
 
-  const hostElement = document.getElementById('scheduleDiv');
-  hostElement.innerHTML = html;
+  const PARENT_EL = document.getElementById('scheduleDiv');  // ALL_CAPS const because it's coming from the page's HTML
+  PARENT_EL.innerHTML = html;
 }
 export default createScheduleElements;

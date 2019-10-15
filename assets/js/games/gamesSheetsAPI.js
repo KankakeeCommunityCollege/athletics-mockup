@@ -30,14 +30,14 @@ function start() {
 
     function doBatchGet() {
 
-      return gapi.client.sheets.spreadsheets.values.batchGet(batchGetParams)
-        .then(function(response) {
+      return gapi.client.sheets.spreadsheets.values.batchGet(batchGetParams)  // Uses the google Sheets api `values.batchGet()` method
+        .then(function(response) {  // Response is a JS Object returned from the Google sheets API contianing the data of the sheets, among other things
           console.log(response);
 
           let createTablePromise = new Promise((resolve, reject) => {
             //console.log(response);
             // Create the HTML to inject into the DOM here
-            createScheduleElements(response);
+            createScheduleElements(response); // pass the Google Sheets API response to a function to build-out the HTML
             //createTableParts(response);
             resolve();
 
@@ -79,7 +79,7 @@ function start() {
 
     function doGet() {
 
-      return gapi.client.sheets.spreadsheets.values.get(sheetParams)
+      return gapi.client.sheets.spreadsheets.values.get(sheetParams)  // Google Sheets API `values.get()` method
         .then(function(response) {
           console.log(response);
           catchUndefinedResponses(response);
