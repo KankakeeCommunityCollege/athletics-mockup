@@ -38,7 +38,7 @@ function setSheetParameters() {
   function checkRanges(r) {
     urlIsRoster || urlIsSchedule ? setRange(r)
     : urlIsStats ? setStatParams()
-    : urlIsIndex ? setRange(r + ' Current')
+    : urlIsIndex ? setRange(r)
     : setRange(r + ' Current');
   }
 
