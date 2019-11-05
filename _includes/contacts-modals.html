@@ -23,9 +23,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <img src="{{ page.baseurl }}{% if contact.portrait %}{{ contact.portrait }}{% else %}uploads/blank-male-avatar-1.jpg{% endif %}" alt="Photo of {{ contact.contacts_title }} {{ contact.name }}" class="img-fluid float-left coach-modal-img editable" title="Photo of {{ contact.contacts_title }} {{ contact.name }}" />
-        <h5 class="coach-name editable">{{ contact.name }}</h5>
-        <h6 class="coach-title editable">{{ contact.contacts_title }}</h6>
+        <img src="{{ page.baseurl }}{% if contact.portrait %}{{ contact.portrait }}{% else %}uploads/blank-male-avatar-1.jpg{% endif %}" alt="Photo of {{ contact.contacts_title }} {{ contact.name }}" class="img-fluid float-left coach-modal-img" title="Photo of {{ contact.contacts_title }} {{ contact.name }}" />
+        <h5 class="coach-name">{{ contact.name }}</h5>
+        <h6 class="coach-title">{{ contact.contacts_title }}</h6>
         <div>
           {{ contact.content }}
         </div>
