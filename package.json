@@ -14,13 +14,10 @@
     ]
   },
   "browserslist": [
-    "> 0.25%",
-    "ie >=9",
-    "Firefox ESR",
+    "defaults",
+    "ie >=11",
     "not ie <= 8",
-    "not ie_mob <= 8",
-    "not bb <= 10",
-    "not op_mob <= 12.1"
+    "not ie_mob <= 8"
   ],
   "scripts": {
     "watch": "gulp",
