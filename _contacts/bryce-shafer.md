@@ -14,4 +14,4 @@ Shafer pitched in the Cubs organization from 2010 to 2012, posting a career 2.99
 
 For the Cavaliers, he works with pitchers and catchers and assists with recruiting. Shafer also works as an academic success coach for the Athletic Department. Coach Shafer has a bachelor's degree in psychology from Ft. Hayes State University (2015).
 
-Coach Shafer resides in Manteno with his wife, Jill, and their son, Carver.
+Coach Shafer resides in Manteno with his wife, Jill, and their two sons, Carver and Callum.
