@@ -14,7 +14,7 @@ Post has completed 19 seasons as the Cavaliers head coach, with a record of 791-
 
 During Coach Post's tenure, the Cavaliers have averaged more than 41 wins per season, and 153 players have gone on to play at the next level. Since 2001, 64 Cavs have been named All-Region, 26 have been named All-Americans, and nine have signed professional contracts.
 
-In 2017 Post coached the Cavaliers to the NJCAA Division II National Championship, defeating Mercer County C.C. (N.J.), 11-5 in Enid, Okla. The Cavaliers finished with a record of 54-11-1. In 2009 they finished 3rd at the World Series with a record of 52-14-1. In all, the Cavs have won seven Region IV Championships and have made five World Series appearances. Post was inducted into the Region IV Hall of Fame in spring 2020.
+In 2017 Post coached the Cavaliers to the NJCAA Division II National Championship, defeating Mercer County C.C. (N.J.), 11-5 in Enid, Okla. The Cavaliers finished with a record of 54-11-1. In 2009, they finished 3rd at the World Series with a record of 52-14-1. In all, the Cavs have won seven Region IV Championships and have made five World Series appearances. Post was inducted into the Region IV Hall of Fame in spring 2020.
 
 Post is a 1987 graduate of Danville Area Community College, where he played basketball for two years. He then attended KCC and began his college baseball career as a pitcher for the Cavaliers in 1988.
 
