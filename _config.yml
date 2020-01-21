@@ -3,7 +3,6 @@ google-tag_key: 'GTM-KRL8533'
 collections:
   posts:
     output: false
-    _hide_content: true
   alerts:
     output: false
   contacts:
