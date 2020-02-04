@@ -10,4 +10,4 @@ news_thumb_alt:
 description: Commits to 4 year Universities
 ---
 
-Aaron Ball: Tulane University<br>Tyler Jasmin: Eastern Illinois University
+Aaron Ball: Tulane University<br>Tyler Jasmin: Eastern Illinois University<br>Nolan Lebamoff: Valporaiso University<br>Nate Vargo: Cameron University<br>Nate James: Indiana University - Kokomo<br>Owen Behrens: Quincy University<br>Jaret Humphrey: Kentucky Wesleyan College
