@@ -8,14 +8,12 @@ phone: 815-802-8606
 email: kcooper@kcc.edu
 ---
 
-Last season, his first as head coach, Keith Cooper lead the Cavaliers to a 27-24 record and a 20th consecutive NJCAA Division II Region IV Championship.
+In his first two seasons with the Cavaliers, Head Coach Keith Cooper has posted 27-24 (2018) and 32-20-1 (2019) marks for a career record of 59-44-1. Both seasons, Cooper was NJCAA Div. II Region IV District C Coach of the Year, and the team won NJCAA Div. II Region IV Championships. The Lady Cavs squad have now won an NJCAA-record 21 consecutive NJCAA Div. II Region IV Championships. In 2019, the Cavs placed 13th at the national tournament.
 
-The well-known KCC Softball Program made the trip to the NJCAA Div. II National Tournament in Clinton, Miss., and finished 12th in the country.
+Prior to becoming KCC’s coach, Cooper was a community leader in youth sports for 23 years, including coaching at various levels. He has held positions with local league board of directors, as well as President of the Kankakee Knights of Columbus Little League, Knights of Columbus Bronco League, Kankakee Elks Pony League, and the Kankakee Valley Colt and Palomino League. His involvement in coaching has taken him to coaching many tournaments at Illinois State University in Normal; Central Michigan University in Mt. Pleasant; and three state Fast Pitch Softball Tournaments in NSA Softball in Illinois.
 
-Prior to becoming KCC's coach, Cooper was a community leader in youth sports for 23 years. His involvement includes 23 years coaching various levels of players. He held multiple positions on local league boards of directors, and was president of the Kankakee Knights of Columbus Little League, Knights of Columbus Bronco League, Kankakee Elks Pony League, and the Kankakee Valley Colt and Palomino League. His involvement in coaching has taken him to many tournaments at Illinois State University in Normal; Central Michigan University in Mt. Pleasant, Mich.; and three state Fast Pitch Softball Tournaments in NSA Softball in Illinois.
+Prior to becoming the head coach for Lady Cavs softball, he assisted with the KCC women’s basketball team as official scorekeeper for home games and often traveled with the team.
 
-Prior to becoming the head coach of the Lady Cavs Softball Program, he assisted with the KCC Women’s Basketball team as official scorekeeper for home games, and he often traveled with the team.
+Cooper was born in Kankakee and raised in Limestone. He is a Kankakee High School graduate, class of 1990. Coach Cooper is a former KCC student, where he studied Law Enforcement. He worked for AT&T for 18 years.
 
-Cooper was born in Kankakee and raised in Limestone. He attended Limestone Grade School, and is a Kankakee High School graduate, class of 1990. Coach Cooper is a former KCC student, where he studied Law Enforcement. He worked for AT&T for 18 years.
-
-He and his wife, Lisa, reside in Kankakee. They have four children Doug (Traci), Brittany, Jordan, and Austin. They have 3 grandchildren, Autumn, Halle, and Hunter, and will be adding 2 more grandchildren in July 2019.
+He and his wife, Lisa, reside in Kankakee. They have four children Doug (Traci), Brittany (Alan), Jordan (Ricki), and Austin. They also have five grandchildren, Autumn, Halle, Hunter, Hazel, and AJ. Another grandson is on the way in June 2020.
