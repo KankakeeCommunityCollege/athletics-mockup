@@ -40,7 +40,14 @@ slides:
     text2: Spring 2019<br>Baseball
 ---
 
-<div class="container slider-container nav-marg">
+<div class="container margin__alert">
+  <div class="row">
+    <div class="col">
+      {% include emergency-alert.html %}
+    </div>
+  </div>
+</div>
+<div class="container slider-container">
   <div class="row slider-row">
     <div class="col-md-12 baseballSlider">
     {% for slide in page.slides %}
