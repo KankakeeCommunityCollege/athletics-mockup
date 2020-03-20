@@ -1,0 +1,12 @@
+
+
+.margin__alert {
+  margin-top: 135px;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+  .margin__alert {
+    margin-top: 160px;
+  }
+}
