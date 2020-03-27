@@ -45,3 +45,35 @@
     max-width: 1300px;
   }
 }
+
+.position__offset-alert {
+  margin-top: 125px;
+  height: 1px;
+  &--visible {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .position__offset-alert {
+    margin-top: 135px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .position__offset-alert {
+      margin-top: 140px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .position__offset-alert {
+      margin-top: 145px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .position__offset-alert {
+      margin-top: 150px;
+  }
+}
