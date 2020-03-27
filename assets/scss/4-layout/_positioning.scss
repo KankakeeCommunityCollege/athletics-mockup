@@ -54,6 +54,10 @@
   }
 }
 
+.sub-nav + .position__offset-alert {
+  margin-top: 15px;
+}
+
 @media screen and (min-width: 400px) {
   .position__offset-alert {
     margin-top: 135px;

@@ -8,8 +8,11 @@
   {% if page.sub-nav_hidden == true %}
     {% include sub-nav.html %}
   {% endif %}
+  {% include emergency-alerts.html %}
   {{ content }}
   {% include footer.html %}
   {% include script/vendor-scripts.html %}
+  {% include script/google-api.html %}
+  {% include script/emergency-alerts.html %}
   {% include script/custom-script.html %}
 {% include foot.html %}
