@@ -1,0 +1,26 @@
+---
+layout: page-page
+baseurl: ../../
+title: Women's Soccer News
+description: "KCC offers intercollegiate men's basketball, women's basketball, baseball, softball, men's soccer and volleyball. The Cavaliers compete in Region IV of the NJCAA."
+base: womens-soccer
+sub-nav_hidden: true
+---
+
+<section class="container sub-nav-marg">
+  <div class="row">
+      <div class="col-md-12">
+        <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/news.svg" class="icon-middle" alt="News icon" />&#160;News</h2>
+          <div>
+            <ul>
+              {% for post in site.posts %}
+                {% if post.categories contains 'soccer' or post.categories contains 'general' %}
+                  {% include news-item.html %}
+                  {% include news-item-modal.html %}
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+      </div>
+  </div>
+</section>
