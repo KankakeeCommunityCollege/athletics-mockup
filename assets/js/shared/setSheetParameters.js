@@ -3,15 +3,16 @@ function setSheetParameters() {
   const host = window.location.host + '/';
   const url = window.location.href.replace(/(^\w+:|^)\/\//, '');
   // Conditions
-  const urlIsBaseball = url.indexOf('/baseball') > -1;
-  const urlIsMensBasketball = url.indexOf('/mens-basketball') > -1;
-  const urlIsSoccer = url.indexOf('/soccer') > -1;
-  const urlIsWomensBasketball = url.indexOf('/womens-basketball') > -1;
-  const urlIsSoftball = url.indexOf('/softball') > -1;
-  const urlIsVolleyball = url.indexOf('/volleyball') > -1;
-  const urlIsRoster = url.indexOf('/roster') > -1;
-  const urlIsSchedule = url.indexOf('/schedule') > -1;
-  const urlIsStats = url.indexOf('/stats') > -1;
+  const urlIsBaseball = url.indexOf('/baseball') !== -1;
+  const urlIsMensBasketball = url.indexOf('/mens-basketball') !== -1;
+  const urlIsWomensSoccer = url.indexOf('/womens-soccer') !== -1;
+  const urlIsSoccer = url.indexOf('/soccer') !== -1;
+  const urlIsWomensBasketball = url.indexOf('/womens-basketball') !== -1;
+  const urlIsSoftball = url.indexOf('/softball') !== -1;
+  const urlIsVolleyball = url.indexOf('/volleyball') !== -1;
+  const urlIsRoster = url.indexOf('/roster') !== -1;
+  const urlIsSchedule = url.indexOf('/schedule') !== -1;
+  const urlIsStats = url.indexOf('/stats') !== -1;
   const urlIsIndex = url === host;
   // Sheet Keys
   const gamesId = "13cd6P3Ze7bBJugzlQ2Uk2dFWc677wE68ghL94JZcnmI";
@@ -64,10 +65,12 @@ function setSheetParameters() {
     checkIds(r);
     checkRanges(r);
   }
+
   urlIsBaseball ? setParams('Baseball')
   : urlIsMensBasketball ? setParams('Mens Basketball')
   : urlIsSoccer ? setParams('Soccer')
   : urlIsWomensBasketball ? setParams('Womens Basketball')
+  : urlIsWomensSoccer ? setParams('Womens Soccer')
   : urlIsSoftball ? setParams('Softball')
   : urlIsVolleyball ? setParams('Volleyball')
   : setParams('All');
