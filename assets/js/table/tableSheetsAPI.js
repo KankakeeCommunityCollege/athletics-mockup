@@ -28,7 +28,7 @@ function start() {
               $('#responsiveTable').DataTable( {
                 responsive: true, // Activate responsive powers GO!
                 paging: false, // Don't paginate. Schedule schould all be on one page
-                'order': [[1, 'asc']], // Initial column ordering
+                'order': [], // Do not order = 'order': []
                 'columnDefs': [
                   { 'visible': false, 'targets': [1,8] }
                 ]
@@ -36,7 +36,7 @@ function start() {
               resolve();
             });
             dataTablesPromise.then(() => {
-              document.querySelector('input[type="search"].form-control').setAttribute('placeholder', 'Schedule roster...');
+              document.querySelector('input[type="search"].form-control').setAttribute('placeholder', 'Search schedule...');
             });
           });
         },
