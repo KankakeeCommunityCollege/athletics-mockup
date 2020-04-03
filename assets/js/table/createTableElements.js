@@ -102,7 +102,7 @@ function formatDate(date) {
   let day = dateArray[1];
   let monthNumber = dateArray[0] - 1;
   let month = monthNames[ monthNumber ];
-  let formatedDate = month + ' ' + day;
+  let formatedDate = month + '&nbsp;' + day;
   return formatedDate;
 }
 
