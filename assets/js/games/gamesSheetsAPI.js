@@ -29,6 +29,7 @@ function start() {
           let createTablePromise = new Promise((resolve, reject) => {
             //console.log(response);
             // Create the HTML to inject into the DOM here
+            console.info(response);
             createScheduleElements(response);
             //createTableParts(response);
             resolve();
