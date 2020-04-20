@@ -10,9 +10,9 @@ description: >-
 base: womens-soccer
 sport: '5'
 slides:
-  - image: assets/img/placeholder.png
+  - image: 'uploads/womens-soccer-web-banner.jpg'
     alt-text:
-    url: '#'
+    url: 'https://form.jotform.com/200896440788164'
 ---
 
 <div class="container slider-container sub-nav-marg">
@@ -24,24 +24,28 @@ slides:
           <a href="{{ slide.url }}">
             <img src="{{page.baseurl}}{{slide.image}}" class="img-fluid slide-img" alt="{{slide.alt-text}}" />
           </a>
+          {% if slide.text1 or slide.text2 %}
           <a href="{{ slide.url }}">
             <div class="heading-container">
-              <h3 class="sub-heading">{{slide.text1}}</h3>
-              <h3 class="slide-heading">{{slide.text2}}</h3>
+              {% if slide.text1 %}<h3 class="sub-heading">{{slide.text1}}</h3>{% endif %}
+              {% if slide.text2 %}<h3 class="slide-heading">{{slide.text2}}</h3>{% endif %}
             </div>
           </a>
+          {% endif %}
         </div>
         {% else %}
         <div>
           <a href="{{ slide.url }}">
             <img src="{{page.baseurl}}assets/img/placeholder.png" data-src="{{page.baseurl}}{{slide.image}}" class="img-fluid slide-img" alt="{{slide.alt-text}}" />
           </a>
+          {% if slide.text1 or slide.text2 %}
           <a href="{{ slide.url }}">
             <div class="heading-container">
-              <h3 class="sub-heading">{{slide.text1}}</h3>
-              <h3 class="slide-heading">{{slide.text2}}</h3>
+              {% if slide.text1 %}<h3 class="sub-heading">{{slide.text1}}</h3>{% endif %}
+              {% if slide.text2 %}<h3 class="slide-heading">{{slide.text2}}</h3>{% endif %}
             </div>
           </a>
+          {% endif %}
         </div>
         {% endif %}
       {% endfor %}
@@ -84,11 +88,11 @@ slides:
     </div>
     <div class="row news-social-row">
       <div class="col-md-8 news-feed">
-        <h2 class="main-heading grey-bg"><img src="{{page.baseurl}}assets/img/news.svg" class="icon-middle" alt="News icon" />&#160;News <a href="{{ page.baseurl }}soccer/news" class="btn btn-primary schedule__button-margin">View All News</a></h2>
+        <h2 class="main-heading grey-bg"><img src="{{page.baseurl}}assets/img/news.svg" class="icon-middle" alt="News icon" />&#160;News <a href="{{ page.baseurl }}womens-soccer/news" class="btn btn-primary schedule__button-margin">View All News</a></h2>
           <div class="news__scroll">
             <ul class="news__list">
               {% for post in site.posts %}
-                {% if post.categories contains 'soccer' or post.categories contains 'general' %}
+                {% if post.categories contains "women's soccer" or post.categories contains "general" %}
                   {% include news-item.html %}
                   {% include news-item-modal.html %}
                 {% endif %}
