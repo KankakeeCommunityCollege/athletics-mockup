@@ -14,7 +14,7 @@ sub-nav_hidden: true
           <div>
             <ul>
               {% for post in site.posts %}
-                {% if post.categories contains 'soccer' or post.categories contains 'general' %}
+                {% if post.categories contains "women's soccer" or post.categories contains "general" %}
                   {% include news-item.html %}
                   {% include news-item-modal.html %}
                 {% endif %}
