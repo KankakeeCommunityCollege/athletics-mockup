@@ -228,6 +228,7 @@
   display: inline-block;
   font-size: 90%;
   font-weight: 900;
+  opacity: .85;
   transform: rotate(-7.5deg);
   &::after {
     background-image: url('/assets/img/callout.svg');
@@ -236,7 +237,6 @@
     content: ' ';
     display: block;
     height: 3rem;
-    opacity: .75;
     position: absolute;
     top: -.5rem;
     transform: scale(1.35, 1.2);
