@@ -8,6 +8,9 @@ description: >-
   the NJCAA.
 sport: '1'
 slides:
+  - image: uploads/athletics_tour_thumb.jpg
+    alt-text: KCC Athletics Virtual Tour
+    url: 'https://athletics.kcc.edu/facilities/'
   - image: uploads/soccer_2019-20_DSC_8369.jpg
     alt-text: 2019-2020 KCC soccer team
     url: 'https://athletics.kcc.edu/soccer'
@@ -54,18 +57,22 @@ slides:
       {% if forloop.first == true %}
       <div>
         <a href="{{ slide.url }}"><img src="{{page.baseurl}}{{slide.image}}" class="img-fluid slide-img" alt="{{slide.alt-text}}"></a>
+        {% if slide.text1 or slide.text2 %}
         <div class="heading-container">
-          <h3 class="sub-heading">{{slide.text1}}</h3>
-          <h3 class="slide-heading">{{slide.text2}}</h3>
+          {% if slide.text1 %}<h3 class="sub-heading">{{slide.text1}}</h3>{% endif %}
+          {% if slide.text2 %}<h3 class="slide-heading">{{slide.text2}}</h3>{% endif %}
         </div>
+        {% endif %}
       </div>
       {% else %}
       <div>
         <a href="{{ slide.url }}"><img src="assets/img/placeholder.png" data-src="{{page.baseurl}}{{slide.image}}" class="img-fluid slide-img" alt="{{slide.alt-text}}"></a>
+        {% if slide.text1 or slide.text2 %}
         <div class="heading-container">
-          <h3 class="sub-heading">{{slide.text1}}</h3>
-          <h3 class="slide-heading">{{slide.text2}}</h3>
+          {% if slide.text1 %}<h3 class="sub-heading">{{slide.text1}}</h3>{% endif %}
+          {% if slide.text2 %}<h3 class="slide-heading">{{slide.text2}}</h3>{% endif %}
         </div>
+        {% endif %}
       </div>
       {% endif %}
     {% endfor %}
