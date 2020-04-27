@@ -74,6 +74,8 @@ function setStatsId(params) {
 function setParams(params, r) {
   checkIds(params, r);
   checkRanges(params, r);
+
+  return params;
 }
 
 function setSheetParameters() {

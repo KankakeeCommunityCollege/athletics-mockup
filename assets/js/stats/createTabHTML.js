@@ -88,7 +88,7 @@ function createTabHTML(response) {
     //                ['<cell-value>', '<cell-value>', '<cell-value>'] // row
     //            ]
     //
-    //console.log(tabValues);
+    console.log(tabValues);
     //
     let tableData;
     let blurb = null;

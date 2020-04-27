@@ -37,19 +37,6 @@ function start() {
               function(error) {
                 console.error("Execute error", error);
               });
-            //createTableElements(response);
-
-            //
-            //
-            //
-            //    TODO
-            //
-            //    Make a values.batchGet call to fetch
-            //    all sheets in the stats workbook
-            //
-            //   THEN: parse the data into a table
-            //
-            //
 
             resolve();
           });
