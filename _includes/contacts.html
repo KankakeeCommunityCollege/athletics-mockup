@@ -11,6 +11,8 @@
   {% assign coaches = sorted_contacts | where: "contacts_sport", "softball" %}
 {% elsif page.title == "Volleyball" %}
   {% assign coaches = sorted_contacts | where: "contacts_sport", "volleyball" %}
+{% elsif page.title == "Women's Soccer" %}
+  {% assign coaches = sorted_contacts | where: "contacts_sport", "women's soccer" %}
 {% endif %}
 {% for contact in coaches %}
 <div class="col-md-4 coaches__col-bottom-margin">

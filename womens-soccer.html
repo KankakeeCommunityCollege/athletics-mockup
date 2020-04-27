@@ -1,0 +1,154 @@
+---
+layout: sport-page
+baseurl: ../
+title: Women's Soccer
+season_preview: false
+description: >-
+  KCC offers intercollegiate men's basketball, women's basketball, baseball,
+  softball, men's soccer and volleyball. The Cavaliers compete in Region IV of
+  the NJCAA.
+base: womens-soccer
+sport: '5'
+slides:
+  - image: 'uploads/womens-soccer-web-banner.jpg'
+    alt-text:
+    url: 'https://form.jotform.com/200896440788164'
+---
+
+<div class="container slider-container sub-nav-marg">
+  <div class="row slider-row">
+    <div class="col-md-12 baseballSlider">
+      {% for slide in page.slides %}
+        {% if forloop.first == true %}
+        <div>
+          <a href="{{ slide.url }}">
+            <img src="{{page.baseurl}}{{slide.image}}" class="img-fluid slide-img" alt="{{slide.alt-text}}" />
+          </a>
+          {% if slide.text1 or slide.text2 %}
+          <a href="{{ slide.url }}">
+            <div class="heading-container">
+              {% if slide.text1 %}<h3 class="sub-heading">{{slide.text1}}</h3>{% endif %}
+              {% if slide.text2 %}<h3 class="slide-heading">{{slide.text2}}</h3>{% endif %}
+            </div>
+          </a>
+          {% endif %}
+        </div>
+        {% else %}
+        <div>
+          <a href="{{ slide.url }}">
+            <img src="{{page.baseurl}}assets/img/placeholder.png" data-src="{{page.baseurl}}{{slide.image}}" class="img-fluid slide-img" alt="{{slide.alt-text}}" />
+          </a>
+          {% if slide.text1 or slide.text2 %}
+          <a href="{{ slide.url }}">
+            <div class="heading-container">
+              {% if slide.text1 %}<h3 class="sub-heading">{{slide.text1}}</h3>{% endif %}
+              {% if slide.text2 %}<h3 class="slide-heading">{{slide.text2}}</h3>{% endif %}
+            </div>
+          </a>
+          {% endif %}
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!--  Content  -->
+<section class="container content-marg">
+  {% for alert in site.alerts %}
+    {% if alert.display_alert == true %}
+      {% include athletics-alert.html %}
+    {% endif %}
+  {% endfor %}
+  <!-- season preview -->
+    <div class="row schedule-row{% if page.season_preview == false %} editor-content{% endif %}">
+      <div class="col">
+        <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/soccer.svg" class="icon-middle" alt="" />&#160;Season Preview</h2>
+        <div class="season-preview__content-bg">
+          <div class="editable">
+            <p>A wonderfull season preview expert...</p>
+            <p>Don't forget to click the "More ..." button to reveal the hidden editable area for the season preview's body.</p>
+          </div>
+          <div id="collapsePreview" class="collapse">
+            <div class="editable">
+              <p>This is the area for the season preview's body (without the exerpt line above.)</p>
+            </div><br />
+          </div>
+          <button class="btn btn-primary float-right season-preview__btn--more js-more-btn" type="button" data-toggle="collapse" data-target="#collapsePreview" aria-expanded="false" aria-controls="collapsePreview">More ...</button>
+        </div>
+      </div>
+    </div>
+    <div class="row schedule-row">
+      <div class="col-md-12">
+        <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/calendar.svg" class="icon-middle" alt="Calendar icon" />&#160;Upcoming Games <!-- <a href="{{ page.baseurl }}soccer/schedule" class="btn btn-primary schedule__button-margin">View Full Schedule</a> --></h2>
+        <div id="scheduleDiv" class="baseball slick games" style="padding:15px">
+          {% include loading-slider.html %}
+        </div>
+      </div>
+    </div>
+    <div class="row news-social-row">
+      <div class="col-md-8 news-feed">
+        <h2 class="main-heading grey-bg"><img src="{{page.baseurl}}assets/img/news.svg" class="icon-middle" alt="News icon" />&#160;News <a href="{{ page.baseurl }}womens-soccer/news" class="btn btn-primary schedule__button-margin">View All News</a></h2>
+          <div class="news__scroll">
+            <ul class="news__list">
+              {% for post in site.posts %}
+                {% if post.categories contains "women's soccer" or post.categories contains "general" %}
+                  {% include news-item.html %}
+                  {% include news-item-modal.html %}
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+      </div>
+      <div class="col-md-4">
+        <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/social-icon.svg" class="icon-middle" alt="Social media icon" />&#160;Social Media</h2>
+        {% include facebook-widget.html %}
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <div id="wrapper">
+          <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/video.svg" class="icon-middle" alt="Video icon" />&#160;Videos
+        	<div id="yt_list" class="yt_list">
+        	</div>
+        		<a class="btn btn-primary yt-button" href="https://www.youtube.com/user/KankakeeCommCollege" target="_blank" rel="noopener">More Athletics Videos</a>
+
+
+YouTube Modal
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                		<iframe id="yt_player"></iframe>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+          </div>
+        </div>
+
+     -->
+</section>
+<!-- Coaches Section -->
+<section class="coach-section">
+  <div class="container">
+    <div class="row text-left">
+      <h4 id="coaches" name="coaches" class="coaches-heading link__offset"><img src="{{page.baseurl}}assets/img/soccer.svg" class="icon-middle" alt="" />&#160;Coaches</h4>
+    </div>
+    <div class="row editor-link">
+      <div class="col editor-link mb-3">
+        <a href="cloudcannon:collections/_contacts/" class="btn btn-success editor-button">Edit Coach Information and Bios</a>
+      </div>
+    </div>
+    <div class="row">
+      {% include contacts.html %}
+    </div>
+  </div>
+  {% include contacts-modals.html %}
+</section>
