@@ -1,10 +1,10 @@
 ---
 post_title: 2020 Baseball Sophomores
-date: 2020-02-05 12:00:00
+date: 2020-05-06 12:00:00
 categories:
   - baseball
   - news
-sport-category:
+sport-category: Baseball
 news_thumb_image: /assets/img/support-thumb.jpg
 news_thumb_alt:
 description: Players commit to 4-year colleges and universities
