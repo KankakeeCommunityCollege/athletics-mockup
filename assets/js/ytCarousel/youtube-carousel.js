@@ -2,8 +2,9 @@ import lzFunction from './lazyload.js'; // IMPORT THE LAZYLOAD MODULE!!!
 // Custom JavaScript to pull in YouTube playlist:
 var Youtube_carousel = (function youtube_carousel_module(){
 
-  var $apiK = $('meta[name=yt-api-k]').attr('value'),
-    $ytList = $('#yt_list'),
+  const YT_API_K = 'AIzaSyCDtQhcIZrqG_uw3OAJvQ5zhtLYWvInZV4';
+
+  var $ytList = $('#yt_list'),
     $ytPlayer = $('#yt_player'),
     // To use on a different site repalce baseUrl's value with the desired site URL
     // (e.g. var baseUrl = 'https://foundation.kcc.edu';)
@@ -22,7 +23,7 @@ var Youtube_carousel = (function youtube_carousel_module(){
       data: {
         part: 'contentDetails',
         forUsername: user_name,
-        key: $apiK
+        key: YT_API_K
       },
       success: function (d) {
         $ytList.html('');
@@ -58,7 +59,7 @@ var Youtube_carousel = (function youtube_carousel_module(){
         playlistId: yt_id,
         maxResults: limit,
         pageToken: next_page,
-        key: $apiK
+        key: YT_API_K
       },
       success: function (data) {
         if (data.nextPageToken) {
