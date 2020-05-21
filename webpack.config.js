@@ -8,7 +8,7 @@ module.exports = {
   //entry: path.join(__dirname, 'webpack', 'main'),
   entry: {
     'main': './assets/js/script/all.js',
-    'ytCarousel': './assets/js/ytCarousel/ytCarousel.js',
+    'ytCarousel': './assets/js/ytCarousel/initYouTubeCarousel.js',
     'games': './assets/js/games/games.js',
     'table': './assets/js/table/table.js',
     'roster': './assets/js/roster/roster.js',
