@@ -1,5 +1,6 @@
 title: "Kankakee Community College"
 google-tag_key: 'GTM-KRL8533'
+#BUILD
 collections:
   posts:
     output: false
