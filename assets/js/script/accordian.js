@@ -2,39 +2,41 @@
 // Allows anchor jump-link to work with with acordian function
 //
 
-$('.membershipTarget').on('click', function() {
-  $('#collapseOne').toggle('show').trigger('showCollapsed');
-});
+function accordion() {
+  $('.membershipTarget').on('click', function() {
+    $('#collapseOne').toggle('show').trigger('showCollapsed');
+  });
 
-$('#collapseOne').on('showCollapsed', function() {
-  $('#plusMinus').toggleClass('buttons__minus');
-});
+  $('#collapseOne').on('showCollapsed', function() {
+    $('#plusMinus').toggleClass('buttons__minus');
+  });
 
-$('.trainersTarget').on('click', function() {
-  $('#collapseTwo').toggle('show').trigger('showCollapsed2');
-});
+  $('.trainersTarget').on('click', function() {
+    $('#collapseTwo').toggle('show').trigger('showCollapsed2');
+  });
 
-$('#collapseTwo').on('showCollapsed2', function() {
-  $('#plusMinus2').toggleClass('buttons__minus');
-});
+  $('#collapseTwo').on('showCollapsed2', function() {
+    $('#plusMinus2').toggleClass('buttons__minus');
+  });
 
-$('.testimonialsTarget').on('click', function() {
-  $('#collapseThree').toggle('show').trigger('showCollapsed3');
-});
+  $('.testimonialsTarget').on('click', function() {
+    $('#collapseThree').toggle('show').trigger('showCollapsed3');
+  });
 
-$('#collapseThree').on('showCollapsed3', function() {
-  $('#plusMinus3').toggleClass('buttons__minus');
-});
+  $('#collapseThree').on('showCollapsed3', function() {
+    $('#plusMinus3').toggleClass('buttons__minus');
+  });
 
-$('.powerTarget').on('click', function() {
-  $('#collapseFour').toggle('show').trigger('showCollapsed4');
-});
+  $('.powerTarget').on('click', function() {
+    $('#collapseFour').toggle('show').trigger('showCollapsed4');
+  });
 
-$('#collapseFour').on('showCollapsed4', function() {
-  $('#plusMinus4').toggleClass('buttons__minus');
-});
+  $('#collapseFour').on('showCollapsed4', function() {
+    $('#plusMinus4').toggleClass('buttons__minus');
+  });
+}
 
-
+export default accordion;
 // function toggleAccordian() {
 //   var plusMinus = document.getElementById('plusMinus');
 //   if (plusMinus.firstChild.nodeValue == '+') {

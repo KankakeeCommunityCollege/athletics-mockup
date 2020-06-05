@@ -53,4 +53,4 @@ function setStatsParameters(rangeArray) {
 //  USAGE:
 //    const sheetParams = setSheetParameters();
 //
-module.exports = setStatsParameters;
+export default setStatsParameters;

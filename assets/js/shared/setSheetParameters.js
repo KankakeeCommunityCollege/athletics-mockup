@@ -89,11 +89,10 @@ function setSheetParameters() {
   : urlIsSoftball ? setParams(sheetParams, 'Softball')
   : urlIsVolleyball ? setParams(sheetParams, 'Volleyball')
   : setParams(sheetParams, 'All');
-  console.log(sheetParams);
   return sheetParams;
 }
 //
 //  USAGE:
 //    const sheetParams = setSheetParameters();
 //
-module.exports = setSheetParameters;
+export default setSheetParameters;

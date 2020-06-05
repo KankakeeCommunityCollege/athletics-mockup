@@ -1,4 +1,11 @@
-import './sliders.js';
-import './moreButton.js';
-import './accordian.js';
-import './footerDate.js';
+import initSlickSliders from './sliders.js';
+import moreClick from './moreButton.js';
+import accordion from './accordian.js';
+import setFooterDate from './footerDate.js';
+
+document.addEventListener('DOMContentLoaded', function() {
+  initSlickSliders();
+  moreClick();
+  accordion();
+  setFooterDate();
+});

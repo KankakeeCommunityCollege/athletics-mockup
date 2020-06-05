@@ -176,4 +176,4 @@ function createModalElements(response) {
   }
 
 }
-module.exports = createModalElements;
+export default createModalElements;

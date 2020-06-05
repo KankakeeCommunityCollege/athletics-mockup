@@ -1,12 +1,15 @@
-import lazyLoad from './lazyload.js';
+import lzFunction from './lazyload.js';
 
 // DO NOT PLACE IN A DOCUMENT READY FUNTION - it will break
-let buildSlidersPromise = new Promise(function(resolve, reject) {
-  buildSliders(resolve);
-});
-buildSlidersPromise.then(function() {
-  lazyLoad();
-});
+function initSlickSliders() {
+  let buildSlidersPromise = new Promise(function(resolve, reject) {
+    buildSliders(resolve);
+  });
+  buildSlidersPromise.then(function() {
+    lzFunction();
+  });
+}
+
 // Main Athletics carousel
 function buildSliders(resolve) {
   $('.heroSlider').slick({
@@ -30,3 +33,5 @@ function buildSliders(resolve) {
   });
   resolve();
 }
+
+export default initSlickSliders;
