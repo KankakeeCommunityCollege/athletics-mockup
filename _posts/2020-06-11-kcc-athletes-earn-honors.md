@@ -3,7 +3,7 @@ post_title: '22 Athletes earn honors'
 date: 2020-06-11 00:00:00
 categories:
   - news
-  - soccer
+  - general
 sport-category:
 news_thumb_image: 'uploads/2020/softball-right.jpg'
 news_thumb_alt:
@@ -22,12 +22,12 @@ The **All-Academic Third Team members**, with grade point averages of 3.60-3.79,
 
 <div class="row">
   <div class="col-4">
-    <img class="img-fluid" src="uploads/2020/volleyball-left.jpg" alt="">
+    <img class="img-fluid" src="uploads/2020/volleyball-left.jpg" alt="Sloan Boyce playing volleyball">
   </div>
   <div class="col-4">
-    <img class="img-fluid" src="uploads/2020/soccer-center.jpg" alt="Andrew Douglas in his soccer uniform">
+    <img class="img-fluid" src="uploads/2020/soccer-center.jpg" alt="Andrew Douglas in his KCC soccer uniform">
   </div>
   <div class="col-4">
-    <img class="img-fluid" src="uploads/2020/softball-right.jpg" alt="Andrew Douglas in his soccer uniform">
+    <img class="img-fluid" src="uploads/2020/softball-right.jpg" alt="Emma Schriner diving to catch the softball">
   </div>
 </div>
