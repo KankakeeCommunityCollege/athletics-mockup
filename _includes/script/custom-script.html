@@ -1,2 +1,5 @@
 <!-- custom compiled and minified javascript -->
 <script src="{{page.baseurl}}assets/js/dist/main{% if site.data.hash %}.{{ site.data.hash }}{% endif %}.bundle.js"></script>
+{% comment %}{% if page.title == "Recruitment" %}
+<!-- Download JS from https://github.com/rndme/download -->
+<script src="{{ page.baseurl }}assets/js/vendor/download.js"></script>{% endif %}{% endcomment %}
