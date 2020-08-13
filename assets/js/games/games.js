@@ -1,7 +1,7 @@
 //import './scheduleSlider.js';
 import start from './gamesSheetsAPI.js';
 
-document.addEventListener('DOMContentLoaded', function() {
+function createPlaceholderSlider() {
   $('.schedule-slider-temp').slick({ // This is a placeholder slider with loading.gif's while the actual schedule loads/builds.
     dots: false, // No dots bellow the slider
     infinite: false, // No infinite scrolling of slides
@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     slidesToShow: 3, // 3 visible
     slidesToScroll: 1, // scroll one at a time
     adaptiveHeight: false,
-    prevArrow:'<img class="a-left control-c prev slick-prev" src="../assets/img/blue-prev.svg">',
-    nextArrow:'<img class="a-right control-c next slick-next" src="../assets/img/blue-next.svg">',
+    prevArrow: '<img class="a-left control-c prev slick-prev" src="../assets/img/blue-prev.svg">',
+    nextArrow: '<img class="a-right control-c next slick-next" src="../assets/img/blue-next.svg">',
     responsive: [
       {
         breakpoint: 1024,
@@ -29,4 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     ]
   });
   gapi.load('client', start);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  createPlaceholderSlider();
 });

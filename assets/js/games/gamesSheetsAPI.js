@@ -1,6 +1,22 @@
-//import createTableParts from './createTableParts.js';
 import createScheduleElements from './createScheduleElements.js';
 import setSheetParameters from '../shared/setSheetParameters.js';
+
+// =============================================================================================  //
+// =============================================================================================  //
+//
+//  TODO:
+//
+//    1.) CHANGE CODE TO MAKE A SMALLER GOOGLE API CALL FIRST (TO FETCH INFO FOR 
+//      ONLY 6 OR 9 GAMES-WORTH OF DATA OR SOMETHING SMALL.)
+//    2.) BUILD A SMALLER VERISON OF THE UPCOMING GAMES SLIDER (6 OR 9 GAMES) INTO THE PAGE...
+//    3.) MAKE THE BIG API CALL FOR THE REMAINING DATA
+//    4.) APPEND THE REMAINING DATA TO THE SLIDER USING SLICK'S APPEND METHOD
+//
+//    THIS SHOULD BOTH IMPROVE PERFORMANCE AND PREVENT THE RESPONSE FROM RETURNING BEFORE 
+//    THE SCHEDULE IS FULLY CALCULATED AND READY.
+//
+// =============================================================================================  //
+// =============================================================================================  //
 
 function catchUndefinedResponses(response) {
   const firstArray = response.result.values[0];
