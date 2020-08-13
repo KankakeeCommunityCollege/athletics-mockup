@@ -53,6 +53,7 @@ exclude:
   - "yarn.lock"
   - "/assets/adobe/*"
   - "gulp-tasks"
+  - "athletics-bad-response-object-from-sheetsAPI-request.js"
 
 uploads_dir: # specifies the default uploads directory for CloudCannon
   - "uploads/"
