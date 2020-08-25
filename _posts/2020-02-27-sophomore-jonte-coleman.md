@@ -5,7 +5,7 @@ categories:
   - mens-basketball
   - news
 sport-category:
-news_thumb_image: /assets/img/jonte.jpg
+news_thumb_image: /uploads/jonte-portrait.jpg
 news_thumb_alt:
 description: New Three Point Record
 ---

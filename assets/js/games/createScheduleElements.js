@@ -135,6 +135,10 @@ function createSlidesInit(data) {
 }
 
 function createScheduleElements(response) {
+
+  if ( ! document.getElementById('scheduleDiv') )
+    return;
+
   const values = response.result.values;
   const valuesLength =  values.length;
   const data = values.slice(1, valuesLength);

@@ -52,7 +52,7 @@ function checkIds(params, i) {
 function checkRanges(params, r) {
   urlIsRoster || urlIsSchedule ? setRange(params, r)
   : urlIsStats ? setStatParams(params)
-  : urlIsIndex ? setRange(params, r + ' Current')
+  : urlIsIndex ? setRange(params, r + ' Current!A1:I7')
   : setRange(params, r + ' Current');
 
   return params;
@@ -88,7 +88,7 @@ function setSheetParameters() {
   : urlIsWomensSoccer ? setParams(sheetParams, 'Womens Soccer')
   : urlIsSoftball ? setParams(sheetParams, 'Softball')
   : urlIsVolleyball ? setParams(sheetParams, 'Volleyball')
-  : setParams(sheetParams, 'All');
+  : setParams(sheetParams, 'All'); // Default option (for '/')
   return sheetParams;
 }
 //

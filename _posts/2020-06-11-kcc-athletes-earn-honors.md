@@ -22,12 +22,12 @@ The **All-Academic Third Team members**, with grade point averages of 3.60-3.79,
 
 <div class="row">
   <div class="col-4">
-    <img class="img-fluid" src="uploads/2020/volleyball-left.jpg" alt="Sloan Boyce playing volleyball">
+    <img class="img-fluid" src="/uploads/2020/volleyball-left.jpg" alt="Sloan Boyce playing volleyball">
   </div>
   <div class="col-4">
-    <img class="img-fluid" src="uploads/2020/soccer-center.jpg" alt="Andrew Douglas in his KCC soccer uniform">
+    <img class="img-fluid" src="/uploads/2020/soccer-center.jpg" alt="Andrew Douglas in his KCC soccer uniform">
   </div>
   <div class="col-4">
-    <img class="img-fluid" src="uploads/2020/softball-right.jpg" alt="Emma Schriner diving to catch the softball">
+    <img class="img-fluid" src="/uploads/2020/softball-right.jpg" alt="Emma Schriner diving to catch the softball">
   </div>
 </div>
