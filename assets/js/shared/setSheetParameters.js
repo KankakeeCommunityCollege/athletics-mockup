@@ -52,7 +52,7 @@ function checkIds(params, i) {
 function checkRanges(params, r) {
   urlIsRoster || urlIsSchedule ? setRange(params, r)
   : urlIsStats ? setStatParams(params)
-  : urlIsIndex ? setRange(params, r + ' Current!A1:I7')
+  : urlIsIndex ? setRange(params, r + ' Current')
   : setRange(params, r + ' Current');
 
   return params;

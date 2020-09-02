@@ -33,7 +33,6 @@ function yt() {
   });
 
   request.execute( (response) => {
-    console.log(response);
     response.items.forEach((item) => {
       const [ , , title, , thumbs, , , , vid ] = createItemArr(item.snippet);
       const html = `
@@ -43,7 +42,6 @@ function yt() {
           </a>
           <h3 class="video-carousel__title">${title}</h3>
         </div>`;
-      console.log(html);
       YT_LIST.insertAdjacentHTML('beforeend', html);
     });
     initSlick(YT_LIST, BASE_URL);
