@@ -92,12 +92,11 @@ slides:
       <div class="col-md-12">
         <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/calendar.svg" class="icon-middle" alt="Calendar icon" />&#160;Upcoming Games <!-- <a href="{{ page.baseurl }}softball/schedule" class="btn btn-primary schedule__button-margin">View Full Schedule</a> --></h2>
         <!-- REMOVED BY WZ 8/20/20 & replaced by "TEMPORARY MESSAGE" below
-          
+        =================================================================== -->  
         <div id="scheduleDiv" class="baseball slick games" style="padding:15px">
           {% include loading-slider.html %}
         
-          =================================================================== -->
-
+        {% comment %}
         <!-- TEMPORARY MESSAGE DUE TO COVID COMPLICATIONS -->
         <div class="baseball slick games" style="padding:15px">
           <div class="schedule-slider">
@@ -126,9 +125,9 @@ slides:
                   <div class="schedule-slider__sport--wrapper"><span class="schedule-slider__sport d-block">&nbsp;</span></div>
                 </div>
               </div>
-            </div>
+            </div><!-- END TEMPORARY MESSAGE -->
+            {% endcomment %}
           </div>
-          <!-- END TEMPORARY MESSAGE -->
       </div>
     </div>
     <div class="row news-social-row">

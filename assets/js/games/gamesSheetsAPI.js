@@ -1,6 +1,6 @@
 import createScheduleElements from './createScheduleElements.js';
 import setSheetParameters from '../shared/setSheetParameters.js';
-import setGamesParams from './setGamesParams.js';
+//import setGamesParams from './setGamesParams.js';
 
 // =============================================================================================  //
 // =============================================================================================  //
@@ -9,7 +9,7 @@ import setGamesParams from './setGamesParams.js';
 //
 //    1.) CHANGE CODE TO MAKE A SMALLER GOOGLE API CALL FIRST (TO FETCH INFO FOR 
 //      ONLY 6 OR 9 GAMES-WORTH OF DATA OR SOMETHING SMALL.)
-//    2.) BUILD A SMALLER VERISON OF THE UPCOMING GAMES SLIDER (6 OR 9 GAMES) INTO THE PAGE...
+//    2.) BUILD A SMALLER VERSION OF THE UPCOMING GAMES SLIDER (6 OR 9 GAMES) INTO THE PAGE...
 //    3.) MAKE THE BIG API CALL FOR THE REMAINING DATA
 //    4.) APPEND THE REMAINING DATA TO THE SLIDER USING SLICK'S APPEND METHOD
 //
@@ -43,9 +43,8 @@ function start() {
     'apiKey': 'AIzaSyCEBsbXfFcdbkASlg-PodD1rT_Fe3Nw62A',
     'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/sheets/v4/rest']
   };
-  const t0 = performance.now();
+  //const t0 = performance.now();
   const sheetParams = setSheetParameters();
-  const prms = setGamesParams();
   //console.log(sheetParams);
   // Initializes the client with the API key
   // No O Auth is needed for read-only public sheets.
@@ -58,9 +57,9 @@ function start() {
           let createTablePromise = new Promise((resolve, reject) => {
             //console.log(response);
             // Create the HTML to inject into the DOM here
-            console.info(response);
-            const t1 = performance.now();
-            console.info( `Sheet perf.: ${Math.round(t1) - Math.round(t0)}` );
+            //console.info(response);
+            //const t1 = performance.now();
+            //console.info( `Sheet perf.: ${Math.round(t1) - Math.round(t0)}` );
             createScheduleElements(response);
             //createTableParts(response);
             resolve();
