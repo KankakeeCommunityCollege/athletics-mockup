@@ -93,13 +93,12 @@ slides:
     <div class="row schedule-row">
       <div class="col-md-12">
         <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/calendar.svg" class="icon-middle" alt="Calendar icon" />&#160;Upcoming Games <!-- <a href="{{ page.baseurl }}baseball/schedule" class="btn btn-primary schedule__button-margin">View Full Schedule</a> --></h2>
-        <!-- REMOVED BY WZ 8/20/20 & replaced by "TEMPORARY MESSAGE" below
-          
+        <!-- RESTORED BY WZ 9/25/20 & commented out via Jekyll comment the "TEMPORARY MESSAGE" below
+          =================================================================== -->
         <div id="scheduleDiv" class="baseball slick games" style="padding:15px">
           {% include loading-slider.html %}
-        
-          =================================================================== -->
-
+          
+        {% comment %}
         <!-- TEMPORARY MESSAGE DUE TO COVID COMPLICATIONS -->
         <div class="baseball slick games" style="padding:15px">
           <div class="schedule-slider">
@@ -131,6 +130,7 @@ slides:
             </div>
           </div>
           <!-- END TEMPORARY MESSAGE -->
+          {% endcomment %}
         </div>
       </div>
     </div>
