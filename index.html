@@ -80,8 +80,8 @@ slides:
   </div>
 </div>
 
-<section class="container content-marg">
-  {% for alert in site.alerts %}
+<section class="container content-marg mt-1">
+  {% for alert in site.alerts limit: 1 %}
     {% if alert.display_alert == true %}
       {% include athletics-alert.html %}
     {% endif %}
