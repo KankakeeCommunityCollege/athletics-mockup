@@ -63,8 +63,13 @@ _options:
   </div>
 </section>
 
-<main class="about-main">
+<main class="about-main mt-3">
   <div class="container">
+    {% for alert in site.alerts limit: 1 %}
+      {% if alert.display_alert == true %}
+        {% include athletics-alert.html %}
+      {% endif %}
+    {% endfor %}
     <div class="row">
       <div class="col">
         <div class="editable mb-4">
