@@ -2,8 +2,8 @@
 name: John Teders
 contacts_title: Assistant Coach
 contacts_sport: softball
-display_order: 4
-portrait:
+display_order: 2
+portrait: 'assets/img/blank-contact.svg'
 phone:
 email:
 ---
