@@ -5,7 +5,7 @@ categories:
   - news
   - general
 sport-category:
-news_thumb_image: /assets/60143ae446e68.image.jpg
+news_thumb_image: /uploads/60143ae446e68.image.jpg
 news_thumb_alt:
 description: Turner impacting basketball at several levels
 ---

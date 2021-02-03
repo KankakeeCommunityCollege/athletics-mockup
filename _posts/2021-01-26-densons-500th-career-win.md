@@ -7,7 +7,7 @@ categories:
   - womens-basketball
   - news
 sport-category:
-news_thumb_image: /assets/6010eb17b5e86.image.jpg
+news_thumb_image: /uploads/6010eb17b5e86.image.jpg
 news_thumb_alt:
 description: Entering the season with 499 wins
 ---

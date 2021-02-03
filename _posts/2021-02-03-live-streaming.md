@@ -5,7 +5,7 @@ categories:
   - news
   - general
 sport-category:
-news_thumb_image: /assets/download.png
+news_thumb_image: /uploads/download.png
 news_thumb_alt:
 description: Link to all home games
 ---
