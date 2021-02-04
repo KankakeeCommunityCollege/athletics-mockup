@@ -7,7 +7,7 @@ categories:
 sport-category:
 news_thumb_image: /uploads/download.png
 news_thumb_alt:
-description: Link to all home games
+description: Watch home games live on YouTube!
 ---
 
 **Live streaming ALL Home games for all 7 sports on the [Kankakee Community College - Athletics YouTube channel](https://www.youtube.com/channel/UCsWah4rJ6mYqMYcIDw4l6Zg){: target="_blank" rel="noopener" .btn .btn-primary}**
