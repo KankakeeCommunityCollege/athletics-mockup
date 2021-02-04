@@ -1,5 +1,5 @@
 ---
-post_title: Live Streaming now available
+post_title: Live Streaming Now Available
 date: 2021-02-03 00:00:00
 categories:
   - news
@@ -10,20 +10,17 @@ news_thumb_alt:
 description: Link to all home games
 ---
 
-[**Live streaming ALL Home games for all 7 sports:**](https://www.youtube.com/channel/UCsWah4rJ6mYqMYcIDw4l6Zg){: target="_blank" rel="noopener"}
+**Live streaming ALL Home games for all 7 sports on the [Kankakee Community College - Athletics YouTube channel](https://www.youtube.com/channel/UCsWah4rJ6mYqMYcIDw4l6Zg){: target="_blank" rel="noopener" .btn .btn-primary}**
 
-Women's Basketball
+Check out their team schedule page for a list of all home and away games:
 
-Men's Basketball
+- [Women's Basketball](/womens-basketball/)
+- [Men's Basketball](/mens-basketball)
+- [Volleyball](/volleyball/)
+- [Baseball](/baseball/)
+- [Softball](/softball/)
+- [Women's Soccer (NEW)](/womens-soccer/)
+- [Men's Soccer](/soccer/)
 
-Volleyball
-
-Baseball
-
-Softball
-
-Women's Soccer (NEW)
-
-Men's Soccer
-
-Check out their team schedule page for a list of all home and away games.
+[Subscribe](https://www.youtube.com/channel/UCsWah4rJ6mYqMYcIDw4l6Zg?=){: target='_blank' rel='noopener noreferrer' .btn .btn-danger} to our Athletics YouTube Channel
+{: .mt-3 }
