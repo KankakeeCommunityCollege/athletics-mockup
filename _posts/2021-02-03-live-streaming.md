@@ -14,13 +14,13 @@ description: Watch home games live on YouTube!
 
 Check out their team schedule page for a list of all home and away games:
 
-- [Women's Basketball](/womens-basketball/)
-- [Men's Basketball](/mens-basketball)
-- [Volleyball](/volleyball/)
-- [Baseball](/baseball/)
-- [Softball](/softball/)
-- [Women's Soccer (NEW)](/womens-soccer/)
-- [Men's Soccer](/soccer/)
+- [Women's Basketball](/womens-basketball/schedule/)
+- [Men's Basketball](/mens-basketball/schedule/)
+- [Volleyball](/volleyball/schedule/)
+- [Baseball](/baseball/schedule/)
+- [Softball](/softball/schedule/)
+- [Women's Soccer (NEW)](/womens-soccer/schedule/)
+- [Men's Soccer](/soccer/schedule/)
 
 [Subscribe](https://www.youtube.com/channel/UCsWah4rJ6mYqMYcIDw4l6Zg?sub_confirmation=1){: target='_blank' rel='noopener noreferrer' .btn .btn-danger} to our Athletics YouTube Channel
 {: .mt-3 }
