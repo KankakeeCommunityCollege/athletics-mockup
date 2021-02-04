@@ -22,5 +22,5 @@ Check out their team schedule page for a list of all home and away games:
 - [Women's Soccer (NEW)](/womens-soccer/)
 - [Men's Soccer](/soccer/)
 
-[Subscribe](https://www.youtube.com/channel/UCsWah4rJ6mYqMYcIDw4l6Zg?=){: target='_blank' rel='noopener noreferrer' .btn .btn-danger} to our Athletics YouTube Channel
+[Subscribe](https://www.youtube.com/channel/UCsWah4rJ6mYqMYcIDw4l6Zg?sub_confirmation=1){: target='_blank' rel='noopener noreferrer' .btn .btn-danger} to our Athletics YouTube Channel
 {: .mt-3 }
