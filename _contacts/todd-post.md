@@ -24,4 +24,4 @@ Post has maintained a connection to professional baseball by working as an assoc
 
 In addition to head coaching duties, Post works with players on hitting and defensive aspects of the game.
 
-Post also is KCC's athletic director. He resides in rural Kankakee with his wife, Julianne, and their son, Dylan. Their daughter, Jordan, is a registered nurse at Riverside Medical Center in Kankakee.
+Post also is KCC's athletic director. He resides in rural Kankakee with his wife, Julianne. Their son, Dylan, is a senior at Illinois State University. Their daughter, Jordan, is a registered nurse at University of Chicago Hospital.
