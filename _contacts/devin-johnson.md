@@ -8,7 +8,7 @@ phone:
 email:
 ---
 
-Devin Johnson is in his second season as the assistant coach and first season as the lead assistant. Coach Johnson was a key factor in the resurgence of the Cavaliers during the 2018-2019 season. He brings a wealth of basketball experience after coaching at many levels. Johnson comes to KCC after serving as assistant varsity coach at Peotone H.S. Prior to Peotone, he spent three seasons as the head coach for the freshman team at Kankakee High School.
+Devin Johnson is in his third season as the assistant coach and second season as the lead assistant. Coach Johnson was a key factor in the resurgence of the Cavaliers during recent seasons. He brings a wealth of basketball experience after coaching at many levels. Johnson comes to KCC after serving as assistant varsity coach at Peotone H.S. Prior to Peotone, he spent three seasons as the head coach for the freshman team at Kankakee High School.
 
 Johnson began his coaching career in 2013 as the assistant boys varsity coach at Clifton Central H.S. helping lead the Comets to a 24-4 record. This was one of the best records in school history, and the team attained a regional championship during that 2013-2014 season.
 

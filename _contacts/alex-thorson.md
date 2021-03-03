@@ -8,7 +8,7 @@ phone: 815‑802‑8609
 email: athorson@kcc.edu
 ---
 
-Head Coach Alex Thorson is in his second year as head coach of the Cavaliers. He comes to KCC after serving two years as a graduate assistant men’s basketball coach at Olivet Nazarene University. Coach Thorson brings a great passion and tremendous knowledge for the game to the Cavaliers.
+Head Coach Alex Thorson is in his third year as head coach of the Cavaliers. He comes to KCC after serving two years as a graduate assistant men’s basketball coach at Olivet Nazarene University. Coach Thorson brings a great passion and tremendous knowledge for the game to the Cavaliers.
 
 At Olivet, Thorson was mentored by Illinois Basketball Coaches Association, Chicagoland Collegiate Athletic Conference Athletics, and National Association of Intercollegiate Athletics Hall of Fame Coach Ralph Hodge.
 
