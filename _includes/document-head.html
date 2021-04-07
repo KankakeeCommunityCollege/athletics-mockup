@@ -14,16 +14,12 @@
     {%- endif -%}
     <!-- Standard Favicon -->
     <link rel="icon" type="image/x-icon" href="{{page.baseurl}}favicon.ico"/>
-    {%- if page.url == '/' -%}
-    <!-- YouTube API -->
-    <meta name="yt-api-k" value="AIzaSyBpxv9JNl4AX816ScNmZcqHkLncMUeiAws" />
-    {%- endif -%}
     {% include styles/bootstrap.html %}
+    {%- if page.layout == 'roster-page' or page.layout == 'schedule-page' -%}
     {% include styles/datatables.html %}
-    <!-- Custom CSS Stylesheet for CloudCannon CMS -->
-    <link rel="stylesheet" href="{{page.baseurl}}assets/css/content.css">
-    <!-- Custom CSS Stylesheet -->
-    <link rel="stylesheet" href="{{page.baseurl}}assets/css/main.css{% if site.data.cache_bust_css %}?version={{ site.data.cache_bust_css | truncate: 32, '' }}{% endif %}">
+    {%- endif -%}
+    {% include styles/slick.html %}
+    {% include styles/main.html %}
     <!--[if IE]>
       <style type="text/css">
         .sample {
