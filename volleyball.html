@@ -8,7 +8,6 @@ description: >-
   softball, men's soccer and volleyball. The Cavaliers compete in Region IV of
   the NJCAA
 base: volleyball
-sport: '4'
 slides:
   - image: uploads/volleyball-team-2021_2.jpg
     alt-text:
@@ -104,6 +103,10 @@ slides:
           target="_blank"
           rel="noopener noreferrer"
         >Watch Home Games Live</a>
+        <a
+          class="btn btn-primary mb-3 ml-2"
+          href="./schedule/"
+        >View Schedule</a>
         <div id="scheduleDiv" class="baseball slick games" style="padding:15px">
           {% include loading-slider.html %}
         </div>
@@ -111,7 +114,14 @@ slides:
     </div>
     <div class="row news-social-row">
       <div class="col-md-8 news-feed">
-        <h2 class="main-heading grey-bg"><img src="{{page.baseurl}}assets/img/news.svg" class="icon-middle" alt="News icon" />&#160;News <a href="{{ page.baseurl }}volleyball/news" class="btn btn-primary schedule__button-margin">View All News</a></h2>
+        <h2 class="main-heading grey-bg"><img
+            src="{{page.baseurl}}assets/img/news.svg"
+            class="icon-middle"
+            alt="News icon"
+          />&#160;News <a
+            href="{{ page.baseurl }}volleyball/news"
+            class="btn btn-primary schedule__button-margin"
+          >View All News</a></h2>
           <div class="news__scroll">
             <ul class="news__list">
               {% for post in site.posts %}

@@ -8,7 +8,6 @@ description: >-
   softball, men's soccer and volleyball. The Cavaliers compete in Region IV of
   the NJCAA.
 base: soccer
-sport: '5'
 slides:
   - image: uploads/soccer_2019-20_DSC_8323.jpg
     alt-text: '2019-2020 KCC soccer team'
@@ -86,7 +85,11 @@ slides:
   <!-- season preview -->
     <div class="row schedule-row{% if page.season_preview == false %} editor-content{% endif %}">
       <div class="col">
-        <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/soccer.svg" class="icon-middle" alt="" />&#160;Season Preview</h2>
+        <h2 class="main-heading"><img
+            src="{{page.baseurl}}assets/img/soccer.svg"
+            class="icon-middle"
+            alt=""
+          />&#160;Season Preview</h2>
         <div class="season-preview__content-bg">
           <div class="editable">
               <p>The Cavaliers enter the 2019 campaign with high expectations. After qualifying for the Region IV quarterfinals the last two years, the program now looks to take the next big step. &ldquo;We are in the largest region in the country, having to play 16 regional opponents to qualify for the tournament,&rdquo; said Coach Barclay.</p>
@@ -100,13 +103,23 @@ slides:
     </div>
     <div class="row schedule-row">
       <div class="col-md-12">
-        <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/calendar.svg" class="icon-middle" alt="Calendar icon" />&#160;Upcoming Games <!-- <a href="{{ page.baseurl }}soccer/schedule" class="btn btn-primary schedule__button-margin">View Full Schedule</a> --></h2>
-        <a
+        <h2 class="main-heading"><img
+            src="{{page.baseurl}}assets/img/calendar.svg"
+            class="icon-middle"
+            alt="Calendar icon"
+          />&#160;Upcoming Games
+          <!-- <a href="{{ page.baseurl }}soccer/schedule" class="btn btn-primary schedule__button-margin">View Full Schedule</a> -->
+          </h2>
+          <a
             class="btn btn-primary ml-2"
             href="https://www.youtube.com/channel/UCsWah4rJ6mYqMYcIDw4l6Zg"
             target="_blank"
             rel="noopener noreferrer"
           >Watch Home Games Live</a>
+          <a
+          class="btn btn-primary mb-3 ml-2"
+          href="./schedule/"
+        >View Schedule</a>
         <div id="scheduleDiv" class="baseball slick games" style="padding:15px">
           {% include loading-slider.html %}
         </div>
