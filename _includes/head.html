@@ -1,54 +1,47 @@
 <!doctype html>
 <html class="no-js" lang="en">
-    <head>
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>{{page.title}} - {{site.title}}</title>
-        <meta name="description" content="{{page.description}}">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- YouTube API -->
-        <meta name="yt-api-k" value="AIzaSyBpxv9JNl4AX816ScNmZcqHkLncMUeiAws" />
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        {% include script/google-tag.html %}
-        <!-- Latest compiled and minified Bootstrap 4 -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <!-- dataTables stylesheets -->
-        <!-- dataTables Bootstrap4 themed stylesheet -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css"/>
-        <!-- dataTables "Responsive" extension stylesheet for bootstrap4 theme -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.bootstrap4.min.css"/>
-        <!--  Slick.js v1.8.1 stylesheet followed by slick-theme stylesheet  -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
-        <!-- dataTables stylesheets -->
-        <!-- dataTables Bootstrap4 themed stylesheet -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css"/>
-        <!-- dataTables "Responsive" extension stylesheet for bootstrap4 theme -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.bootstrap4.min.css"/>
-        <!-- Typkit font for KCC logo-font -->
-        <link rel="stylesheet" href="https://use.typekit.net/mli7lsm.css">
-        <!-- Link to Google Font's "Roboto" font -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
-        <!-- Link to Google Font's "Open Sans" font -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-        <!--  FontAwesome defered script link
-        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>  -->
-        <!-- Place favicon.ico in the root directory -->
-        <!-- Standard Favicon -->
-        <link rel="icon" type="image/x-icon" href="{{page.baseurl}}favicon.ico" />
-        <!-- Custom CSS Stylesheet for CloudCannon CMS -->
-        <link rel="stylesheet" href="{{page.baseurl}}assets/css/content.css">
-        <!-- Custom CSS Stylesheet -->
-        <link rel="stylesheet" href="{{page.baseurl}}assets/css/main.css{% if site.data.cache_bust_css %}?version={{ site.data.cache_bust_css | truncate: 32, '' }}{% endif %}">
-        <!--[if IE]>
-     <style type="text/css">
-
-       .sample {
-         filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://athletics.kcc.edu/assets/img/menu-bg.png', sizingMethod='scale');
-         background:none !important;
-       }
-
-       </style>
-   <![endif]-->
-    </head>
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{page.title}} - {{site.title}}</title>
+    <meta name="description" content="{{page.description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include script/google-tag.html %}
+    <!-- YouTube API -->
+    <meta name="yt-api-k" value="AIzaSyBpxv9JNl4AX816ScNmZcqHkLncMUeiAws" />
+    <!-- Latest compiled and minified Bootstrap 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- dataTables stylesheets -->
+    <!-- dataTables Bootstrap4 themed stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css"/>
+    <!-- dataTables "Responsive" extension stylesheet for bootstrap4 theme -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.bootstrap4.min.css"/>
+    <!--  Slick.js v1.8.1 stylesheet followed by slick-theme stylesheet  -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <!-- dataTables stylesheets -->
+    <!-- dataTables Bootstrap4 themed stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css"/>
+    <!-- dataTables "Responsive" extension stylesheet for bootstrap4 theme -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.bootstrap4.min.css"/>
+    <!-- Typkit font for KCC logo-font -->
+    <link rel="stylesheet" href="https://use.typekit.net/mli7lsm.css">
+    <!-- Link to Google Font's "Roboto" font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{page.baseurl}}favicon.ico" />
+    <!-- Custom CSS Stylesheet for CloudCannon CMS -->
+    <link rel="stylesheet" href="{{page.baseurl}}assets/css/content.css">
+    <!-- Custom CSS Stylesheet -->
+    <link rel="stylesheet" href="{{page.baseurl}}assets/css/main.css{% if site.data.cache_bust_css %}?version={{ site.data.cache_bust_css | truncate: 32, '' }}{% endif %}">
+    <!--[if IE]>
+      <style type="text/css">
+        .sample {
+          filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://athletics.kcc.edu/assets/img/menu-bg.png', sizingMethod='scale');
+          background:none !important;
+        }
+      </style>
+    <![endif]-->
+  </head>
