@@ -1,5 +1,5 @@
 import createScheduleElements from './createScheduleElements.js';
-import setSheetParameters from '../shared/setSheetParameters.js';
+import setSheetParameters from '../shared/setSheetParameters.js'; // In the `assets/js/shared/` folder -- module is used by other bundles
 import slickParamsObject from './createSlickParamsObject.js';
 
 function catchUndefinedResponses(response) {
@@ -32,14 +32,12 @@ function start() {
   // Initializes the client with the API key
   // No O Auth is needed for read-only public sheets.
   gapi.client.init(params).then( () => {
-    return gapi.client.sheets.spreadsheets.values.get(sheetParams)
+    return gapi.client.sheets.spreadsheets.values.get(sheetParams);
   }).then((response) => {
     catchUndefinedResponses(response);
     createScheduleElements(response);
   }).then(() => {
-    const slickParams = slickParamsObject();
-
-    $('.schedule-slider').slick(slickParams);
+    $('.schedule-slider').slick(slickParamsObject());
   },
   function(err) {
     console.error("Execute error", err);
