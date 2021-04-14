@@ -9,7 +9,7 @@ description: >-
   the NJCAA.
 base: womens-soccer
 slides:
-  - image: 'uploads/womens-soccer-web-banner.jpg'
+  - image: uploads/womens-soccer-web-banner.jpg
     alt-text:
     url: 'https://form.jotform.com/200896440788164'
 ---
@@ -65,12 +65,11 @@ slides:
         <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/soccer.svg" class="icon-middle" alt="" />&#160;Season Preview</h2>
         <div class="season-preview__content-bg">
           <div class="editable">
-            <p>A wonderfull season preview expert...</p>
-            <p>Don't forget to click the "More ..." button to reveal the hidden editable area for the season preview's body.</p>
+            <p>The Lady Cavaliers will be taking the field for the first time in its inaugural season.</p>
           </div>
           <div id="collapsePreview" class="collapse">
             <div class="editable">
-              <p>This is the area for the season preview's body (without the exerpt line above.)</p>
+              <p>&ldquo;We are excited for this opportunity to represent Kankakee Community College and the Athletics Department,&rdquo; Coach Barclay said. &ldquo;We have assembled a solid, core group of women to build the foundation of this program for years to come. The high schools and areas soccer clubs we serve at KCC have a long history of producing some top quality women soccer players and we are excited to help these players continue their education and athletic goals here at the collegiate level. We have set the bar high for these ladies in their first season, and they are ready for the challenge!&rdquo;</p>
             </div><br />
           </div>
           <button class="btn btn-primary float-right season-preview__btn--more js-more-btn" type="button" data-toggle="collapse" data-target="#collapsePreview" aria-expanded="false" aria-controls="collapsePreview">More ...</button>
@@ -80,16 +79,8 @@ slides:
     <div class="row schedule-row">
       <div class="col-md-12">
         <h2 class="main-heading"><img src="{{page.baseurl}}assets/img/calendar.svg" class="icon-middle" alt="Calendar icon" />&#160;Upcoming Games <!-- <a href="{{ page.baseurl }}soccer/schedule" class="btn btn-primary schedule__button-margin">View Full Schedule</a> --></h2>
-        <a
-          class="btn btn-primary mb-3 ml-2"
-          href="https://www.youtube.com/channel/UCsWah4rJ6mYqMYcIDw4l6Zg"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Watch Home Games Live</a>
-        <a
-          class="btn btn-primary mb-3 ml-2"
-          href="./schedule/"
-        >View Schedule</a>
+        <a class="btn btn-primary mb-3 ml-2" href="https://www.youtube.com/channel/UCsWah4rJ6mYqMYcIDw4l6Zg" target="_blank" rel="noopener noreferrer">Watch Home Games Live</a>
+        <a class="btn btn-primary mb-3 ml-2" href="./schedule/">View Schedule</a>
         <div id="scheduleDiv" class="baseball slick games" style="padding:15px">
           {% include loading-slider.html %}
         </div>
