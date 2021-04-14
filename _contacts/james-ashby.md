@@ -1,6 +1,6 @@
 ---
 name: James Ashby
-contacts_title: Assistant Coach
+contacts_title: Assistant Coach men’s only
 contacts_sport: soccer
 display_order: 3
 portrait: uploads/j-ashby.jpg
