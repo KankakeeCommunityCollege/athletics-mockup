@@ -5,7 +5,7 @@ categories:
   - womens-basketball
   - general
 sport-category: WBB
-news_thumb_image: assets/img/placeholder.png
+news_thumb_image: /assets/img/16-9_thumb.png
 news_thumb_alt:
 description: All Region Team
 ---
