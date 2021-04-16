@@ -3,7 +3,7 @@ name: Aubrey Schuh
 contacts_title: Assistant Coach women’s only
 contacts_sport: women's soccer
 display_order: 2
-portrait: uploads/Aubreysm.JPG
+portrait: uploads/rsz_aubrey_schuh.jpg
 phone: 888-888-8888
 email: aschuh@kcc.edu
 ---
