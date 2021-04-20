@@ -1,15 +1,13 @@
-import initSlickSliders from './sliders.js';
-import moreClick from './moreButton.js';
-import accordion from './accordian.js';
-import setFooterDate from './footerDate.js';
+/*
+// Custom JS | written by https://github.com/wdzajicek
+// © 2020 Kankakee Community College
+// =================================================== */
 import start from './campusAlertsSheetsAPI.js';
 import getCachedResponse from './getCachedResponse.js';
+import checkForPrefersReducedMotion from './checkForPrefersReducedMotion.js';
 
-document.addEventListener('DOMContentLoaded', function() {
-  initSlickSliders();
-  moreClick();
-  accordion();
-  setFooterDate();
+document.addEventListener('DOMContentLoaded', () => {
+  checkForPrefersReducedMotion();
 
   ! window.sessionStorage.getItem('Alert-Content') ? // Checks if our cached alert is already in sessionStorage
     gapi.load('client', start) // If not, build the alert from a new Google API response

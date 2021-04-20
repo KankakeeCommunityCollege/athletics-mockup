@@ -5,7 +5,6 @@ title: Facilities
 description: "KCC offers intercollegiate men's basketball, women's basketball, baseball, softball, men's soccer and volleyball. The Cavaliers compete in Region IV of the NJCAA."
 base: facilities
 ---
-
 <!-- Facilities-specific sub-nav -->
 <div class="container-fluid sub-nav">
   <div class="container-fluid positioning__sub-nav--container">
@@ -27,7 +26,13 @@ base: facilities
     </div>
   </div>
 </div>
-
+<div class="container margin__alert--2">
+  <div class="row">
+    <div class="col">
+      {% include emergency-alert.html %}
+    </div>
+  </div>
+</div>
 
 {% comment %}
 <section class="hero-section sub-nav-marg">
@@ -43,7 +48,7 @@ base: facilities
 </section>
 {% endcomment %}
 
-<main class="facilities-container margin__facilities">
+<main>
   <div class="container">
     {% for alert in site.alerts limit: 1 %}
       {% if alert.display_alert == true %}
