@@ -3,7 +3,7 @@ name: Jennifer Hoekstra
 contacts_title: Assistant Coach
 contacts_sport: volleyball
 display_order: 2
-portrait: assets/img/blank-contact.svg
+portrait: uploads/coach-placeholder2_3x4.svg
 phone:
 email:
 ---
